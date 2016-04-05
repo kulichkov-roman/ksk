@@ -3,5 +3,79 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 	die();
 }
 ?>
+
+		<footer class="footer">
+			<div class="footer__inner">
+				<button type="button" class="footer__up-btn">Вернуться наверх</button>
+				<section class="footer-content">
+					<div class="footer-content__col">
+						<div class="footer-phones">
+							<?
+							$APPLICATION->IncludeComponent("bitrix:main.include", "",
+								Array(
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => "/local/include/site_templates/ft_phones.php",
+									"EDIT_TEMPLATE" => ""
+								),
+								false
+							);
+							?>
+						</div>
+					</div>
+					<div class="footer-content__col">
+						<ul class="footer-contacts">
+							<li class="footer-contacts__item _location">
+								<?
+								$APPLICATION->IncludeComponent("bitrix:main.include", "",
+									Array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/local/include/site_templates/ft_contacts_location.php",
+										"EDIT_TEMPLATE" => ""
+									),
+									false
+								);
+								?>
+							</li>
+							<li class="footer-contacts__item _email">
+								<?
+								$APPLICATION->IncludeComponent("bitrix:main.include", "",
+									Array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/local/include/site_templates/ft_contacts_email.php",
+										"EDIT_TEMPLATE" => ""
+									),
+									false
+								);
+								?>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<div class="footer__copyrights">
+					<?
+					$APPLICATION->IncludeComponent("bitrix:main.include", "",
+						Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/local/include/site_templates/ft_copyrights.php",
+							"EDIT_TEMPLATE" => ""
+						),
+						false
+					);
+					?>
+				</div>
+				<div class="footer__developers">
+					<?
+					$APPLICATION->IncludeComponent("bitrix:main.include", "",
+						Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/local/include/site_templates/ft_developers.php",
+							"EDIT_TEMPLATE" => ""
+						),
+						false
+					);
+					?>
+				</div>
+			</div>
+		</footer>
+	</div>
 </body>
-</html>

@@ -1,0 +1,6 @@
+/bitrix/
+/local/php_interface/config/*_override.php
+/upload/
+/.htaccess
+/sitemap*.xml
+/.idea/*
