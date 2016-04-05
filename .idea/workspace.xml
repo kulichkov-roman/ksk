@@ -2,104 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df91a0d5-d405-41d7-ab49-f5b42b6f5921" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/js/menu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/js/slideout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/js/waypoints.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/carousel_arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/carousel_arrow_left@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/carousel_arrow_left_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/carousel_arrow_left_white@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/carousel_arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/carousel_arrow_right@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/carousel_arrow_right_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/carousel_arrow_right_white@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/fb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/fb@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo_big.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo_big@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo_hover@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo_white@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo_white_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/logo_white_hover@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/ratio.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/ratio@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/slideout_toggle_button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/sprite/slideout_toggle_button@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/main.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/mixins/layout.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/mixins/variables.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/buttons.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/fancybox.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/fonts.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/footer.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/header.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/hero.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/inputs.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/owl-carousel-clients.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/owl-carousel-hero.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/slideout.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/small.reset.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/src/stylus/partials/sprite.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/tasks/copy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/tasks/scripts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/tasks/sprite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/tasks/styles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/tasks/sync.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/tasks/watch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/000_example_migration.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/001_add_deletion_flag_properties_for_messages_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/002_update_rating_descriptions_list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/003_add_entity_id_property_to_rating_history_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/004_update_portfolio_rating_descriptions_list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/005_add_user_groups.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/006_property_who_thanks_say_forum.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/007_add_property_for_time_change_userType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/008_message_infor_admin_add.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/009_user_portfolio_create.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/010_create_props_for_portfolio_Iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/011_create_iblock_images_portfolio.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/012_create_props_for_images_portfolio_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/013_works_of_user_rebase_to_new_portfolio_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/014_action_iblock_add.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/015_action_props_create.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/016_add_opros_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/017_add_opros_result.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/018_add_prop_interview_result.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/019_add_props_for_opros_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/020_update_question_interview.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/021_card_send_create_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/022_users_add_in_index_search.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/023_slider_on_main_page_iblock_add.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/024_create_additional_rating_event.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/025_add_action_baner_property_user_groups.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/026_add_property_link_for_main_page_slider_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/027_upd_email_template_for_confirm_pass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/028_create_email_promocode_mail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/029_create_sms_promo_requests_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/030_add_properties_to_create_sms_promo_requests_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/031_create_iblock_type.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/032_create_hero_slider_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/033_add_properties_to_hero_slider_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/034_create_feedback_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/035_add_properties_to_feedback_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/036_create_contacts_slider_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/037_add_properties_to_contacts_slider_iblock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local/migrate/038_create_email_feedback_mail.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/.default/footer.php" afterPath="$PROJECT_DIR$/local/templates/.default/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/.default/header.php" afterPath="$PROJECT_DIR$/local/templates/.default/header.php" />
     </list>
     <ignored path="ksk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -121,6 +25,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local/templates/.default/header.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -134,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local/templates/.default/footer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="563">
@@ -164,9 +78,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/local/templates/.default/header.php" />
         <option value="$PROJECT_DIR$/local/templates/.default/footer.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -227,42 +141,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ksk" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ksk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ksk" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".default" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ksk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ksk" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,12 +208,12 @@
       <option name="presentableId" value="Default" />
       <updated>1459836340332</updated>
       <workItem from="1459880780622" duration="542000" />
-      <workItem from="1459881351697" duration="3298000" />
+      <workItem from="1459881351697" duration="3730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3840000" />
+    <option name="totallyTimeSpent" value="4272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1864" height="1092" extended-state="0" />
@@ -386,14 +264,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp08689/rehau.kulichkov.pro/public_html/bitrix/templates/rehau/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1364">
@@ -419,6 +289,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
