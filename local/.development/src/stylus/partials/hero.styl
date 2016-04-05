@@ -1,0 +1,64 @@
+.hero
+	height 592px
+	background-color #051b64
+
+	&__item
+		height 592px
+		background-repeat no-repeat
+		background-position: 50% 0
+		text-align left
+
+	&__link
+		display block
+		text-decoration none
+
+	&__title
+		font-size 88px
+		line-height 70px
+		padding 121px 0 0 173px
+		color #fff
+
+		&-slash
+			margin-left -47px
+
+	&__subtitle
+		text-transform uppercase
+		padding 20px 0 0 173px
+		color #fff
+
+	&__color
+		color #ed691e
+
+@media screen and (max-width: ($desktopContentWidth - 1))
+
+	.hero
+		height auto
+
+		&__item
+			padding: 50px 0
+			height auto
+
+		&__title
+			padding 0 0 0 100px
+			font-size: 60px
+			line-height: 90%
+
+		&__subtitle
+			padding 20px 0 0 100px
+
+@media screen and (max-width: ($tabletContentWidth - 1))
+
+	.hero
+		height 320px
+
+		&__item
+			height 320px
+			padding 0
+
+		&__title
+			padding 30px 0 0 68px
+			font-size 55px
+			line-height 45px
+
+		&__subtitle
+			display none

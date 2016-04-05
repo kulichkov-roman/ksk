@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8b16cfc0-f0fb-4b9a-bba5-a6d52d340125" name="ksk.kulichkov.pro" url="http://ksk.kulichkov.pro">
+        <fileTransfer host="ksk.kulichkov.pro" port="21" rootFolder="/ksk.kulichkov.pro/public_html" password="dfe4dffbdfc7dfc7dfe0dfdfdfc0dfc6df9b" username="cl200027">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,72 @@
+@require "../mixins/variables.styl"
+@require "./sprite.styl"
+
+.header
+	height 80px
+	background #fff
+	z-index 2
+
+	&__logo
+		float left
+		width 570px
+
+		&-link
+			display block
+			margin 17px 0 0 26px
+			retinaSprite($logo_group)
+
+			&:hover
+				retinaSprite($logo_hover_group)
+
+	&-menu
+		float left
+		width 571px
+		margin-top 31px
+		margin-left 29px
+
+		&__item
+			display block
+			float left
+			margin-left 39px
+			font-weight bold
+			text-transform uppercase
+			font-size 14px
+			text-decoration none
+			color #333e48
+
+			&:first-child
+				margin-left 0
+
+			&:hover,
+			&--active
+				color #31e7ff
+
+
+@media screen and (max-width: ($desktopContentWidth - 1))
+	.header
+		&__logo
+			width 140px
+
+			&-link
+				// 
+
+		&-menu
+			margin-left 0
+
+
+@media screen and (max-width: ($tabletContentWidth - 1))
+	.header
+		height 52px
+
+		&__logo
+			width 85%
+
+			&-link
+				margin 4px auto 0 auto
+
+			&-img
+				width 30px
+				height 30px
+
+		&-menu
+			display none

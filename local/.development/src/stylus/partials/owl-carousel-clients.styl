@@ -1,0 +1,60 @@
+.clients__content
+
+	.owl-carousel
+
+		.owl-item
+			text-align center
+
+			div
+				padding 0 50px
+
+				img
+					display inline-block
+					width: auto
+
+		&.owl-theme
+			.owl-nav
+				position absolute
+				width 100%
+				margin-top 0
+				text-align left
+
+				[class*='owl-']
+					width 12px
+					height 20px
+					text-indent 12px
+					overflow hidden
+					position absolute
+					top -52px
+
+				.owl-prev
+					left -47px
+
+				.owl-next
+					right -47px
+
+				.owl-prev:hover,
+				.owl-prev
+					background-color transparent
+					retinaSprite($carousel_arrow_left_group)
+
+				.owl-next:hover,
+				.owl-next
+					background-color transparent
+					retinaSprite($carousel_arrow_right_group)
+
+
+@media screen and (max-width: ($desktopContentWidth - 1))
+	.clients__content
+		.owl-carousel
+			&.owl-theme
+				.owl-nav
+					.owl-prev
+						left 0
+
+					.owl-next
+						right 0
+
+
+@media screen and (max-width: ($tabletContentWidth - 1))
+	// 
