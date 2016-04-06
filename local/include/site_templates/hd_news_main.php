@@ -1,72 +1,64 @@
-<section class="content">
-			<div class="content__inner">
-				<div class="content__substrate"></div>
-				<div class="content__content">
-					<div class="content__tab"><span class="content__tab-text">О нас</span></div>
-					<h1 class="content__title">Корниловский свинокомплекс</h1>
-					<section class="feed">
-						<article class="feed__item">
-							<figure class="feed__img-h"><a href="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" data-header="Название слайда" title="lala" rel="fancybox-feed" class="feed__img-link _fancybox"><img src="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" alt="" class="feed__img"></a></figure>
-							<div class="feed__content _bg-0">
-								<h2 class="feed__title">Комплекс был построен в 2011 году</h2>
-								<p class="feed__text">
-
-									При планировании и проектировании комплекса были учтены все тонкости
-									и подробности разведения свинок - свежный воздух, плодородные почвы,
-									естественные водоёмы и имногое другое.
-								</p>
-							</div>
-						</article>
-						<article class="feed__item">
-							<figure class="feed__img-h"><a href="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" data-header="Название слайда" title="lala" rel="fancybox-feed" class="feed__img-link _fancybox"><img src="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" alt="" class="feed__img"></a></figure>
-							<div class="feed__content _bg-1">
-								<h2 class="feed__title">Делаем упор на натуральном и полезном</h2>
-								<p class="feed__text">
-
-									При планировании и проектировании комплекса были учтены все тонкости
-									и подробности разведения свинок - свежный воздух, плодородные почвы,
-									естественные водоёмы и имногое другое.
-								</p>
-							</div>
-						</article>
-						<article class="feed__item">
-							<figure class="feed__img-h"><a href="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" data-header="Название слайда" title="lala" rel="fancybox-feed" class="feed__img-link _fancybox"><img src="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" alt="" class="feed__img"></a></figure>
-							<div class="feed__content _bg-2">
-								<h2 class="feed__title">Современное оборудование</h2>
-								<p class="feed__text">
-
-									При планировании и проектировании комплекса были учтены все тонкости
-									и подробности разведения свинок - свежный воздух, плодородные почвы,
-									естественные водоёмы и имногое другое.
-								</p>
-							</div>
-						</article>
-						<article class="feed__item">
-							<figure class="feed__img-h"><a href="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" data-header="Название слайда" title="lala" rel="fancybox-feed" class="feed__img-link _fancybox"><img src="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" alt="" class="feed__img"></a></figure>
-							<div class="feed__content _bg-3">
-								<h2 class="feed__title">Всё ради получения лучших результатов</h2>
-								<p class="feed__text">
-
-									При планировании и проектировании комплекса были учтены все тонкости
-									и подробности разведения свинок - свежный воздух, плодородные почвы,
-									естественные водоёмы и имногое другое.
-								</p>
-							</div>
-						</article>
-						<article class="feed__item">
-							<figure class="feed__img-h"><a href="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" data-header="Название слайда" title="lala" rel="fancybox-feed" class="feed__img-link _fancybox"><img src="<?=SITE_TEMPLATE_PATH?>/images/pic.jpg" alt="" class="feed__img"></a></figure>
-							<div class="feed__content _bg-4">
-								<h2 class="feed__title">Мы ещё и племенное хозяйство</h2>
-								<p class="feed__text">
-
-									При планировании и проектировании комплекса были учтены все тонкости
-									и подробности разведения свинок - свежный воздух, плодородные почвы,
-									естественные водоёмы и имногое другое.
-								</p>
-							</div>
-						</article>
-						<button type="button" class="feed__photos-btn">Смотреть все фотографии</button>
-					</section>
-				</div>
-			</div>
-		</section>
+<?$APPLICATION->IncludeComponent(
+	'bitrix:news.list', 
+	'advantage-main', 
+	array(
+		'COMPONENT_TEMPLATE' => 'advantage-main',
+		'IBLOCK_TYPE' => 'dynamic_content',
+		'IBLOCK_ID' => '2',
+		'NEWS_COUNT' => '20',
+		'SORT_BY1' => 'SORT',
+		'SORT_ORDER1' => 'ASC',
+		'SORT_BY2' => 'SORT',
+		'SORT_ORDER2' => 'ASC',
+		'FILTER_NAME' => '',
+		'FIELD_CODE' => array(
+			0 => '',
+			1 => '',
+		),
+		'PROPERTY_CODE' => array(
+			0 => '',
+			1 => '',
+		),
+		'CHECK_DATES' => 'Y',
+		'DETAIL_URL' => '',
+		'AJAX_MODE' => 'N',
+		'AJAX_OPTION_JUMP' => 'N',
+		'AJAX_OPTION_STYLE' => 'Y',
+		'AJAX_OPTION_HISTORY' => 'N',
+		'AJAX_OPTION_ADDITIONAL' => '',
+		'CACHE_TYPE' => 'A',
+		'CACHE_TIME' => '36000000',
+		'CACHE_FILTER' => 'N',
+		'CACHE_GROUPS' => 'Y',
+		'PREVIEW_TRUNCATE_LEN' => '',
+		'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+		'SET_TITLE' => 'Y',
+		'SET_BROWSER_TITLE' => 'Y',
+		'SET_META_KEYWORDS' => 'Y',
+		'SET_META_DESCRIPTION' => 'Y',
+		'SET_LAST_MODIFIED' => 'N',
+		'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
+		'ADD_SECTIONS_CHAIN' => 'Y',
+		'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
+		'PARENT_SECTION' => '',
+		'PARENT_SECTION_CODE' => '',
+		'INCLUDE_SUBSECTIONS' => 'Y',
+		'DISPLAY_DATE' => 'Y',
+		'DISPLAY_NAME' => 'Y',
+		'DISPLAY_PICTURE' => 'Y',
+		'DISPLAY_PREVIEW_TEXT' => 'Y',
+		'PAGER_TEMPLATE' => '.default',
+		'DISPLAY_TOP_PAGER' => 'N',
+		'DISPLAY_BOTTOM_PAGER' => 'Y',
+		'PAGER_TITLE' => 'Новости',
+		'PAGER_SHOW_ALWAYS' => 'N',
+		'PAGER_DESC_NUMBERING' => 'N',
+		'PAGER_DESC_NUMBERING_CACHE_TIME' => '36000',
+		'PAGER_SHOW_ALL' => 'N',
+		'PAGER_BASE_LINK_ENABLE' => 'N',
+		'SET_STATUS_404' => 'N',
+		'SHOW_404' => 'N',
+		'MESSAGE_404' => ''
+	),
+	false
+);?>

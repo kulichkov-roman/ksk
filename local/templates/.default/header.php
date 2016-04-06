@@ -53,7 +53,8 @@ IncludeTemplateLangFile(__FILE__);
 					"PATH" => "/local/include/site_templates/hd_slider_main.php",
 					"EDIT_TEMPLATE" => ""
 				),
-				false
+				false,
+				Array('HIDE_ICONS' => 'Y')
 			);
 			?>
 		</header>
@@ -64,7 +65,8 @@ IncludeTemplateLangFile(__FILE__);
 				"PATH" => "/local/include/site_templates/hd_news_main.php",
 				"EDIT_TEMPLATE" => ""
 			),
-			false
+			false,
+			Array('HIDE_ICONS' => 'Y')
 		);
 		$APPLICATION->IncludeComponent("bitrix:main.include", "",
 			Array(
