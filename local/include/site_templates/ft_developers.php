@@ -1,0 +1,1 @@
+<a href="http://kulichkov.pro" class="footer__developers-link">Сайт разработали</a>
