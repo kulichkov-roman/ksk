@@ -6,6 +6,9 @@
 	new \Quetzal\Environment\Configuration\CommonConfiguration(
 		array(
 			'sliderMainIBlockId' => 1,
+			'sliderMainPlugId' => 5,
+			'advantageMainIBlockId' => 2,
+			'advantageMainPlugId' => 16,
 		)
 	)
 );
@@ -22,6 +25,14 @@ itc\Resizer::addPreset('sliderMain', array(
 		'mode' => 'crop',
 		'width' => '1920',
 		'height' => '620',
+		'type' => 'jpg'
+	)
+);
+
+itc\Resizer::addPreset('advantageMain', array(
+		'mode' => 'crop',
+		'width' => '554',
+		'height' => '354',
 		'type' => 'jpg'
 	)
 );
