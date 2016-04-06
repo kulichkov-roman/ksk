@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df91a0d5-d405-41d7-ab49-f5b42b6f5921" name="Default" comment="">
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/.gitignore" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/.htaccess" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/local/.development/README.md" afterPath="" />
@@ -138,6 +139,79 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick.min.js" afterPath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick.scss" afterPath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/main.html" afterPath="$PROJECT_DIR$/your_test/pigs_04.04.16/main.html" />
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/css/developers.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/bg-footer.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/bg-footer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/bg-substrate.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/content-bg-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/content-bg-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/content-bg-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/content-bg-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/content-bg-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/icon-docs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/icon-email.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/icon-info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/icon-phone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/icon-photos.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/icon-pin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/icon-up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/line.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/pic.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/reward-big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/reward1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/slide1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/slide2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/images/slider-arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/Vague/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/Vague/Vague.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/Vague/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/Vague/img.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/Vague/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/Vague/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/Vague/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/fancybox_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/fancybox_loading@2x.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/fancybox_overlay.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/fancybox_sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/fancybox_sprite@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/helpers/fancybox_buttons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/helpers/jquery.fancybox-buttons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/helpers/jquery.fancybox-buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/helpers/jquery.fancybox-media.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/helpers/jquery.fancybox-thumbs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/helpers/jquery.fancybox-thumbs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/jquery.fancybox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/jquery.fancybox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/fancybox-2.1.5/jquery.fancybox.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/jquery-1.11.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/jquery.jcarousel.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/jquery.qtip.custom/imagesloaded.pkg.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/jquery.qtip.custom/imagesloaded.pkg.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/jquery.qtip.custom/jquery.qtip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/jquery.qtip.custom/jquery.qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/jquery.qtip.custom/jquery.qtip.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/jquery.qtip.custom/jquery.qtip.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/jquery.qtip.custom/jquery.qtip.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/config.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/fonts/slick.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/fonts/slick.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/fonts/slick.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/fonts/slick.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick-theme.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/js/slick-1.4.1/slick.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/your_test/pigs_04.04.16/main.html" afterPath="" />
+>>>>>>> origin/master
     </list>
     <ignored path="ksk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -158,7 +232,57 @@
     <favorites_list name="ksk" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/templates/.default/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="67" selection-end-column="10" />
+              <folding>
+                <marker date="1459883602191" expanded="true" signature="1477:2407" placeholder="..." />
+                <marker date="1459883602191" expanded="true" signature="1503:1969" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/templates/.default/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="563">
+              <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/scp08689/rehau.kulichkov.pro/public_html/bitrix/templates/rehau/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1364">
+              <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+              <folding>
+                <element signature="e#2689#2802#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> origin/master
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -166,8 +290,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/local/include/hd_logo.php" />
         <option value="$PROJECT_DIR$/local/templates/.default/header.php" />
+=======
+        <option value="$PROJECT_DIR$/local/templates/.default/header.php" />
+        <option value="$PROJECT_DIR$/local/templates/.default/footer.php" />
+>>>>>>> origin/master
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -177,12 +306,15 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1864" />
-    <option name="height" value="1096" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -210,6 +342,10 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> origin/master
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -225,7 +361,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ksk" />
+<<<<<<< HEAD
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+=======
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+>>>>>>> origin/master
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -235,16 +375,27 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ksk" />
+<<<<<<< HEAD
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="local" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+=======
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="your_test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+>>>>>>> origin/master
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> origin/master
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,7 +403,11 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="web.server" />
+=======
+    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+>>>>>>> origin/master
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -277,6 +432,10 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+<<<<<<< HEAD
+=======
+      <node-interpreter>project</node-interpreter>
+>>>>>>> origin/master
       <node-options />
       <gulpfile />
       <tasks />
@@ -287,22 +446,34 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="df91a0d5-d405-41d7-ab49-f5b42b6f5921" name="Default" comment="" />
       <created>1459836340332</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1459836340332</updated>
+      <workItem from="1459880780622" duration="542000" />
+      <workItem from="1459881351697" duration="3781000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4323000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1864" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1864" height="1092" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982263" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -310,7 +481,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33021808" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20855057" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> origin/master
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -326,6 +501,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -336,24 +519,64 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.21393842">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> origin/master
           <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/local/templates/.default/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77474403">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+=======
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp08689/rehau.kulichkov.pro/public_html/bitrix/templates/rehau/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+          <folding>
+            <element signature="e#2689#2802#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/.default/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77474403">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        <state relative-caret-position="216">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="67" selection-end-column="10" />
+          <folding>
+            <marker date="1459883602191" expanded="true" signature="1477:2407" placeholder="..." />
+            <marker date="1459883602191" expanded="true" signature="1503:1969" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/.default/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/local/include/hd_logo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.037542664">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
