@@ -11,6 +11,7 @@
 			'advantageMainPlugId' => 16,
 			'rewardsMainIBlockId' => 3,
 			'rewardsMainPlugId' => 16,
+			'phoneFooterIBlockId' => 4,
 		)
 	)
 );
