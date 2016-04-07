@@ -9,6 +9,7 @@
 			'sliderMainPlugId' => 5,
 			'advantageMainIBlockId' => 2,
 			'advantageMainPlugId' => 16,
+			'tolerancesIBlockId' => 3
 		)
 	)
 );
@@ -33,6 +34,22 @@ itc\Resizer::addPreset('advantageMain', array(
 		'mode' => 'crop',
 		'width' => '554',
 		'height' => '354',
+		'type' => 'jpg'
+	)
+);
+
+itc\Resizer::addPreset('rewardsMainPreview', array(
+		'mode' => 'auto',
+		'width' => '150',
+		'height' => '221',
+		'type' => 'jpg'
+	)
+);
+
+itc\Resizer::addPreset('rewardsMainDetail', array(
+		'mode' => 'width',
+		'width' => '1024',
+		'height' => null,
 		'type' => 'jpg'
 	)
 );
