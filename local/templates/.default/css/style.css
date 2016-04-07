@@ -393,7 +393,7 @@ address {
   z-index: 100;
   position: absolute;
   width: 1125px;
-  right: -340px;
+  right: -330px;
   top: 15px;
   bottom: 0px;
   background: #f0eed5 url("../images/bg-substrate.jpg") bottom no-repeat;
@@ -403,12 +403,12 @@ address {
 .content__content {
   position: relative;
   z-index: 200;
-  padding-top: 85px; }
+  padding-top: 80px; }
 
 .content__tab {
   background: #f0eed5;
   text-align: center;
-  padding: 0 80px;
+  padding: 0 80px 0 74px;
   height: 96px;
   border-radius: 7px;
   position: absolute;
@@ -439,7 +439,7 @@ address {
   margin-left: 516px;
   font-size: 39px;
   line-height: 45px;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
   font-weight: bold;
   color: #543b2f; }
 
@@ -449,7 +449,7 @@ address {
   .feed__item {
     position: relative; }
     .feed__item + .feed__item {
-      margin-top: 18px; }
+      margin-top: 16px; }
   .feed__img-h {
     margin-left: -10px;
     background: #fff;
@@ -579,7 +579,7 @@ address {
     font-size: 15px;
     line-height: 20px;
     font-weight: 300;
-    margin-bottom: 20px; }
+    margin-bottom: 32px; }
 
 .rewards-slider__inner {
   margin-left: -30px;
@@ -653,11 +653,11 @@ address {
     position: relative;
     height: 100%; }
   .footer__up-btn {
-    width: 450px;
+    width: 445px;
     position: absolute;
     z-index: 10;
     height: 56px;
-    line-height: 54px;
+    line-height: 52px;
     box-sizing: border-box;
     border-radius: 0 0 7px 7px;
     background: rgba(0, 0, 0, 0.5);
@@ -665,7 +665,7 @@ address {
     color: #fff;
     font-size: 24px;
     text-align: center;
-    padding: 0 0 4px 20px; }
+    padding: 0 0 4px 42px; }
     .footer__up-btn:before {
       content: '';
       position: absolute;
@@ -681,7 +681,7 @@ address {
     color: #7a7a7a;
     height: 48px;
     line-height: 48px;
-    padding: 0 30px;
+    padding: 0 28px;
     border-radius: 7px 7px 0 0;
     background: #fff; }
   .footer__developers {
@@ -716,7 +716,8 @@ address {
 .footer-phones {
   position: relative;
   padding-left: 30px;
-  padding-top: 7px; }
+  padding-top: 7px;
+  display: table; }
   .footer-phones:before {
     content: '';
     position: absolute;
@@ -726,16 +727,17 @@ address {
     height: 32px;
     background: url("../images/icon-phone.png"); }
   .footer-phones__row {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    display: table-row; }
     .footer-phones__row:after {
       content: '';
       display: table;
       clear: both; }
   .footer-phones__title {
-    float: left;
-    width: 130px; }
+    padding-right: 25px;
+    display: table-cell; }
   .footer-phones__value {
-    float: left;
+    display: table-cell;
     font-weight: 500; }
   .footer-phones__link {
     color: #201811;

@@ -1,0 +1,65 @@
+.content {
+
+    &__inner {
+        position: relative;
+        @include content;
+    }
+
+    &__substrate {
+        z-index: 100;
+        position: absolute;
+        width: 1125px;
+        right: -330px;
+        top: 15px;
+        bottom: 0px;
+        background: #f0eed5 url('../images/bg-substrate.jpg') bottom no-repeat;
+        border-radius: 7px;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    }
+
+    &__content {
+        position: relative;
+        z-index: 200;
+        padding-top: 80px;
+    }
+
+    &__tab {
+        background: #f0eed5;
+        text-align: center;
+        padding: 0 80px 0 74px;
+        height: 96px;
+        border-radius: 7px;
+        position: absolute;
+        right: 0px;
+        top: -37px;
+        @include middler;
+
+        &:before {
+            content: '';
+            width: 29px;
+            height: 29px;
+            margin-right: 22px;
+            display: inline-block;
+            vertical-align: middle;
+            background: url('../images/icon-info.png')
+        }
+    }
+
+    &__tab-text {
+        vertical-align: middle;
+        color: #8b8b8b;
+        font-size: 26px;
+        line-height: 28px;
+        font-weight: bold;
+    }
+
+    &__title {
+        margin-left: 516px;
+        font-size: 39px;
+        line-height: 45px;
+        margin-bottom: 24px;
+        font-weight: bold;
+        color: #543b2f;
+    }
+
+}

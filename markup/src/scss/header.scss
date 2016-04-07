@@ -1,0 +1,143 @@
+.header {
+    position: relative;
+
+    &__inner {
+        @include content;
+        // height: 584px;
+    }
+}
+
+
+.header-slider {
+    height: 584px;
+    position: relative;
+    z-index: 10;
+
+    &__list {
+        height: 100%;
+        position: relative;
+    }
+
+    &__item {
+        transition: opacity 1s ease;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+
+        &._active {
+            opacity: 1;
+            z-index: 10;
+        }
+    }
+
+    &__item-img {
+
+    }
+}
+
+.header-slider-content {
+    position: absolute;
+    z-index: 20;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 15px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+    }
+
+    &__inner {
+        @include content;
+        position: relative;
+    }
+
+
+    &__box {
+        position: relative;
+        border-radius: 7px 7px 0 0;
+        width: 445px;
+        height: 225px;
+        background: rgba(0,0,0,0.5);
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        color: #fff;
+        text-align: center;
+    }
+
+    &__box-list {
+
+    }
+
+    &__box-item {
+        display: none;
+
+        &._active {
+            display: block;
+        }
+    }
+
+    &__title {
+        position: relative;
+        font-size: 26px;
+        line-height: 76px;
+        font-weight: bold;
+        height: 76px;
+        padding: 0 15px;
+
+        &:after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            background: rgba(255,255,255,0.5);
+            width: 210px;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            margin: 0 auto;
+        }
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 30px;
+        padding: 20px 15px 0;
+    }
+
+
+    &__nav {
+        position: absolute;
+        bottom: 22px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    &__nav-btn {
+        vertical-align: top;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        box-sizing: border-box;
+
+        &._active {
+            background: #fff;
+        }
+
+        & + & {
+            margin-left: 10px;
+        }
+    }
+}

@@ -3,3 +3,6 @@
 /upload/
 /.htaccess
 /sitemap*.xml
+/markup/node_modules
+/markup/psd
+/local/templates/.default/*.html

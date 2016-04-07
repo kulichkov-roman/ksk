@@ -1,0 +1,41 @@
+@mixin content() {
+	max-width: 1200px;
+	min-width: 1200px;
+	// min-width: 1130px;
+	padding: 0 40px;
+	margin: 0 auto;
+}
+
+$ff-regular: 'Open Sans', Arial, sans-serif;
+$ff-tech: 'Roboto', Tahoma, sans-serif;
+
+@import "mixins";
+// @import "fonts";
+@import "base";
+
+.wrapper {
+	overflow: hidden;
+}
+
+@import "header";
+@import "menu";
+@import "content";
+@import "feed";
+@import "rewards";
+@import "footer";
+
+.fancybox-header {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+	font-family: $ff-regular;
+	color: #404040;
+	margin-bottom: 15px;
+}
+
+.fancybox-title  {
+	font-size: 14px;
+	line-height: 20px;
+	font-family: $ff-tech;
+	color: #505050;
+}
