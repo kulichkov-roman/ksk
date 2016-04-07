@@ -66,7 +66,7 @@ class AddPropertiesTolerancesIBlockMigration extends AbstractIBlockPropertyMigra
 }
 
 $iBlockMigrations = new AddPropertiesTolerancesIBlockMigration(
-    $environment->get('tolerancesIBlockId')
+    $environment->get('rewardsMainIBlockId')
 );
 
 $iBlockMigrations->up();

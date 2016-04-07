@@ -9,7 +9,8 @@
 			'sliderMainPlugId' => 5,
 			'advantageMainIBlockId' => 2,
 			'advantageMainPlugId' => 16,
-			'tolerancesIBlockId' => 3
+			'rewardsMainIBlockId' => 3,
+			'rewardsMainPlugId' => 16,
 		)
 	)
 );

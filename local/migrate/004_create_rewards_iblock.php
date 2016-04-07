@@ -48,7 +48,7 @@ class CreateTolerancesIBlockMigration extends AbstractIBlockMigration
                 array(
                     'ACTIVE'           => 'Y',
                     'NAME'             => 'Допуски и сертификаты',
-                    'CODE'             => 'tolerances',
+                    'CODE'             => 'rewards',
                     'IBLOCK_TYPE_ID'   => 'dynamic_content',
                     'SITE_ID'          => array('s1'),
                     'SORT'             => 500,
@@ -59,7 +59,7 @@ class CreateTolerancesIBlockMigration extends AbstractIBlockMigration
             );
 
             $logger->log(
-                sprintf('IBlock has been created. Id: "%s". Add to "tolerancesIBlockId"', $this->iblockId)
+                sprintf('IBlock has been created. Id: "%s". Add to "rewardsMainIBlockId"', $this->iblockId)
             );
         } catch (\Quetzal\Exception\Data\Migration\MigrationException $exception) {
             $logger->log(sprintf('ERROR: %s', $exception->getMessage()));
@@ -73,9 +73,9 @@ class CreateTolerancesIBlockMigration extends AbstractIBlockMigration
     {
         $logger = new \Quetzal\Tools\Logger\EchoLogger();
 
-        $this->deleteIBlock($environment->get('tolerancesIBlockId'));
+        $this->deleteIBlock($environment->get('rewardsMainIBlockId'));
 
-        $logger->log(sprintf('IBlock tolerances has been removed. Id: "%s"', $this->iblockId));
+        $logger->log(sprintf('IBlock rewards has been removed. Id: "%s"', $this->iblockId));
     }
 }
 
