@@ -35,7 +35,7 @@ use Quetzal\Tools\Data\Migration\Bitrix\AbstractIBlockPropertyMigration;
 /**
  * Class AddPropertiesToSMSPromoRequestsIBlockMigration
  */
-class AddPropertiesTolerancesIBlockMigration extends AbstractIBlockPropertyMigration
+class AddPropertiesRewardsIBlockMigration extends AbstractIBlockPropertyMigration
 {
     /**
      * {@inheritdoc}
@@ -65,7 +65,7 @@ class AddPropertiesTolerancesIBlockMigration extends AbstractIBlockPropertyMigra
     }
 }
 
-$iBlockMigrations = new AddPropertiesTolerancesIBlockMigration(
+$iBlockMigrations = new AddPropertiesRewardsIBlockMigration(
     $environment->get('rewardsMainIBlockId')
 );
 
