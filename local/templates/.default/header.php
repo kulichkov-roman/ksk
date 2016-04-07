@@ -74,6 +74,7 @@ IncludeTemplateLangFile(__FILE__);
 				"PATH" => "/local/include/site_templates/hd_rewards_main.php",
 				"EDIT_TEMPLATE" => ""
 			),
-			false
+			false,
+			Array('HIDE_ICONS' => 'Y')
 		);
 		?>
