@@ -1,4 +1,4 @@
-<?$APPLICATION->IncludeComponent("bitrix:news.list", "tolerances-main", Array(
+<?$APPLICATION->IncludeComponent("bitrix:news.list", "rewards-main", Array(
 	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
 		"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
 		"AJAX_MODE" => "N",	// Включить режим AJAX
