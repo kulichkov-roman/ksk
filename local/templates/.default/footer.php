@@ -17,9 +17,22 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 									"PATH" => "/local/include/site_templates/ft_phones.php",
 									"EDIT_TEMPLATE" => ""
 								),
-								false
+								false,
+								Array('HIDE_ICONS' => 'Y')
 							);
 							?>
+							<div class="footer-phones__note">
+								<?
+								$APPLICATION->IncludeComponent("bitrix:main.include", "",
+									Array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/local/include/site_templates/ft_time_to_call.php",
+										"EDIT_TEMPLATE" => ""
+									),
+									false
+								);
+								?>
+							</div>
 						</div>
 					</div>
 					<div class="footer-content__col">

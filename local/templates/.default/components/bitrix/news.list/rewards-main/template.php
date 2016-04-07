@@ -12,7 +12,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
 <div class="rewards">
 	<div class="rewards__inner">
 		<div class="rewards__substrate"></div>
