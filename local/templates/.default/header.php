@@ -25,11 +25,13 @@ IncludeTemplateLangFile(__FILE__);
 
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/slick-1.4.1/slick.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/jquery.fancybox.css');
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/helpers/jquery.fancybox-thumbs.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/style.css');
 
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery-1.11.2.min.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/slick-1.4.1/slick.min.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/jquery.fancybox.pack.js');
+	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/helpers/jquery.fancybox-thumbs.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/init.js');
 	?>
 	<?$APPLICATION->ShowHead()?>

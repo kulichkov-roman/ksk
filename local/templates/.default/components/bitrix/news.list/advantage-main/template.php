@@ -27,7 +27,7 @@ $this->setFrameMode(true);
 					<article class="feed__item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 						<figure class="feed__img-h">
 							<a href="/local/templates/images/pic.jpg"
-							   data-header="<?=$arItem['NAME']?>" title="lala"
+							   data-header="<?=$arItem['NAME']?>" title="Какой-то полосатый носорог в туманном царстве"
 							   rel="fancybox-feed" class="feed__img-link _fancybox">
 								<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="" class="feed__img">
 							</a>

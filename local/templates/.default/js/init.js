@@ -77,6 +77,10 @@ $(function () {
         nextEffect		: 'none',
         // closeBtn		: false,
         helpers		: {
+            thumbs: {
+                width: 120,
+                height: 100
+            },
             title	: { type : 'inside' },
             buttons	: {}
         },
