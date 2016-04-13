@@ -32,7 +32,7 @@ itc\Resizer::addPreset('sliderMain', array(
 	)
 );
 
-itc\Resizer::addPreset('advantageMain', array(
+itc\Resizer::addPreset('advantageMainPreview', array(
 		'mode' => 'crop',
 		'width' => '554',
 		'height' => '354',
