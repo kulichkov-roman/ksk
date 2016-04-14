@@ -92,5 +92,9 @@ $(function () {
         }
     });
 
+    $('.feed__photos-btn').click(function () {
+        $('.feed__img-link').first().click();
+    })
+
     // $el.data('header')
 })
