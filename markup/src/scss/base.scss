@@ -48,10 +48,11 @@ html {
 }
 
 body {
-    background: #e0d4af url('../images/bg.jpg') center 520px;
+    background: #e0d4af url('../images/bg.jpg') center 380px;
     color: #3c3c3c;
     margin: 0;
 	font-family: $ff-regular;
+	min-width: 1280px;
 }
 
 

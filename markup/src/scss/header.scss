@@ -9,13 +9,19 @@
 
 
 .header-slider {
-    height: 584px;
+    // height: 584px;
+    padding-bottom: 30%;
     position: relative;
     z-index: 10;
 
     &__list {
-        height: 100%;
-        position: relative;
+        // height: 100%;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
     }
 
     &__item {

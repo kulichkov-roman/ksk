@@ -40,10 +40,11 @@ html {
   line-height: 20px; }
 
 body {
-  background: #e0d4af url("../images/bg.jpg") center 520px;
+  background: #e0d4af url("../images/bg.jpg") center 380px;
   color: #3c3c3c;
   margin: 0;
-  font-family: "Open Sans", Arial, sans-serif; }
+  font-family: "Open Sans", Arial, sans-serif;
+  min-width: 1280px; }
 
 /* =============================================================================
    Links
@@ -235,12 +236,16 @@ address {
     margin: 0 auto; }
 
 .header-slider {
-  height: 584px;
+  padding-bottom: 30%;
   position: relative;
   z-index: 10; }
   .header-slider__list {
-    height: 100%;
-    position: relative; }
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0; }
   .header-slider__item {
     transition: opacity 1s ease;
     opacity: 0;
