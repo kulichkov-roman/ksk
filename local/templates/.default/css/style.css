@@ -40,7 +40,8 @@ html {
   line-height: 20px; }
 
 body {
-  background: #e0d4af url("../images/bg.jpg") center 380px;
+  background: #e2d3ac url("../images/bg.jpg") center -28% no-repeat;
+  background-size: cover;
   color: #3c3c3c;
   margin: 0;
   font-family: "Open Sans", Arial, sans-serif;
