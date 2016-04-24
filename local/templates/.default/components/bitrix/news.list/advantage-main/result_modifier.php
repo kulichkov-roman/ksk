@@ -60,7 +60,7 @@ else
     foreach($arResult['ITEMS'] as &$arItem)
     {
         $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('advantageMainPlugId'), 'advantageMainPreview');
-        $arItem['PREVIEW_PICTURE']['SRC'] = itc\Resizer::get($environment->get('advantageMainPlugId'), 'rewardsMainDetail');
+        $arItem['DETAIL_PICTURE']['SRC'] = itc\Resizer::get($environment->get('advantageMainPlugId'), 'rewardsMainDetail');
     }
     unset($arItem);
 }
