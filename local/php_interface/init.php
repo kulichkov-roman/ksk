@@ -1,10 +1,10 @@
 <?php
-require_once 'vendor/QuetzalTools/bootstrap.php';
+require_once 'vendor/YourTools/bootstrap.php';
 require_once 'classes/AutoLoader.php';
 
-\spl_autoload_register('\Momentum\AutoLoader::autoLoad');
+\spl_autoload_register('\KSK\AutoLoader::autoLoad');
 
-$environment = \Quetzal\Environment\EnvironmentManager::getInstance();
+$environment = \Your\Environment\EnvironmentManager::getInstance();
 
 foreach ($environment->getConfigFileNames() as $fileName) {
 	$fileName = sprintf('%s/config/%s.php', __DIR__, $fileName);

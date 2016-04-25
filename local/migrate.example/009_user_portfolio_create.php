@@ -32,13 +32,13 @@ if (!CModule::IncludeModule('iblock')) {
 class CreatePortfolioIblock implements MigrationInterface
 {
 	/**
-	 * @var \Quetzal\Tools\LoggerInterface
+	 * @var \Your\Tools\LoggerInterface
 	 */
 	private $logger;
 
 	public function __construct()
 	{
-		$this->logger = new \Quetzal\Tools\Logger\EchoLogger();
+		$this->logger = new \Your\Tools\Logger\EchoLogger();
 	}
 
 	/**
@@ -80,7 +80,7 @@ class CreatePortfolioIblock implements MigrationInterface
 	 */
 	public function down()
 	{
-		throw new \Quetzal\Exception\Common\NotImplementedException('Method "down" was not implement');
+		throw new \Your\Exception\Common\NotImplementedException('Method "down" was not implement');
 	}
 }
 
@@ -88,7 +88,7 @@ $migrationIblockCreate = new CreatePortfolioIblock();
 
 try {
 	$migrationIblockCreate->up();
-} catch (\Quetzal\Exception\Data\Migration\MigrationException $e) {
+} catch (\Your\Exception\Data\Migration\MigrationException $e) {
 	echo sprintf('Error of migration apply: "%s"', $e->getMessage()) . PHP_EOL;
 }
 

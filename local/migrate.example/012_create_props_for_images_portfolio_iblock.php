@@ -24,7 +24,7 @@ if (!CModule::IncludeModule('iblock')) {
 	die('Unable to include "iblock" module');
 }
 
-class CreatePropsForPortfolioIblock extends \Quetzal\Tools\Data\Migration\Bitrix\AbstractIBlockPropertyMigration
+class CreatePropsForPortfolioIblock extends \Your\Tools\Data\Migration\Bitrix\AbstractIBlockPropertyMigration
 {
 	/**
 	 * @var array
@@ -34,7 +34,7 @@ class CreatePropsForPortfolioIblock extends \Quetzal\Tools\Data\Migration\Bitrix
 
 	public function __construct()
 	{
-		$iBlockId = \Quetzal\Environment\EnvironmentManager::getInstance()->get('imagesworkIblockId');
+		$iBlockId = \Your\Environment\EnvironmentManager::getInstance()->get('imagesworkIblockId');
 
 		parent::__construct($iBlockId);
 
@@ -87,7 +87,7 @@ class CreatePropsForPortfolioIblock extends \Quetzal\Tools\Data\Migration\Bitrix
 	 */
 	public function down()
 	{
-		throw new \Quetzal\Exception\Common\NotImplementedException('Method "down" was not implement');
+		throw new \Your\Exception\Common\NotImplementedException('Method "down" was not implement');
 	}
 }
 
@@ -95,6 +95,6 @@ $migration = new CreatePropsForPortfolioIblock();
 
 try {
 	$migration->up();
-} catch (\Quetzal\Exception\Data\Migration\MigrationException $e) {
+} catch (\Your\Exception\Data\Migration\MigrationException $e) {
 	echo sprintf('Error of migration apply: "%s"', $e->getMessage()) . PHP_EOL;
 }

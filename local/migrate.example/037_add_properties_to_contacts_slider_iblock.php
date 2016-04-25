@@ -42,7 +42,7 @@ class AddPropertiesToSMSPromoRequestsIBlockMigration extends AbstractIBlockPrope
 	 */
 	public function up()
 	{
-		$logger = new \Quetzal\Tools\Logger\EchoLogger();
+		$logger = new \Your\Tools\Logger\EchoLogger();
 
 		try {
 			$this->createStringProperty(
@@ -58,17 +58,17 @@ class AddPropertiesToSMSPromoRequestsIBlockMigration extends AbstractIBlockPrope
 			);
 
 			$logger->log('Properties have been created successfully');
-		} catch (\Quetzal\Exception\Data\Migration\MigrationException $exception) {
+		} catch (\Your\Exception\Data\Migration\MigrationException $exception) {
 			$logger->log(sprintf('ERROR: %s', $exception->getMessage()));
 		}
 	}
 
 	/**
-	 * @throws \Quetzal\Exception\Common\NotImplementedException
+	 * @throws \Your\Exception\Common\NotImplementedException
 	 */
 	public function down()
 	{
-		throw new \Quetzal\Exception\Common\NotImplementedException('Method down was not implemented');
+		throw new \Your\Exception\Common\NotImplementedException('Method down was not implemented');
 	}
 }
 

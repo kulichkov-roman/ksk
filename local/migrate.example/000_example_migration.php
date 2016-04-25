@@ -1,6 +1,6 @@
 <?php
 
-class ExampleMigration extends \Quetzal\Tools\Data\Migration\Bitrix\AbstractIBlockMigration
+class ExampleMigration extends \Your\Tools\Data\Migration\Bitrix\AbstractIBlockMigration
 {
 	/**
 	 * Применяет миграцию

@@ -2,7 +2,7 @@
 /**
  * Обновляет список правил начисления рейтинга
  */
-use Quetzal\Tools\Data\Migration\Common\MigrationInterface;
+use Your\Tools\Data\Migration\Common\MigrationInterface;
 
 define('BX_BUFFER_USED', true);
 define('NO_KEEP_STATISTIC', true);
@@ -37,14 +37,14 @@ class UpdateRatingDescriptionsList implements MigrationInterface
 	protected $iblockId;
 
 	/**
-	 * @var \Quetzal\Tools\LoggerInterface
+	 * @var \Your\Tools\LoggerInterface
 	 */
 	private $logger;
 
 	public function __construct()
 	{
-		$this->iblockId = \Quetzal\Environment\EnvironmentManager::getInstance()->get('ratingDescriptionIBlockId');
-		$this->logger = new \Quetzal\Tools\Logger\EchoLogger();
+		$this->iblockId = \Your\Environment\EnvironmentManager::getInstance()->get('ratingDescriptionIBlockId');
+		$this->logger = new \Your\Tools\Logger\EchoLogger();
 	}
 
 	/**
@@ -52,7 +52,7 @@ class UpdateRatingDescriptionsList implements MigrationInterface
 	 */
 	public function up()
 	{
-		$manager = \Quetzal\Data\Bitrix\IBlockElementManager::getInstance();
+		$manager = \Your\Data\Bitrix\IBlockElementManager::getInstance();
 
 		// Deactivate "Создать альбом"
 		$manager->update(9598, array('ACTIVE' => 'N'));
@@ -101,7 +101,7 @@ class UpdateRatingDescriptionsList implements MigrationInterface
 	 */
 	public function down()
 	{
-		throw new \Quetzal\Exception\Common\NotImplementedException('Method "down" was not implement');
+		throw new \Your\Exception\Common\NotImplementedException('Method "down" was not implement');
 	}
 }
 
@@ -109,6 +109,6 @@ $migration = new UpdateRatingDescriptionsList();
 
 try {
 	$migration->up();
-} catch (\Quetzal\Exception\Data\Migration\MigrationException $e) {
+} catch (\Your\Exception\Data\Migration\MigrationException $e) {
 	echo sprintf('Error of migration apply: "%s"', $e->getMessage()) . PHP_EOL;
 }

@@ -24,7 +24,7 @@ if (!CModule::IncludeModule('iblock')) {
 	die('Unable to include "iblock" module');
 }
 
-class CreateEntityIdPropertyForRatingHistory extends \Quetzal\Tools\Data\Migration\Bitrix\AbstractIBlockPropertyMigration
+class CreateEntityIdPropertyForRatingHistory extends \Your\Tools\Data\Migration\Bitrix\AbstractIBlockPropertyMigration
 {
 	/**
 	 * @var array
@@ -33,7 +33,7 @@ class CreateEntityIdPropertyForRatingHistory extends \Quetzal\Tools\Data\Migrati
 
 	public function __construct()
 	{
-		$iBlockId = \Quetzal\Environment\EnvironmentManager::getInstance()->get('ratingHistoryIBlockId');
+		$iBlockId = \Your\Environment\EnvironmentManager::getInstance()->get('ratingHistoryIBlockId');
 
 		parent::__construct($iBlockId);
 
@@ -67,7 +67,7 @@ class CreateEntityIdPropertyForRatingHistory extends \Quetzal\Tools\Data\Migrati
 	 */
 	public function down()
 	{
-		throw new \Quetzal\Exception\Common\NotImplementedException('Method "down" was not implement');
+		throw new \Your\Exception\Common\NotImplementedException('Method "down" was not implement');
 	}
 }
 
@@ -75,6 +75,6 @@ $migration = new CreateEntityIdPropertyForRatingHistory();
 
 try {
 	$migration->up();
-} catch (\Quetzal\Exception\Data\Migration\MigrationException $e) {
+} catch (\Your\Exception\Data\Migration\MigrationException $e) {
 	echo sprintf('Error of migration apply: "%s"', $e->getMessage()) . PHP_EOL;
 }

@@ -25,7 +25,7 @@ if (!CModule::IncludeModule('iblock')) {
 	die('Unable to include "iblock" module');
 }
 
-$environmentManager = \Quetzal\Environment\EnvironmentManager::getInstance();
+$environmentManager = \Your\Environment\EnvironmentManager::getInstance();
 $rehauWorks = $environmentManager->get('rehauPortfolioIBlockId');
 $userWorks = $environmentManager->get('examplePortfolioIBlockId');
 $portfolioIblockId = $environmentManager->get('portfolioIblockId');

@@ -41,7 +41,7 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
 	 */
 	public function up()
 	{
-		$logger = new \Quetzal\Tools\Logger\EchoLogger();
+		$logger = new \Your\Tools\Logger\EchoLogger();
 
 		try {
 			$this->createIBlock(
@@ -66,7 +66,7 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
 			$logger->log(
 				sprintf('IBlock has been created. Id: "%s". Add to "feedbackIBlockId"', $this->iblockId)
 			);
-		} catch (\Quetzal\Exception\Data\Migration\MigrationException $exception) {
+		} catch (\Your\Exception\Data\Migration\MigrationException $exception) {
 			$logger->log(sprintf('ERROR: %s', $exception->getMessage()));
 		}
 	}
@@ -76,7 +76,7 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
 	 */
 	public function down()
 	{
-		$logger = new \Quetzal\Tools\Logger\EchoLogger();
+		$logger = new \Your\Tools\Logger\EchoLogger();
 
 		$this->deleteIBlock($environment->get('feedbackIBlockId'));
 

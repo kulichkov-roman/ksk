@@ -26,7 +26,7 @@ ini_set('display_errors', 1);
 
 require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php';
 
-$logger = new \Quetzal\Tools\Logger\EchoLogger();
+$logger = new \Your\Tools\Logger\EchoLogger();
 
 $eventType = new CEventType;
 $eventId = $eventType->Add(

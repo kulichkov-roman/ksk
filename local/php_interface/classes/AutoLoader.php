@@ -1,19 +1,19 @@
 <?php
 
-namespace Momentum;
+namespace KSK;
 
 /**
- * Автозагрузчик для пространства Momentum
+ * Автозагрузчик для пространства Your
  *
  * Class AutoLoader
  *
- * @author Grigory Bychek <gbychek@gmail.com>
+ * @author Roman Kulichkov <roman@kulichkov.pro>
  *
- * @package Momentum
+ * @package Your
  */
 class AutoLoader
 {
-	const PROJECT_NAMESPACE = 'Momentum';
+	const PROJECT_NAMESPACE = 'KSK';
 
 	static private $recursiveSearch = true;
 

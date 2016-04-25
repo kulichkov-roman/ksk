@@ -37,14 +37,14 @@ class CreateNewEventForRating implements MigrationInterface
 	protected $iblockId;
 
 	/**
-	 * @var \Quetzal\Tools\LoggerInterface
+	 * @var \Your\Tools\LoggerInterface
 	 */
 	private $logger;
 
 	public function __construct()
 	{
-		$this->iblockId = \Quetzal\Environment\EnvironmentManager::getInstance()->get('ratingDescriptionIBlockId');
-		$this->logger = new \Quetzal\Tools\Logger\EchoLogger();
+		$this->iblockId = \Your\Environment\EnvironmentManager::getInstance()->get('ratingDescriptionIBlockId');
+		$this->logger = new \Your\Tools\Logger\EchoLogger();
 	}
 
 	/**
@@ -52,7 +52,7 @@ class CreateNewEventForRating implements MigrationInterface
 	 */
 	public function up()
 	{
-		$manager = \Quetzal\Data\Bitrix\IBlockElementManager::getInstance();
+		$manager = \Your\Data\Bitrix\IBlockElementManager::getInstance();
 
 		// Add a new items
 		$items = array(
@@ -80,7 +80,7 @@ class CreateNewEventForRating implements MigrationInterface
 	 */
 	public function down()
 	{
-		throw new \Quetzal\Exception\Common\NotImplementedException('Method "down" was not implement');
+		throw new \Your\Exception\Common\NotImplementedException('Method "down" was not implement');
 	}
 }
 
@@ -88,6 +88,6 @@ $migration = new CreateNewEventForRating();
 
 try {
 	$migration->up();
-} catch (\Quetzal\Exception\Data\Migration\MigrationException $e) {
+} catch (\Your\Exception\Data\Migration\MigrationException $e) {
 	echo sprintf('Error of migration apply: "%s"', $e->getMessage()) . PHP_EOL;
 }

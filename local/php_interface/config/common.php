@@ -2,8 +2,8 @@
 /**
  * Общая конфигурация для всех сайтов и окружений
  */
-\Quetzal\Environment\EnvironmentManager::getInstance()->addConfig(
-	new \Quetzal\Environment\Configuration\CommonConfiguration(
+\Your\Environment\EnvironmentManager::getInstance()->addConfig(
+	new \Your\Environment\Configuration\CommonConfiguration(
 		array(
 			'sliderMainIBlockId' => 1,
 			'sliderMainPlugId' => 5,

@@ -2,7 +2,7 @@
 /**
  * Обновляет правило начисления рейтинга за портфолио
  */
-use Quetzal\Tools\Data\Migration\Common\MigrationInterface;
+use \Your\Tools\Data\Migration\Common\MigrationInterface;
 
 define('BX_BUFFER_USED', true);
 define('NO_KEEP_STATISTIC', true);
@@ -37,14 +37,14 @@ class UpdatePortfolioRatingDescriptions implements MigrationInterface
 	protected $iblockId;
 
 	/**
-	 * @var \Quetzal\Tools\LoggerInterface
+	 * @var \Your\Tools\LoggerInterface
 	 */
 	private $logger;
 
 	public function __construct()
 	{
-		$this->iblockId = \Quetzal\Environment\EnvironmentManager::getInstance()->get('ratingDescriptionIBlockId');
-		$this->logger = new \Quetzal\Tools\Logger\EchoLogger();
+		$this->iblockId = \Your\Environment\EnvironmentManager::getInstance()->get('ratingDescriptionIBlockId');
+		$this->logger = new \Your\Tools\Logger\EchoLogger();
 	}
 
 	/**
@@ -54,7 +54,7 @@ class UpdatePortfolioRatingDescriptions implements MigrationInterface
 	{
 		CIBlockElement::SetPropertyValuesEx(
 			3345,
-			\Quetzal\Environment\EnvironmentManager::getInstance()->get('ratingDescriptionIBlockId'),
+			\Your\Environment\EnvironmentManager::getInstance()->get('ratingDescriptionIBlockId'),
 			array(
 				'VAL'     => 1,
 				'IS_ONCE' => '',
@@ -67,7 +67,7 @@ class UpdatePortfolioRatingDescriptions implements MigrationInterface
 	 */
 	public function down()
 	{
-		throw new \Quetzal\Exception\Common\NotImplementedException('Method "down" was not implement');
+		throw new \Your\Exception\Common\NotImplementedException('Method "down" was not implement');
 	}
 }
 
@@ -77,6 +77,6 @@ try {
 	$migration->up();
 
 	echo 'OK' . PHP_EOL;
-} catch (\Quetzal\Exception\Data\Migration\MigrationException $e) {
+} catch (\Your\Exception\Data\Migration\MigrationException $e) {
 	echo sprintf('Error of migration apply: "%s"', $e->getMessage()) . PHP_EOL;
 }

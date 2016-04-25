@@ -1,7 +1,7 @@
 <?if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true)die();?>
 
 <?
-$environment = \Quetzal\Environment\EnvironmentManager::getInstance();
+$environment = \Your\Environment\EnvironmentManager::getInstance();
 
 $arIds = array();
 foreach($arResult['ITEMS'] as &$arItem)
