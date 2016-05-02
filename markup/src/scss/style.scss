@@ -1,8 +1,11 @@
+@function get-width($width) {
+	@return ($width / 16.5) + vw;
+}
+
 @mixin content() {
-	max-width: 1200px;
-	min-width: 1200px;
+	width: get-width(1200);
 	// min-width: 1130px;
-	padding: 0 40px;
+	padding: 0 get-width(40);
 	margin: 0 auto;
 }
 

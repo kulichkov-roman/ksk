@@ -1,5 +1,6 @@
 .header {
     position: relative;
+    z-index: 30;
 
     &__inner {
         @include content;
@@ -60,7 +61,7 @@
     &:after {
         content: '';
         position: absolute;
-        height: 15px;
+        height: get-width(15);
         left: 0;
         right: 0;
         bottom: 0;
@@ -75,11 +76,11 @@
 
     &__box {
         position: relative;
-        border-radius: 7px 7px 0 0;
-        width: 445px;
-        height: 225px;
+        border-radius: get-width(7) get-width(7) 0 0;
+        width: get-width(445);
+        height: get-width(225);
         background: rgba(0,0,0,0.5);
-        margin-bottom: 15px;
+        margin-bottom: get-width(15);
         box-sizing: border-box;
         color: #fff;
         text-align: center;
@@ -99,18 +100,18 @@
 
     &__title {
         position: relative;
-        font-size: 26px;
-        line-height: 76px;
+        font-size: get-width(26);
+        line-height: get-width(76);
         font-weight: bold;
-        height: 76px;
-        padding: 0 15px;
+        height: get-width(76);
+        padding: 0 get-width(15);
 
         &:after {
             position: absolute;
             content: '';
             height: 1px;
             background: rgba(255,255,255,0.5);
-            width: 210px;
+            width: get-width(210);
             left: 0;
             right: 0;
             bottom: -1px;
@@ -119,15 +120,15 @@
     }
 
     &__text {
-        font-size: 15px;
-        line-height: 30px;
-        padding: 20px 15px 0;
+        font-size: get-width(15);
+        line-height: get-width(30);
+        padding: get-width(20) get-width(15) 0;
     }
 
 
     &__nav {
         position: absolute;
-        bottom: 22px;
+        bottom: get-width(22);
         left: 0;
         right: 0;
         text-align: center;
@@ -137,8 +138,8 @@
         vertical-align: top;
         border: 1px solid #fff;
         border-radius: 50%;
-        height: 18px;
-        width: 18px;
+        height: get-width(18);
+        width: get-width(18);
         box-sizing: border-box;
 
         &._active {
@@ -146,7 +147,7 @@
         }
 
         & + & {
-            margin-left: 10px;
+            margin-left: get-width(10);
         }
     }
 }

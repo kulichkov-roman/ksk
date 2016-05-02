@@ -39,7 +39,7 @@
         @include middler;
         text-decoration: none;
         display: block;
-        height: 87px;
+        height: get-width(87);
         box-sizing: border-box;
         color: #1e1e1e;
         background: rgba(255,255,255,0.5);
@@ -59,7 +59,8 @@
     }
 
     &__text {
-        font-size: 24px;
+        // font-size: 24px;
+        font-size: get-width(24);
         vertical-align: middle;
         font-weight: 300;
     }

@@ -5,6 +5,8 @@
     padding-top: 155px;
     box-sizing: border-box;
     background: url('../images/bg-footer.jpg') center bottom;
+    position: relative;
+    z-index: 10;
 
     &__inner {
         @include content;

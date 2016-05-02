@@ -1,5 +1,9 @@
 .rewards {
     margin-top: 130px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    background: #fff;
+    position: relative;
+    z-index: 20;
 
     &__inner {
         position: relative;
@@ -7,15 +11,16 @@
     }
 
     &__substrate {
-        z-index: 100;
-        position: absolute;
-        width: 1960px;
-        left: -340px;
-        top: 0;
-        bottom: 0px;
-        background: #fff;
-        border-radius: 7px;
-        box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        display: none;
+        // z-index: 100;
+        // position: absolute;
+        // width: 1960px;
+        // left: -340px;
+        // top: 0;
+        // bottom: 0px;
+        // background: #fff;
+        // border-radius: 7px;
+        // box-shadow: 0 5px 12px rgba(0,0,0,0.2);
     }
 
     &__content {
