@@ -1,6 +1,4 @@
 .content {
-    position: relative;
-    z-index: 40;
 
     &__inner {
         position: relative;
@@ -10,57 +8,56 @@
     &__substrate {
         z-index: 100;
         position: absolute;
-        width: get-width(1125);
-        right: get-width(-330);
-        top: get-width(15);
+        width: 1125px;
+        right: -330px;
+        top: 15px;
         bottom: 0px;
         background: #f0eed5 url('../images/bg-substrate.jpg') bottom no-repeat;
-        border-radius: get-width(7);
-        box-shadow: 0 get-width(5) get-width(12) rgba(0,0,0,0.2);
+        border-radius: 7px;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.2);
     }
 
     &__content {
         position: relative;
         z-index: 200;
-        padding-top: get-width(80);
+        padding-top: 80px;
     }
 
     &__tab {
         background: #f0eed5;
         text-align: center;
-        padding: 0 get-width(80) 0 get-width(74);
-        height: get-width(96);
-        border-radius: get-width(7);
+        padding: 0 80px 0 74px;
+        height: 96px;
+        border-radius: 7px;
         position: absolute;
         right: 0px;
-        top: get-width(-37);
+        top: -37px;
         @include middler;
 
         &:before {
             content: '';
-            width: get-width(29);
-            height: get-width(29);
-            margin-right: get-width(22);
+            width: 29px;
+            height: 29px;
+            margin-right: 22px;
             display: inline-block;
             vertical-align: middle;
-            background: url('../images/icon-info.png');
-            background-size: cover;
+            background: url('../images/icon-info.png')
         }
     }
 
     &__tab-text {
         vertical-align: middle;
         color: #8b8b8b;
-        font-size: get-width(26);
-        line-height: get-width(28);
+        font-size: 26px;
+        line-height: 28px;
         font-weight: bold;
     }
 
     &__title {
-        margin-left: get-width(516);
-        font-size: get-width(39);
-        line-height: get-width(45);
-        margin-bottom: get-width(24);
+        margin-left: 516px;
+        font-size: 39px;
+        line-height: 45px;
+        margin-bottom: 24px;
         font-weight: bold;
         color: #543b2f;
     }

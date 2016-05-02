@@ -56,7 +56,6 @@
 }
 
 @mixin blur() {
-	filter: blur(3px);
-	-webkit-filter: blur(3px);
+	-webkit-filter: blur(1px);
     -webkit-transform: translate3d(0, 0, 0);
 }
