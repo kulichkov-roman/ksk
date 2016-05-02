@@ -28,7 +28,7 @@ itc\Resizer::addPreset('sliderMain', array(
 		'mode' => 'crop',
 		'width' => '1920',
 		'height' => '620',
-		'type' => 'jpg'
+		'type' => 'png'
 	)
 );
 
