@@ -6,8 +6,8 @@
     @include content;
     padding: 0;
     z-index: 100;
-    border-bottom: 3px solid rgba(0,0,0,0.2);
-    border-radius: 0 0 7px 7px;
+    border-bottom: get-width(3) solid rgba(0,0,0,0.2);
+    border-radius: 0 0 get-width(7) get-width(7);
 
     &__list {
         @include cf;
@@ -39,7 +39,7 @@
         @include middler;
         text-decoration: none;
         display: block;
-        height: 87px;
+        height: get-width(87);
         box-sizing: border-box;
         color: #1e1e1e;
         background: rgba(255,255,255,0.5);
@@ -50,16 +50,17 @@
         }
 
         .menu__item:first-child & {
-            border-radius: 0 0 0 7px;
+            border-radius: 0 0 0 get-width(7);
         }
 
         .menu__item:last-child & {
-            border-radius: 0 0 7px 0;
+            border-radius: 0 0 get-width(7) 0;
         }
     }
 
     &__text {
-        font-size: 24px;
+        // font-size: 24px;
+        font-size: get-width(24);
         vertical-align: middle;
         font-weight: 300;
     }

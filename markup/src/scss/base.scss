@@ -43,15 +43,17 @@ html {
 	-ms-text-size-adjust: 100%;
 	height: 100%;
     font-family: $ff-regular;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: get-width(14);
+    line-height: get-width(20);
 }
 
 body {
-    background: #e0d4af url('../images/bg.jpg') center 520px;
+    background: #e2d3ac url('../images/bg.jpg') center get-width(400) no-repeat;
+	background-size: cover;
     color: #3c3c3c;
     margin: 0;
 	font-family: $ff-regular;
+	// min-width: 1000px;
 }
 
 

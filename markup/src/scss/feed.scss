@@ -1,23 +1,23 @@
 .feed {
     position: relative;
-    padding-bottom: 55px;
+    padding-bottom: get-width(55);
 
     &__item {
         position: relative;
 
         & + & {
-            margin-top: 16px;
+            margin-top: get-width(16);
         }
     }
 
     &__img-h {
-        margin-left: -10px;
+        margin-left: get-width(-10);
         background: #fff;
-        border-radius: 7px;
-        box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-        padding: 10px;
-        width: 554px;
-        height: 354px;
+        border-radius: get-width(7);
+        box-shadow: get-width(2) get-width(2) get-width(8) rgba(0,0,0,0.2);
+        padding: get-width(10);
+        width: get-width(554);
+        height: get-width(354);
     }
 
     &__img-link {
@@ -25,48 +25,53 @@
     }
 
     &__img {
-        max-width: 100%;
+        width: 100%;
     }
 
     &__content {
         position: absolute;
         right: 0px;
-        height: 294px;
-        width: 724px;
-        top: 40px;
+        height: get-width(294);
+        width: get-width(724);
+        top: get-width(40);
         box-sizing: border-box;
-        padding: 32px 42px 20px;
+        padding: get-width(32) get-width(42) get-width(20);
         background: rgba(255,255,255,0.7);
 
         &._bg-0 {
             background: url('../images/content-bg-0.png') no-repeat;
+            background-size: 100%;
         }
 
         &._bg-1 {
             background: url('../images/content-bg-1.png') no-repeat;
+            background-size: 100%;
         }
 
         &._bg-2 {
             background: url('../images/content-bg-2.png') no-repeat;
+            background-size: 100%;
         }
 
         &._bg-3 {
             background: url('../images/content-bg-3.png') no-repeat;
+            background-size: 100%;
         }
 
         &._bg-4 {
             background: url('../images/content-bg-4.png') no-repeat;
+            background-size: 100%;
         }
     }
 
     &__title {
         position: relative;
-        font-size: 24px;
-        line-height: 28px;
+        font-size: get-width(24);
+        line-height: get-width(28);
         color: #505050;
         font-weight: bold;
-        padding-bottom: 30px;
-        margin-bottom: 24px;
+        padding-bottom: get-width(30);
+        margin-bottom: get-width(24);
 
         &:after {
             position: absolute;
@@ -76,28 +81,29 @@
             left: 0;
             right: 0;
             background: url('../images/line.png') no-repeat left;
+            background-size: 100%;
         }
     }
 
     &__text {
         color: #646464;
-        font-size: 15px;
-        line-height: 30px;
+        font-size: get-width(15);
+        line-height: get-width(30);
     }
 
     &__photos-btn {
         background: rgba(#891b16, 0.85);
         font-weight: 300;
-        font-size: 24px;
-        line-height: 56px;
+        font-size: get-width(24);
+        line-height: get-width(56);
         box-sizing: border-box;
         color: #fff;
-        height: 58px;
-        border-radius: 5px;
-        padding: 0 38px 3px 85px;
+        height: get-width(58);
+        border-radius: get-width(5);
+        padding: 0 get-width(38) get-width(3) get-width(85);
         position: absolute;
         z-index: 100;
-        bottom: -30px;
+        bottom: get-width(-30);
         left: 0;
 
 
@@ -106,11 +112,12 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            left: 28px;
+            left: get-width(28);
             margin: auto 0;
-            width: 38px;
-            height: 33px;
+            width: get-width(38);
+            height: get-width(33);
             background: url('../images/icon-photos.png');
+            background-size: 100%;
         }
     }
 }

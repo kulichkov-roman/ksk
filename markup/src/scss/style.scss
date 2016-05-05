@@ -1,8 +1,11 @@
+@function get-width($width) {
+	@return ($width / 16.5) + vw;
+}
+
 @mixin content() {
-	max-width: 1200px;
-	min-width: 1200px;
+	width: get-width(1200);
 	// min-width: 1130px;
-	padding: 0 40px;
+	padding: 0 get-width(40);
 	margin: 0 auto;
 }
 
@@ -38,4 +41,53 @@ $ff-tech: 'Roboto', Tahoma, sans-serif;
 	line-height: 20px;
 	font-family: $ff-tech;
 	color: #505050;
+	padding-top: 20px;
+}
+
+body {
+	.fancybox-close {
+		background: url('../images/icon-cross.png') center no-repeat;
+		top: 8px;
+	    right: 3px;
+	    width: 36px;
+	    height: 36px;
+	}
+
+	.fancybox-nav span {
+		visibility: visible;
+		width: 38px;
+		height: 56px;
+	}
+
+	.fancybox-prev {
+	    left: -90px;
+
+		span {
+			background: url('../images/icon-gallery-prev.png');
+		}
+	}
+
+	.fancybox-next {
+	    right: -90px;
+
+		span {
+			background: url('../images/icon-gallery-next.png');
+		}
+	}
+}
+
+#fancybox-thumbs ul li {
+	padding: 4px;
+
+	&.active {
+		padding: 3px;
+	}
+
+	a {
+		border: 0
+	}
+}
+
+.fancybox-lock .wrapper {
+	@include blur;
 }

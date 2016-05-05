@@ -1,5 +1,9 @@
 .rewards {
     margin-top: 130px;
+    box-shadow: 0 get-width(5) get-width(12) rgba(0,0,0,0.2);
+    background: #fff;
+    position: relative;
+    z-index: 20;
 
     &__inner {
         position: relative;
@@ -7,67 +11,69 @@
     }
 
     &__substrate {
-        z-index: 100;
-        position: absolute;
-        width: 1960px;
-        left: -340px;
-        top: 0;
-        bottom: 0px;
-        background: #fff;
-        border-radius: 7px;
-        box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        display: none;
+        // z-index: 100;
+        // position: absolute;
+        // width: 1960px;
+        // left: -340px;
+        // top: 0;
+        // bottom: 0px;
+        // background: #fff;
+        // border-radius: 7px;
+        // box-shadow: 0 5px 12px rgba(0,0,0,0.2);
     }
 
     &__content {
         position: relative;
         z-index: 200;
-        padding-top: 85px;
-        padding-bottom: 85px;
+        padding-top: get-width(85);
+        padding-bottom: get-width(85);
     }
 
     &__tab {
         background: #fff;
         text-align: center;
-        padding: 0 70px;
-        height: 96px;
-        border-radius: 7px;
+        padding: 0 get-width(70);
+        height: get-width(96);
+        border-radius: get-width(7);
         position: absolute;
         right: 0px;
-        top: -52px;
+        top: get-width(-52);
         @include middler;
 
         &:before {
             content: '';
-            width: 29px;
-            height: 29px;
-            margin-right: 22px;
+            width: get-width(29);
+            height: get-width(29);
+            margin-right: get-width(22);
             display: inline-block;
             vertical-align: middle;
-            background: url('../images/icon-docs.png')
+            background: url('../images/icon-docs.png');
+            background-size: 100%;
         }
     }
 
     &__tab-text {
         vertical-align: middle;
         color: #8b8b8b;
-        font-size: 26px;
-        line-height: 28px;
+        font-size: get-width(26);
+        line-height: get-width(28);
         font-weight: bold;
     }
 
     &__text {
-        font-size: 15px;
-        line-height: 20px;
+        font-size: get-width(15);
+        line-height: get-width(20);
         font-weight: 300;
-        margin-bottom: 32px;
+        margin-bottom: get-width(32);
     }
 }
 
 .rewards-slider {
 
     &__inner {
-        margin-left: -30px;
-        margin-right: -26px;
+        margin-left: get-width(-30);
+        margin-right: get-width(-26);
 
         .slick-prev,
         .slick-next {
@@ -76,21 +82,22 @@
             font-size: 0;
             color: #fff;
             background: #fff;
-            width: 40px;
+            width: get-width(40);
             top: 0;
 
             &:before {
                 content: '';
                 background: url('../images/slider-arrows.png') 0 0;
-                width: 16px;
-                height: 32px;
+                background-size: 100%;
+                width: get-width(16);
+                height: get-width(32);
                 position: absolute;
-                top: 93px;
+                top: get-width(93);
             }
         }
 
         .slick-prev {
-            left: -10px;
+            left: get-width(-10);
 
             &:before {
                 left: 0;
@@ -99,11 +106,11 @@
         }
 
         .slick-next {
-            right: -10px;
+            right: get-width(-10);
 
             &:before {
                 right: 0;
-                background-position: 0 -32px;
+                background-position: 0 get-width(-32);
             }
         }
     }
@@ -117,26 +124,26 @@
     }
 
     &__img {
-        margin-bottom: 15px;
+        margin-bottom: get-width(15);
         display: inline-block !important;
-        max-width: 150px;
+        max-width: get-width(150);
     }
 
     &__title {
         display: block;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: get-width(14);
+        line-height: get-width(18);
         text-transform: uppercase;
         font-weight: 600;
-        width: 150px;
-        margin: 0 auto 12px auto;
+        width: get-width(150);
+        margin: 0 auto get-width(12) auto;
         color: #3c3c3c;
     }
 
     &__text,
     &__date {
-        font-size: 9px;
-        line-height: 18px;
+        font-size: get-width(9);
+        line-height: get-width(18);
         color: #777777;
     }
 
