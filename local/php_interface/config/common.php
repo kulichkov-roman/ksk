@@ -25,9 +25,9 @@
  * Патерны для перерезатора
  */
 itc\Resizer::addPreset('sliderMain', array(
-		'mode' => 'crop',
-		'width' => '1920',
-		'height' => '620',
+		'mode' => 'auto',
+		'width' => '2000',
+		'height' => '568',
 		'type' => 'png'
 	)
 );
