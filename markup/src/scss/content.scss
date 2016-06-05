@@ -15,15 +15,26 @@
         top: get-width(15);
         bottom: 0px;
         background: #f0eed5 url('../images/bg-substrate.jpg') bottom no-repeat;
-        background-size: 100%;
+        background-size: cover;
         border-radius: get-width(7);
         box-shadow: 0 get-width(5) get-width(12) rgba(0,0,0,0.2);
+
+        .content._catalog & {
+            background: #f0eed5 url('../images/bg-substrate_catalog.jpg') left top no-repeat;
+            background-size: cover;
+            width: get-width(1025 + 50);
+            right: get-width(-230);
+        }
     }
 
     &__content {
         position: relative;
         z-index: 200;
-        padding-top: get-width(80);
+        padding-top: get-width(15);
+
+        .content._catalog & {
+            // padding-top: get-width(80);
+        }
     }
 
     &__tab {
@@ -58,12 +69,24 @@
     }
 
     &__title {
+        margin-top: get-width(65);
         margin-left: get-width(516);
+        margin-bottom: get-width(24);
         font-size: get-width(39);
         line-height: get-width(45);
-        margin-bottom: get-width(24);
         font-weight: bold;
         color: #543b2f;
+    }
+
+    &__description {
+        color: #7c7c7c;
+        font-size: get-width(15);
+        line-height: get-width(30);
+        padding-left: get-width(444);
+        margin-top: get-width(45);
+
+        .content._catalog & {
+        }
     }
 
 }

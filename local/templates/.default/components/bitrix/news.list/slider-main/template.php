@@ -32,7 +32,11 @@ $this->setFrameMode(true);
 				<?$first = true;?>
 				<?foreach($arResult["ITEMS"] as $arItem){?>
 					<li class="header-slider-content__box-item <?=$first ? '_active' : '';?>" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-						<h3 class="header-slider-content__title"><?=$arItem['NAME']?></h3>
+						<h3 class="header-slider-content__title">
+							<span class="header-slider-content__title-text">
+								<?=$arItem['NAME']?>
+							</span>
+						</h3>
 						<div class="header-slider-content__text">
 							<?if($arItem['PREVIEW_TEXT']){?>
 								<?=$arItem['PREVIEW_TEXT']?>

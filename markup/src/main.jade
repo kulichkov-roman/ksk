@@ -2,7 +2,7 @@ doctype html
 <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-html 
+html
     <!--<![endif]-->
     head
         include ./includes/head.jade
@@ -13,23 +13,23 @@ html
                 nav.menu
                     ul.menu__list
                         li.menu__item
-                            a.menu__link(href="#") 
+                            a.menu__link(href="#")
                                 span.menu__text Гостевая
                         li.menu__item
-                            a.menu__link(href="#") 
+                            a.menu__link(href="#")
                                 span.menu__text Мясо и Субпродукты
                         li.menu__item
-                            a.menu__link(href="#") 
+                            a.menu__link(href="#")
                                 span.menu__text Полуфабрикаты
                         li.menu__item
-                            a.menu__link(href="#") 
+                            a.menu__link(href="#")
                                 span.menu__text Контакты
                         li.menu__item
-                            a.menu__link(href="#") 
+                            a.menu__link(href="#")
                                 span.menu__text Новости
-                                        
-                                        
-                section.header-slider(data-interval="5000")
+
+
+                section.header-slider(data-interval="0")
                     ul.header-slider__list
                         li.header-slider__item._active(
                             style="background-image: url(images/slide1.png)"
@@ -43,38 +43,40 @@ html
                         li.header-slider__item(
                             style="background-image: url(images/slide2.png)"
                         )
-                        
+
                 section.header-slider-content
                     .header-slider-content__inner
                         .header-slider-content__box
                             ul.header-slider-content__box-list
                                 li.header-slider-content__box-item._active
-                                    h3.header-slider-content__title Современная техника
+                                    h3.header-slider-content__title
+                                        span.header-slider-content__title-text Современная техника
                                     .header-slider-content__text
-                                        | Современная экологчиная техника и оборудование, 
+                                        | Современная экологчиная техника и оборудование,
                                         | соответствующее всем ГОСТ и СНИМ нормативам.
                                 each val in [1, 2, 3]
                                     li.header-slider-content__box-item
-                                        h3.header-slider-content__title Белые утки
+                                        h3.header-slider-content__title
+                                            span.header-slider-content__title-text Белые утки
                                         .header-slider-content__text
-                                            | Современная экологчиная техника и оборудование, 
+                                            | Современная экологчиная техника и оборудование,
                                             | соответствующее всем ГОСТ и СНИМ нормативам.
                             .header-slider-content__nav
                                 button.header-slider-content__nav-btn._active(type="button")
                                 button.header-slider-content__nav-btn(type="button")
                                 button.header-slider-content__nav-btn(type="button")
                                 button.header-slider-content__nav-btn(type="button")
-            
-            
+
+
             section.content
                 .content__inner
                     .content__substrate
                     .content__content
                         .content__tab
                             span.content__tab-text О нас
-                            
+
                         h1.content__title Корниловский свинокомплекс
-                        
+
                         section.feed
                             article.feed__item
                                 figure.feed__img-h
@@ -85,26 +87,10 @@ html
                                         rel="fancybox-feed"
                                     )
                                         img.feed__img(src="images/pic.jpg" alt="")
-                                        
+
                                 .feed__content._bg-0
                                     h2.feed__title Комплекс был построен в 2011 году
-                                    .feed__text 
-                                        | При планировании и проектировании комплекса были учтены все тонкости
-                                        | и подробности разведения свинок - свежный воздух, плодородные почвы,
-                                        | естественные водоёмы и имногое другое.
-                                    
-                            article.feed__item
-                                figure.feed__img-h
-                                    a.feed__img-link._fancybox(
-                                        href="images/pic.jpg"
-                                        data-header="Название слайда"
-                                        title="lala"
-                                        rel="fancybox-feed"
-                                    )
-                                        img.feed__img(src="images/pic.jpg" alt="")    
-                                .feed__content._bg-1
-                                    h2.feed__title Делаем упор на натуральном и полезном
-                                    .feed__text 
+                                    .feed__text
                                         | При планировании и проектировании комплекса были учтены все тонкости
                                         | и подробности разведения свинок - свежный воздух, плодородные почвы,
                                         | естественные водоёмы и имногое другое.
@@ -117,14 +103,30 @@ html
                                         title="lala"
                                         rel="fancybox-feed"
                                     )
-                                        img.feed__img(src="images/pic.jpg" alt="")    
+                                        img.feed__img(src="images/pic.jpg" alt="")
+                                .feed__content._bg-1
+                                    h2.feed__title Делаем упор на натуральном и полезном
+                                    .feed__text
+                                        | При планировании и проектировании комплекса были учтены все тонкости
+                                        | и подробности разведения свинок - свежный воздух, плодородные почвы,
+                                        | естественные водоёмы и имногое другое.
+
+                            article.feed__item
+                                figure.feed__img-h
+                                    a.feed__img-link._fancybox(
+                                        href="images/pic.jpg"
+                                        data-header="Название слайда"
+                                        title="lala"
+                                        rel="fancybox-feed"
+                                    )
+                                        img.feed__img(src="images/pic.jpg" alt="")
                                 .feed__content._bg-2
                                     h2.feed__title Современное оборудование
-                                    .feed__text 
+                                    .feed__text
                                         | При планировании и проектировании комплекса были учтены все тонкости
                                         | и подробности разведения свинок - свежный воздух, плодородные почвы,
                                         | естественные водоёмы и имногое другое.
-        
+
                             article.feed__item
                                 figure.feed__img-h
                                     a.feed__img-link._fancybox(
@@ -133,14 +135,14 @@ html
                                         title="lala"
                                         rel="fancybox-feed"
                                     )
-                                        img.feed__img(src="images/pic.jpg" alt="")    
+                                        img.feed__img(src="images/pic.jpg" alt="")
                                 .feed__content._bg-3
                                     h2.feed__title Всё ради получения лучших результатов
-                                    .feed__text 
+                                    .feed__text
                                         | При планировании и проектировании комплекса были учтены все тонкости
                                         | и подробности разведения свинок - свежный воздух, плодородные почвы,
                                         | естественные водоёмы и имногое другое.
-        
+
                             article.feed__item
                                 figure.feed__img-h
                                     a.feed__img-link._fancybox(
@@ -149,29 +151,29 @@ html
                                         title="lala"
                                         rel="fancybox-feed"
                                     )
-                                        img.feed__img(src="images/pic.jpg" alt="")    
+                                        img.feed__img(src="images/pic.jpg" alt="")
                                 .feed__content._bg-4
                                     h2.feed__title Мы ещё и племенное хозяйство
-                                    .feed__text 
+                                    .feed__text
                                         | При планировании и проектировании комплекса были учтены все тонкости
                                         | и подробности разведения свинок - свежный воздух, плодородные почвы,
                                         | естественные водоёмы и имногое другое.
-                        
+
                             button.feed__photos-btn(type="button") Смотреть все фотографии
-        
-        
+
+
             .rewards
                 .rewards__inner
                     .rewards__substrate
                     .rewards__content
-                        
+
                         .rewards__tab
                             span.rewards__tab-text Допуски и Сертификаты
-                        
+
                         .rewards__text
                             | Вся деятельность комплекса сертифицирована и проходит ежегодную проверку
-                            
-                            
+
+
                         .rewards-slider
                             .rewards-slider__inner
                                 each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -186,17 +188,17 @@ html
                                             strong.rewards-slider__title
                                                 if val % 2 == 0
                                                     | Свидетельство<br> о допуске<br> к видам работ
-                                                else 
+                                                else
                                                     | Лицензия МЧС
                                             .rewards-slider__text
                                                 | 0163.05-2012.5405331176-С-060
                                             span.rewards-slider__date
                                                 | от 21 февраля 2012г.
-                                    
-                
-            
-        
-        
+
+
+
+
+
             footer.footer
                 .footer__inner
                     button.footer__up-btn(type="button") Вернуться наверх
@@ -205,31 +207,30 @@ html
                             .footer-phones
                                 dl.footer-phones__row
                                     dt.footer-phones__title Отдел продаж:
-                                    dd.footer-phones__value 
+                                    dd.footer-phones__value
                                         a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
                                 dl.footer-phones__row
                                     dt.footer-phones__title Бухгалтерия:
-                                    dd.footer-phones__value 
+                                    dd.footer-phones__value
                                         a.footer-phones__link(href="tel:88008002020") 8 (930) 800-20-20
                                 dl.footer-phones__row
                                     dt.footer-phones__title Отдел продаж:
-                                    dd.footer-phones__value 
+                                    dd.footer-phones__value
                                         a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
                                 .footer-phones__note
                                     | Звонки принимаем с 10:00 до 19:00 по Москве
-                                    
+
                         .footer-content__col
                             ul.footer-contacts
-                                li.footer-contacts__item._location 
+                                li.footer-contacts__item._location
                                     | Россия, индекс: 93847, Новосибирская область, пос. Название посёлка<br>
                                     | (69 км трассы Новосибирск-Кемерово)
-                                li.footer-contacts__item._email 
+                                li.footer-contacts__item._email
                                     a.footer-contacts__link(href="#") svinki_kompleks@mail.ru
 
-                        
+
                     .footer__copyrights
                         | Права защищены. 2016 г. © ООО «Корниловский Свинокомплекс»
-                    
+
                     .footer__developers
                         a.footer__developers-link(href="#") Сайт разработали
-                        

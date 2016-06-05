@@ -15,6 +15,12 @@
     position: relative;
     z-index: 10;
 
+    &._catalog {
+        background: url('../images/bg-slider_catalog.jpg') center no-repeat;
+        background-size: cover;
+        padding-bottom: 23%;
+    }
+
     &__list {
         // height: 100%;
         position: absolute;
@@ -100,13 +106,9 @@
 
     &__title {
         position: relative;
-        font-size: get-width(26);
-        line-height: get-width(76);
-        font-weight: bold;
-        height: get-width(76);
-        padding: 0 get-width(15);
+        padding: get-width(19.5) get-width(15);
 
-        &:after {
+        &:before {
             position: absolute;
             content: '';
             height: 1px;
@@ -117,6 +119,14 @@
             bottom: -1px;
             margin: 0 auto;
         }
+    }
+
+    &__title-text {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: get-width(38);
+        font-size: get-width(26);
+        font-weight: bold;
     }
 
     &__text {

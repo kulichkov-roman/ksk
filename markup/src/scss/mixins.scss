@@ -60,3 +60,9 @@
 	-webkit-filter: blur(3px);
     -webkit-transform: translate3d(0, 0, 0);
 }
+
+@mixin rotate($deg) {
+    -ms-transform: rotate(#{$deg}deg) translateX(0px) scale(1);
+    -webkit-transform: rotate(#{$deg}deg) translateX(0px) scale(1);
+    transform: rotate(#{$deg}deg) translateX(0px) scale(1);
+}

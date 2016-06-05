@@ -1,0 +1,161 @@
+.catalog {
+    padding-bottom: get-width(50);
+
+    &__title {
+        font-size: get-width(26);
+        line-height: get-width(28);
+        margin-bottom: get-width(40);
+        font-weight: bold;
+        color: #543b2f;
+    }
+
+    &__list {
+        & + & {
+            margin-top: get-width(85);
+        }
+    }
+}
+
+
+
+.catalog-item {
+    @include cf;
+    position: relative;
+    border: get-width(5) solid #fff;
+    width: get-width(770);
+    min-height: get-width(240);
+    margin-left: get-width(-45);
+    border-radius: get-width(7);
+    background: #fff;
+    box-sizing: border-box;
+    padding: get-width(28) get-width(30) get-width(10) get-width(20);
+    box-shadow: get-width(2) get-width(2) get-width(8) rgba(0,0,0,0.2);
+
+    &:hover {
+        border: get-width(5) solid #a62626;
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: get-width(350);
+            height: get-width(180);
+            background: url('../images/pig-part-1.jpg') no-repeat;
+            background-size: cover;
+            right: get-width(-440);
+            top: get-width(30);
+        }
+    }
+
+    & + & {
+        margin-top: get-width(20);
+    }
+
+    &__corner {
+        display: none;
+        position: absolute;
+        width: get-width(20);
+        height: get-width(32);
+        top: get-width(60);
+        right: get-width(-20);
+        overflow: hidden;
+
+        .catalog-item:hover & {
+            display: block;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            border: get-width(5) solid #a62626;
+            background: #fff;
+            position: relative;
+            width: get-width(15);
+            height: get-width(15);
+            left: get-width(-14);
+            top: get-width(3);
+            @include rotate(45);
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__img-h {
+        @include middler;
+        float: left;
+        width: get-width(155);
+        padding-right: get-width(25);
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    &__img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    &__inner {
+    }
+
+    &__title {
+        padding-bottom: get-width(20);
+        margin-bottom: get-width(15);
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            bottom: -1px;
+            left: get-width(157);
+            right: 0;
+            background: url('../images/line.png') no-repeat left;
+            background-size: 100%;
+        }
+    }
+
+    &__title-text {
+        font-size: get-width(24);
+        line-height: get-width(28);
+        font-weight: bold;
+        color: #505050;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &__description {
+        font-size: get-width(15);
+        line-height: get-width(24);
+        color: #646464;
+    }
+}
+
+.catalog-item-info {
+    width: 100%;
+    color: #505050;
+    font-size: get-width(15);
+    line-height: get-width(24);
+    margin-bottom: get-width(5);
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+
+        & + & {
+            margin-left: get-width(25);
+        }
+    }
+
+    &__item-text {
+        font-weight: bold;
+    }
+
+    &__item-value {
+        color: #ae0c0c;
+    }
+
+    &__item-notice {
+        color: #9b9b9b;
+    }
+}

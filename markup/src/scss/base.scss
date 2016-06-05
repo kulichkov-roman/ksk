@@ -54,6 +54,11 @@ body {
     margin: 0;
 	font-family: $ff-regular;
 	// min-width: 1000px;
+
+	&._catalog {
+		background: #ded2ad url('../images/bg_catalog.jpg') center get-width(370) no-repeat;
+		background-size: cover;
+	}
 }
 
 

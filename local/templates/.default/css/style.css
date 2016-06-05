@@ -45,6 +45,9 @@ body {
   color: #3c3c3c;
   margin: 0;
   font-family: "Open Sans", Arial, sans-serif; }
+  body._catalog {
+    background: #ded2ad url("../images/bg_catalog.jpg") center 22.42424vw no-repeat;
+    background-size: cover; }
 
 /* =============================================================================
    Links
@@ -239,6 +242,10 @@ address {
   padding-bottom: 30%;
   position: relative;
   z-index: 10; }
+  .header-slider._catalog {
+    background: url("../images/bg-slider_catalog.jpg") center no-repeat;
+    background-size: cover;
+    padding-bottom: 23%; }
   .header-slider__list {
     position: absolute;
     z-index: 10;
@@ -299,12 +306,8 @@ address {
       display: block; }
   .header-slider-content__title {
     position: relative;
-    font-size: 1.57576vw;
-    line-height: 4.60606vw;
-    font-weight: bold;
-    height: 4.60606vw;
-    padding: 0 0.90909vw; }
-    .header-slider-content__title:after {
+    padding: 1.18182vw 0.90909vw; }
+    .header-slider-content__title:before {
       position: absolute;
       content: '';
       height: 1px;
@@ -314,6 +317,12 @@ address {
       right: 0;
       bottom: -1px;
       margin: 0 auto; }
+  .header-slider-content__title-text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 2.30303vw;
+    font-size: 1.57576vw;
+    font-weight: bold; }
   .header-slider-content__text {
     font-size: 0.90909vw;
     line-height: 1.81818vw;
@@ -370,7 +379,7 @@ address {
     height: 5.27273vw;
     box-sizing: border-box;
     color: #1e1e1e;
-    background: rgba(255, 255, 255, 0.5); }
+    background: rgba(255, 255, 255, 0.75); }
     .menu__link:after {
       content: '';
       display: inline-block;
@@ -378,6 +387,9 @@ address {
       height: 100%; }
     .menu__link:hover {
       background: #a72e2f;
+      color: #fff; }
+    .menu__item._active .menu__link {
+      background: rgba(0, 0, 0, 0.2);
       color: #fff; }
     .menu__item:first-child .menu__link {
       border-radius: 0 0 0 0.42424vw; }
@@ -404,13 +416,18 @@ address {
     top: 0.90909vw;
     bottom: 0px;
     background: #f0eed5 url("../images/bg-substrate.jpg") bottom no-repeat;
-    background-size: 100%;
+    background-size: cover;
     border-radius: 0.42424vw;
     box-shadow: 0 0.30303vw 0.72727vw rgba(0, 0, 0, 0.2); }
+    .content._catalog .content__substrate {
+      background: #f0eed5 url("../images/bg-substrate_catalog.jpg") left top no-repeat;
+      background-size: cover;
+      width: 65.15152vw;
+      right: -13.93939vw; }
   .content__content {
     position: relative;
     z-index: 200;
-    padding-top: 4.84848vw; }
+    padding-top: 0.90909vw; }
   .content__tab {
     background: #f0eed5;
     text-align: center;
@@ -441,12 +458,140 @@ address {
     line-height: 1.69697vw;
     font-weight: bold; }
   .content__title {
+    margin-top: 3.93939vw;
     margin-left: 31.27273vw;
+    margin-bottom: 1.45455vw;
     font-size: 2.36364vw;
     line-height: 2.72727vw;
-    margin-bottom: 1.45455vw;
     font-weight: bold;
     color: #543b2f; }
+  .content__description {
+    color: #7c7c7c;
+    font-size: 0.90909vw;
+    line-height: 1.81818vw;
+    padding-left: 26.90909vw;
+    margin-top: 2.72727vw; }
+
+.catalog {
+  padding-bottom: 3.0303vw; }
+  .catalog__title {
+    font-size: 1.57576vw;
+    line-height: 1.69697vw;
+    margin-bottom: 2.42424vw;
+    font-weight: bold;
+    color: #543b2f; }
+  .catalog__list + .catalog__list {
+    margin-top: 5.15152vw; }
+
+.catalog-item {
+  position: relative;
+  border: 0.30303vw solid #fff;
+  width: 46.66667vw;
+  min-height: 14.54545vw;
+  margin-left: -2.72727vw;
+  border-radius: 0.42424vw;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 1.69697vw 1.81818vw 0.60606vw 1.21212vw;
+  box-shadow: 0.12121vw 0.12121vw 0.48485vw rgba(0, 0, 0, 0.2); }
+  .catalog-item:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .catalog-item:hover {
+    border: 0.30303vw solid #a62626; }
+    .catalog-item:hover:before {
+      position: absolute;
+      content: '';
+      width: 21.21212vw;
+      height: 10.90909vw;
+      background: url("../images/pig-part-1.jpg") no-repeat;
+      background-size: cover;
+      right: -26.66667vw;
+      top: 1.81818vw; }
+  .catalog-item + .catalog-item {
+    margin-top: 1.21212vw; }
+  .catalog-item__corner {
+    display: none;
+    position: absolute;
+    width: 1.21212vw;
+    height: 1.93939vw;
+    top: 3.63636vw;
+    right: -1.21212vw;
+    overflow: hidden; }
+    .catalog-item:hover .catalog-item__corner {
+      display: block; }
+    .catalog-item__corner:before {
+      content: '';
+      display: block;
+      border: 0.30303vw solid #a62626;
+      background: #fff;
+      position: relative;
+      width: 0.90909vw;
+      height: 0.90909vw;
+      left: -0.84848vw;
+      top: 0.18182vw;
+      -ms-transform: rotate(45deg) translateX(0px) scale(1);
+      -webkit-transform: rotate(45deg) translateX(0px) scale(1);
+      transform: rotate(45deg) translateX(0px) scale(1); }
+  .catalog-item__link {
+    text-decoration: none; }
+  .catalog-item__img-h {
+    float: left;
+    width: 9.39394vw;
+    padding-right: 1.51515vw;
+    box-sizing: border-box;
+    text-align: center; }
+    .catalog-item__img-h:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%; }
+  .catalog-item__img {
+    max-width: 100%;
+    vertical-align: middle; }
+  .catalog-item__title {
+    padding-bottom: 1.21212vw;
+    margin-bottom: 0.90909vw;
+    position: relative; }
+    .catalog-item__title:after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      bottom: -1px;
+      left: 9.51515vw;
+      right: 0;
+      background: url("../images/line.png") no-repeat left;
+      background-size: 100%; }
+  .catalog-item__title-text {
+    font-size: 1.45455vw;
+    line-height: 1.69697vw;
+    font-weight: bold;
+    color: #505050;
+    display: inline-block;
+    vertical-align: top; }
+  .catalog-item__description {
+    font-size: 0.90909vw;
+    line-height: 1.45455vw;
+    color: #646464; }
+
+.catalog-item-info {
+  width: 100%;
+  color: #505050;
+  font-size: 0.90909vw;
+  line-height: 1.45455vw;
+  margin-bottom: 0.30303vw; }
+  .catalog-item-info__item {
+    display: inline-block;
+    vertical-align: top; }
+    .catalog-item-info__item + .catalog-item-info__item {
+      margin-left: 1.51515vw; }
+  .catalog-item-info__item-text {
+    font-weight: bold; }
+  .catalog-item-info__item-value {
+    color: #ae0c0c; }
+  .catalog-item-info__item-notice {
+    color: #9b9b9b; }
 
 .feed {
   position: relative;
@@ -535,6 +680,127 @@ address {
       height: 2vw;
       background: url("../images/icon-photos.png");
       background-size: 100%; }
+
+.catalog {
+  padding-bottom: 3.0303vw; }
+  .catalog__title {
+    font-size: 1.57576vw;
+    line-height: 1.69697vw;
+    margin-bottom: 2.42424vw;
+    font-weight: bold;
+    color: #543b2f; }
+  .catalog__list + .catalog__list {
+    margin-top: 5.15152vw; }
+
+.catalog-item {
+  position: relative;
+  border: 0.30303vw solid #fff;
+  width: 46.66667vw;
+  min-height: 14.54545vw;
+  margin-left: -2.72727vw;
+  border-radius: 0.42424vw;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 1.69697vw 1.81818vw 0.60606vw 1.21212vw;
+  box-shadow: 0.12121vw 0.12121vw 0.48485vw rgba(0, 0, 0, 0.2); }
+  .catalog-item:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .catalog-item:hover {
+    border: 0.30303vw solid #a62626; }
+    .catalog-item:hover:before {
+      position: absolute;
+      content: '';
+      width: 21.21212vw;
+      height: 10.90909vw;
+      background: url("../images/pig-part-1.jpg") no-repeat;
+      background-size: cover;
+      right: -26.66667vw;
+      top: 1.81818vw; }
+  .catalog-item + .catalog-item {
+    margin-top: 1.21212vw; }
+  .catalog-item__corner {
+    display: none;
+    position: absolute;
+    width: 1.21212vw;
+    height: 1.93939vw;
+    top: 3.63636vw;
+    right: -1.21212vw;
+    overflow: hidden; }
+    .catalog-item:hover .catalog-item__corner {
+      display: block; }
+    .catalog-item__corner:before {
+      content: '';
+      display: block;
+      border: 0.30303vw solid #a62626;
+      background: #fff;
+      position: relative;
+      width: 0.90909vw;
+      height: 0.90909vw;
+      left: -0.84848vw;
+      top: 0.18182vw;
+      -ms-transform: rotate(45deg) translateX(0px) scale(1);
+      -webkit-transform: rotate(45deg) translateX(0px) scale(1);
+      transform: rotate(45deg) translateX(0px) scale(1); }
+  .catalog-item__link {
+    text-decoration: none; }
+  .catalog-item__img-h {
+    float: left;
+    width: 9.39394vw;
+    padding-right: 1.51515vw;
+    box-sizing: border-box;
+    text-align: center; }
+    .catalog-item__img-h:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%; }
+  .catalog-item__img {
+    max-width: 100%;
+    vertical-align: middle; }
+  .catalog-item__title {
+    padding-bottom: 1.21212vw;
+    margin-bottom: 0.90909vw;
+    position: relative; }
+    .catalog-item__title:after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      bottom: -1px;
+      left: 9.51515vw;
+      right: 0;
+      background: url("../images/line.png") no-repeat left;
+      background-size: 100%; }
+  .catalog-item__title-text {
+    font-size: 1.45455vw;
+    line-height: 1.69697vw;
+    font-weight: bold;
+    color: #505050;
+    display: inline-block;
+    vertical-align: top; }
+  .catalog-item__description {
+    font-size: 0.90909vw;
+    line-height: 1.45455vw;
+    color: #646464; }
+
+.catalog-item-info {
+  width: 100%;
+  color: #505050;
+  font-size: 0.90909vw;
+  line-height: 1.45455vw;
+  margin-bottom: 0.30303vw; }
+  .catalog-item-info__item {
+    display: inline-block;
+    vertical-align: top; }
+    .catalog-item-info__item + .catalog-item-info__item {
+      margin-left: 1.51515vw; }
+  .catalog-item-info__item-text {
+    font-weight: bold; }
+  .catalog-item-info__item-value {
+    color: #ae0c0c; }
+  .catalog-item-info__item-notice {
+    color: #9b9b9b; }
 
 .rewards {
   margin-top: 130px;
@@ -653,7 +919,7 @@ address {
   margin-top: -9.39394vw;
   padding-top: 9.39394vw;
   box-sizing: border-box;
-  background: url("../images/bg-footer.jpg") center bottom;
+  background: url("../images/bg-footer.png") center bottom no-repeat;
   background-size: 100%;
   position: relative;
   z-index: 10; }
@@ -667,7 +933,8 @@ address {
     width: 26.9697vw;
     position: absolute;
     z-index: 10;
-    height: 3.15152vw;
+    height: 6.18182vw;
+    top: -3.0303vw;
     line-height: 0.72727vw;
     box-sizing: border-box;
     border-radius: 0 0 0.42424vw 0.42424vw;
@@ -676,11 +943,11 @@ address {
     color: #fff;
     font-size: 1.45455vw;
     text-align: center;
-    padding: 0 0 0.24242vw 2.54545vw; }
+    padding: 3.0303vw 0 0.24242vw 2.54545vw; }
     .footer__up-btn:before {
       content: '';
       position: absolute;
-      top: 1.09091vw;
+      top: 4vw;
       margin-left: -2.24242vw;
       width: 1.15152vw;
       height: 1.09091vw;
