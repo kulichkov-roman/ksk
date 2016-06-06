@@ -1,1 +1,1 @@
-<span class="rewards__tab-text">Допуски и Сертификаты</span>
+<span class="rewards__tab-text">Справки и Свидетельства</span>

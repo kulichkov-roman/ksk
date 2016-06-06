@@ -1,2 +1,1 @@
-
-								<a href="#" class="footer-contacts__link">svinki_kompleks@mail.ru</a>
+<a href="#" class="footer-contacts__link">kck54@mail.ru</a>
