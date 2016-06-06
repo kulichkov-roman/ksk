@@ -4,7 +4,7 @@
 		$APPLICATION->IncludeComponent("bitrix:main.include", "",
 			Array(
 				"AREA_FILE_SHOW" => "file",
-				"PATH" => "/local/include/pg_templates/pg_catalog_meat_title.php",
+				"PATH" => "/local/include/page_templates/pg_catalog_meat_title.php",
 				"EDIT_TEMPLATE" => ""
 			),
 			false
@@ -16,7 +16,7 @@
 		$APPLICATION->IncludeComponent("bitrix:main.include", "",
 			Array(
 				"AREA_FILE_SHOW" => "file",
-				"PATH" => "/local/include/pg_templates/pg_catalog_meat_text.php",
+				"PATH" => "/local/include/page_templates/pg_catalog_meat_text.php",
 				"EDIT_TEMPLATE" => ""
 			),
 			false
