@@ -30,7 +30,7 @@ if (!CModule::IncludeModule('iblock')) {
     exit;
 }
 
-use Quetzal\Tools\Data\Migration\Bitrix\AbstractIBlockPropertyMigration;
+use Your\Tools\Data\Migration\Bitrix\AbstractIBlockPropertyMigration;
 
 /**
  * Class AddPropertiesToSMSPromoRequestsIBlockMigration

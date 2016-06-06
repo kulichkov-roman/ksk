@@ -4,7 +4,7 @@
  *
  * @global $APPLICATION CMain
  */
-use Quetzal\Tools\Data\Migration\Bitrix\AbstractIBlockMigration;
+use Your\Tools\Data\Migration\Bitrix\AbstractIBlockMigration;
 
 define('BX_BUFFER_USED', true);
 define('NO_KEEP_STATISTIC', true);

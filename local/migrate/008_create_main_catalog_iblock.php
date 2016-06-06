@@ -1,6 +1,6 @@
 <?php
 /**
- * Создает инфоблок «Слайдер»
+ * Создает инфоблок «Каталог: мясо и субпродукты»
  *
  * @global $APPLICATION CMain
  */
@@ -34,7 +34,7 @@ if (!CModule::IncludeModule('iblock')) {
  *
  * Class CreateHeroSliderIBlockMigration
  */
-class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
+class CreateCatalogMeatIBlockMigration extends AbstractIBlockMigration
 {
 	/**
 	 * {@inheritdoc}
@@ -47,8 +47,8 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
 			$this->createIBlock(
 				array(
 					'ACTIVE'           => 'Y',
-					'NAME'             => 'Слайдер',
-					'CODE'             => 'sliderMain',
+					'NAME'             => 'Каталог: мясо и субпродукты',
+					'CODE'             => 'catalogMeat',
 					'IBLOCK_TYPE_ID'   => 'dynamic_content',
 					'SITE_ID'          => array('s1'),
 					'SORT'             => 500,
@@ -59,7 +59,7 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
 			);
 
 			$logger->log(
-				sprintf('IBlock has been created. Id: "%s". Add to "sliderMainIBlockId"', $this->iblockId)
+				sprintf('IBlock has been created. Id: "%s". Add to "catalogMeatIBlockId"', $this->iblockId)
 			);
 		} catch (\Your\Exception\Data\Migration\MigrationException $exception) {
 			$logger->log(sprintf('ERROR: %s', $exception->getMessage()));
@@ -73,11 +73,11 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
 	{
 		$logger = new \Your\Tools\Logger\EchoLogger();
 
-		$this->deleteIBlock($environment->get('sliderMainIBlockId'));
+		$this->deleteIBlock($environment->get('catalogMeatIBlockId'));
 
-		$logger->log(sprintf('IBlock sliderMain has been removed. Id: "%s"', $this->iblockId));
+		$logger->log(sprintf('IBlock catalogMeat has been removed. Id: "%s"', $this->iblockId));
 	}
 }
 
-$migration = new CreateHeroSliderIBlockMigration();
+$migration = new CreateCatalogMeatIBlockMigration();
 $migration->up();

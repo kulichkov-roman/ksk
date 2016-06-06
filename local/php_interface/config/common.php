@@ -12,6 +12,7 @@
 			'rewardsMainIBlockId' => 3,
 			'rewardsMainPlugId' => 16,
 			'phoneFooterIBlockId' => 4,
+			'catalogMeatIBlockId' => 5,
 		)
 	)
 );
