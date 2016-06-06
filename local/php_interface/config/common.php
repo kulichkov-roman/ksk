@@ -13,6 +13,12 @@
 			'rewardsMainPlugId' => 16,
 			'phoneFooterIBlockId' => 4,
 			'catalogMeatIBlockId' => 5,
+			'bodyClassesTemplates' => array(
+				'/catalog_meat/' => '_catalog'
+			),
+			'contentClassesTemplates' => array(
+				'/catalog_meat/' => '_catalog'
+			),
 		)
 	)
 );
@@ -20,39 +26,40 @@
 /**
  * Перерезатор
  */
-\Bitrix\Main\Loader::includeModule("itconstruct.resizer");
+if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
+{
+	/**
+	 * Патерны для перерезатора
+	 */
+	itc\Resizer::addPreset('sliderMain', array(
+			'mode' => 'auto',
+			'width' => '2000',
+			'height' => '568',
+			'type' => 'png'
+		)
+	);
 
-/**
- * Патерны для перерезатора
- */
-itc\Resizer::addPreset('sliderMain', array(
-		'mode' => 'auto',
-		'width' => '2000',
-		'height' => '568',
-		'type' => 'png'
-	)
-);
+	itc\Resizer::addPreset('advantageMainPreview', array(
+			'mode' => 'crop',
+			'width' => '554',
+			'height' => '354',
+			'type' => 'jpg'
+		)
+	);
 
-itc\Resizer::addPreset('advantageMainPreview', array(
-		'mode' => 'crop',
-		'width' => '554',
-		'height' => '354',
-		'type' => 'jpg'
-	)
-);
+	itc\Resizer::addPreset('rewardsMainPreview', array(
+			'mode' => 'auto',
+			'width' => '150',
+			'height' => '221',
+			'type' => 'jpg'
+		)
+	);
 
-itc\Resizer::addPreset('rewardsMainPreview', array(
-		'mode' => 'auto',
-		'width' => '150',
-		'height' => '221',
-		'type' => 'jpg'
-	)
-);
-
-itc\Resizer::addPreset('rewardsMainDetail', array(
-		'mode' => 'width',
-		'width' => '1024',
-		'height' => null,
-		'type' => 'jpg'
-	)
-);
+	itc\Resizer::addPreset('rewardsMainDetail', array(
+			'mode' => 'width',
+			'width' => '1024',
+			'height' => null,
+			'type' => 'jpg'
+		)
+	);
+}
