@@ -1,1 +1,1 @@
-<a href="http://kulichkov.pro" class="footer__developers-link">Сайт разработали</a>
+Разработка сайта — <a href="http://kulichkov.pro" target="_blank" class="footer__developers-link">Kulichkov.PRO</a>

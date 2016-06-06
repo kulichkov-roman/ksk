@@ -84,7 +84,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 							"PATH" => "/local/include/site_templates/ft_developers.php",
 							"EDIT_TEMPLATE" => ""
 						),
-						false
+						false,
+						Array('HIDE_ICONS' => 'Y')
 					);
 					?>
 				</div>
