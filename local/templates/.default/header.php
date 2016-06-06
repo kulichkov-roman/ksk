@@ -23,6 +23,9 @@ IncludeTemplateLangFile(__FILE__);
 	$arBodyClasses    = $environment->get('bodyClassesTemplates');
 	$arContentClasses = $environment->get('contentClassesTemplates');
 
+	$isMain = CSite::InDir(SITE_DIR.'index.php');
+	$isCatalogMeat = CSite::InDir(SITE_DIR.'catalog_meat/');
+
 	$APPLICATION->AddHeadString('
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500italic,400italic,500" rel="stylesheet" type="text/css">
@@ -54,15 +57,22 @@ IncludeTemplateLangFile(__FILE__);
 				),
 				false
 			);
-			$APPLICATION->IncludeComponent("bitrix:main.include", "",
-				Array(
-					"AREA_FILE_SHOW" => "file",
-					"PATH" => "/local/include/site_templates/hd_slider_main.php",
-					"EDIT_TEMPLATE" => ""
-				),
-				false,
-				Array('HIDE_ICONS' => 'Y')
-			);
+			if($isMain)
+			{
+				$APPLICATION->IncludeComponent("bitrix:main.include", "",
+					Array(
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/local/include/site_templates/hd_slider_main.php",
+						"EDIT_TEMPLATE" => ""
+					),
+					false,
+					Array('HIDE_ICONS' => 'Y')
+				);
+			}
+			elseif($isCatalogMeat)
+			{
+				?><section class="header-slider _catalog"></section><?
+			}
 			?>
 		</header>
 		<section class="content <?=$arContentClasses[$APPLICATION->GetCurDir()] ? $arContentClasses[$APPLICATION->GetCurDir()] : '';?>">

@@ -2,10 +2,24 @@
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 	die();
 }
+
+$isMain = CSite::InDir(SITE_DIR.'index.php');
 ?>
 				</div><!--content__content-->
 			</div><!--content__inner-->
 		</section><!--content-->
+		<?if($isMain) {
+			$APPLICATION->IncludeComponent('bitrix:main.include', '',
+				Array(
+					'AREA_FILE_SHOW' => 'file',
+					'PATH' => '/local/include/site_templates/hd_rewards_main.php',
+					'EDIT_TEMPLATE' => ''
+				),
+				false,
+				Array('HIDE_ICONS' => 'Y')
+			);
+		}
+		?>
 		<footer class="footer">
 			<div class="footer__inner">
 				<button type="button" class="footer__up-btn">Вернуться наверх</button>
