@@ -18,6 +18,11 @@ IncludeTemplateLangFile(__FILE__);
 	<?
 	CJSCore::Init();
 
+	$environment = \Your\Environment\EnvironmentManager::getInstance();
+
+	$arBodyClasses    = $environment->get('bodyClassesTemplates');
+	$arContentClasses = $environment->get('contentClassesTemplates');
+
 	$APPLICATION->AddHeadString('
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500italic,400italic,500" rel="stylesheet" type="text/css">
@@ -36,7 +41,7 @@ IncludeTemplateLangFile(__FILE__);
 	?>
 	<?$APPLICATION->ShowHead()?>
 </head>
-<body>
+<body <?=$arBodyClasses[$APPLICATION->GetCurDir()] ? 'class="'.$arBodyClasses[$APPLICATION->GetCurDir()].'"' : '';?>>
 	<?$APPLICATION->ShowPanel();?>
 	<div class="wrapper">
 		<header class="header">
@@ -60,23 +65,7 @@ IncludeTemplateLangFile(__FILE__);
 			);
 			?>
 		</header>
-		<?
-		$APPLICATION->IncludeComponent("bitrix:main.include", "",
-			Array(
-				"AREA_FILE_SHOW" => "file",
-				"PATH" => "/local/include/site_templates/hd_news_main.php",
-				"EDIT_TEMPLATE" => ""
-			),
-			false,
-			Array('HIDE_ICONS' => 'Y')
-		);
-		$APPLICATION->IncludeComponent("bitrix:main.include", "",
-			Array(
-				"AREA_FILE_SHOW" => "file",
-				"PATH" => "/local/include/site_templates/hd_rewards_main.php",
-				"EDIT_TEMPLATE" => ""
-			),
-			false,
-			Array('HIDE_ICONS' => 'Y')
-		);
-		?>
+		<section class="content <?=$arContentClasses[$APPLICATION->GetCurDir()] ? $arContentClasses[$APPLICATION->GetCurDir()] : '';?>">
+			<div class="content__inner">
+				<div class="content__substrate"></div>
+				<div class="content__content">
