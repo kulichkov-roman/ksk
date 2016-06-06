@@ -1,10 +1,16 @@
-
-			<nav class="menu">
-				<ul class="menu__list">
-					<li class="menu__item"><a href="#" class="menu__link"> <span class="menu__text">Гостевая</span></a></li>
-					<li class="menu__item"><a href="#" class="menu__link"> <span class="menu__text">Мясо и Субпродукты</span></a></li>
-					<li class="menu__item"><a href="#" class="menu__link"> <span class="menu__text">Полуфабрикаты</span></a></li>
-					<li class="menu__item"><a href="#" class="menu__link"> <span class="menu__text">Контакты</span></a></li>
-					<li class="menu__item"><a href="#" class="menu__link"> <span class="menu__text">Новости</span></a></li>
-				</ul>
-			</nav>
+<?$APPLICATION->IncludeComponent("bitrix:menu", "main-menu", Array(
+	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"MAX_LEVEL" => "1",	// Уровень вложенности меню
+		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+			0 => "",
+		),
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+	),
+	false
+);?>
