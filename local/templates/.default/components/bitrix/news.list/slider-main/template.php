@@ -34,7 +34,7 @@ $this->setFrameMode(true);
 					<li class="header-slider-content__box-item <?=$first ? '_active' : '';?>" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 						<h3 class="header-slider-content__title">
 							<span class="header-slider-content__title-text">
-								<?=$arItem['NAME']?>
+								<?=TruncateText($arItem['NAME'], 23)?>
 							</span>
 						</h3>
 						<div class="header-slider-content__text">
