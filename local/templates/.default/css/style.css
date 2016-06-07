@@ -595,6 +595,8 @@ address {
   .catalog-item__img {
     max-width: 100%;
     vertical-align: middle; }
+  .catalog-item__inner {
+    margin-left: 9.39394vw; }
   .catalog-item__title {
     padding-bottom: 1.21212vw;
     margin-bottom: 0.90909vw;
@@ -604,7 +606,7 @@ address {
       content: '';
       height: 1px;
       bottom: -1px;
-      left: 9.51515vw;
+      left: 0.12121vw;
       right: 0;
       background: url("../images/line.png") no-repeat left;
       background-size: 100%; }
@@ -849,6 +851,8 @@ address {
   .catalog-item__img {
     max-width: 100%;
     vertical-align: middle; }
+  .catalog-item__inner {
+    margin-left: 9.39394vw; }
   .catalog-item__title {
     padding-bottom: 1.21212vw;
     margin-bottom: 0.90909vw;
@@ -858,7 +862,7 @@ address {
       content: '';
       height: 1px;
       bottom: -1px;
-      left: 9.51515vw;
+      left: 0.12121vw;
       right: 0;
       background: url("../images/line.png") no-repeat left;
       background-size: 100%; }

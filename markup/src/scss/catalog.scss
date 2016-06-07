@@ -164,6 +164,7 @@
     }
 
     &__inner {
+        margin-left: get-width(155);
     }
 
     &__title {
@@ -176,7 +177,7 @@
             content: '';
             height: 1px;
             bottom: -1px;
-            left: get-width(157);
+            left: get-width(2);
             right: 0;
             background: url('../images/line.png') no-repeat left;
             background-size: 100%;

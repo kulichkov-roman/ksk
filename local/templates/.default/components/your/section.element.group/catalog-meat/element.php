@@ -23,28 +23,28 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
 			<h3 class="catalog-item__title">
 				<span class="catalog-item__title-text"><?=$arResult["NAME"]?></span>
 			</h3>
-		</div>
-		<div class="catalog-item-info">
-			<?if($arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']){?>
-				<div class="catalog-item-info__item">
-					<span class="catalog-item-info__item-text">Самовывоз -&#32;
-						<span class="catalog-item-info__item-value"><?=$arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']?></span>&#32;р/кг,
-					</span>
-				</div>
-			<?}?>
-			<?if($arResult['PROPERTIES']['PRICE_DELIVERY']['VALUE']){?>
-				<div class="catalog-item-info__item">
-					<span class="catalog-item-info__item-text">Доставка -&#32;
-						<span class="catalog-item-info__item-value"><?=$arResult['PROPERTIES']['PRICE_DELIVERY']['VALUE']?></span>&#32;р/кг,
-						<span class="catalog-item-info__item-notice">&#32;(при заказе от 120кг)</span>
-					</span>
-				</div>
-			<?}?>
-		</div>
-		<?if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arResult["PREVIEW_TEXT"]){?>
-			<div class="catalog-item__description">
-				<?=$arResult["PREVIEW_TEXT"];?>
+			<div class="catalog-item-info">
+				<?if($arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']){?>
+					<div class="catalog-item-info__item">
+						<span class="catalog-item-info__item-text">Самовывоз -&#32;
+							<span class="catalog-item-info__item-value"><?=$arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']?></span>&#32;р/кг,
+						</span>
+					</div>
+				<?}?>
+				<?if($arResult['PROPERTIES']['PRICE_DELIVERY']['VALUE']){?>
+					<div class="catalog-item-info__item">
+						<span class="catalog-item-info__item-text">Доставка -&#32;
+							<span class="catalog-item-info__item-value"><?=$arResult['PROPERTIES']['PRICE_DELIVERY']['VALUE']?></span>&#32;р/кг,
+							<span class="catalog-item-info__item-notice">&#32;(при заказе от 120кг)</span>
+						</span>
+					</div>
+				<?}?>
 			</div>
-		<?}?>
+			<?if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arResult["PREVIEW_TEXT"]){?>
+				<div class="catalog-item__description">
+					<?=$arResult["PREVIEW_TEXT"];?>
+				</div>
+			<?}?>
+		</div>
 	</a>
 </article>
