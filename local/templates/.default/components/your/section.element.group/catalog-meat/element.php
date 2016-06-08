@@ -2,13 +2,11 @@
 global $arParams, $resItems;
 $arResult = $GLOBALS['resItems'];
 
-echo "<pre>"; var_dump($GLOBALS['resItems']); echo "</pre>";
-
 $this->AddEditAction($arResult['ID'], $arResult['EDIT_LINK'], CIBlock::GetArrayByID($arResult["IBLOCK_ID"], "ELEMENT_EDIT"));
 $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetArrayByID($arResult["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 ?>
 
-<article class="catalog-item " id="<?=$this->GetEditAreaId($arResult['ID']);?>">
+<article class="catalog-item <?=$arResult['PROPERTIES']['PARTS_BODY']['VALUE_XML_ID'] ? '_part-'.$arResult['PROPERTIES']['PARTS_BODY']['VALUE_XML_ID'] : '';?>" id="<?=$this->GetEditAreaId($arResult['ID']);?>">
 	<span class="catalog-item__corner"></span>
 	<a href="javascript:void(0)" class="catalog-item__link">
 		<div class="catalog-item__img-h">
