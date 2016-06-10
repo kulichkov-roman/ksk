@@ -69,7 +69,7 @@ IncludeTemplateLangFile(__FILE__);
 					Array('HIDE_ICONS' => 'Y')
 				);
 			}
-			elseif($isCatalogMeat)
+			else
 			{
 				?><section class="header-slider _catalog"></section><?
 			}
