@@ -53,6 +53,7 @@ body {
     color: #3c3c3c;
     margin: 0;
 	font-family: $ff-regular;
+	overflow-y: scroll;
 	// min-width: 1000px;
 
 	&._catalog {

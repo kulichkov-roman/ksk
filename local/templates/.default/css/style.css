@@ -44,7 +44,8 @@ body {
   background-size: cover;
   color: #3c3c3c;
   margin: 0;
-  font-family: "Open Sans", Arial, sans-serif; }
+  font-family: "Open Sans", Arial, sans-serif;
+  overflow-y: scroll; }
   body._catalog {
     background: #ded2ad url("../images/bg_catalog.jpg") center 22.42424vw no-repeat;
     background-size: cover; }
@@ -245,7 +246,7 @@ address {
   .header-slider._catalog {
     background: url("../images/bg-slider_catalog.jpg") center no-repeat;
     background-size: cover;
-    padding-bottom: 23%; }
+    padding-bottom: 23.2%; }
   .header-slider__list {
     position: absolute;
     z-index: 10;
@@ -424,10 +425,23 @@ address {
       background-size: cover;
       width: 65.15152vw;
       right: -13.93939vw; }
+    .content._preparing .content__substrate {
+      background: #f0eed5; }
   .content__content {
     position: relative;
     z-index: 200;
-    padding-top: 0.90909vw; }
+    padding-top: 0.90909vw;
+    min-height: 6.06061vw; }
+  .content__preparing {
+    padding: 1.51515vw 0 3.0303vw;
+    width: 70%; }
+  .content__preparing-inner {
+    box-shadow: 0 0.30303vw 0.72727vw rgba(0, 0, 0, 0.2);
+    border-radius: 0.42424vw;
+    padding: 3.0303vw 2.12121vw;
+    background: #fff;
+    font-size: 1.45455vw;
+    line-height: 1.57576vw; }
   .content__tab {
     background: #f0eed5;
     text-align: center;

@@ -25,16 +25,35 @@
             width: get-width(1025 + 50);
             right: get-width(-230);
         }
+
+        .content._preparing & {
+            background: #f0eed5;
+        }
     }
 
     &__content {
         position: relative;
         z-index: 200;
         padding-top: get-width(15);
+        min-height: get-width(100);
 
         .content._catalog & {
             // padding-top: get-width(80);
         }
+    }
+
+    &__preparing {
+        padding: get-width(25) 0 get-width(50);
+        width: 70%;
+    }
+
+    &__preparing-inner {
+        box-shadow: 0 get-width(5) get-width(12) rgba(0,0,0,0.2);
+        border-radius: get-width(7);
+        padding: get-width(50) get-width(35);
+        background: #fff;
+        font-size: get-width(24);
+        line-height: get-width(26);
     }
 
     &__tab {
