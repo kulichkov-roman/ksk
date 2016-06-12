@@ -5,19 +5,22 @@
 \Your\Environment\EnvironmentManager::getInstance()->addConfig(
 	new \Your\Environment\Configuration\CommonConfiguration(
 		array(
-			'sliderMainIBlockId' => 1,
-			'sliderMainPlugId' => 5,
-			'advantageMainIBlockId' => 2,
-			'advantageMainPlugId' => 16,
-			'rewardsMainIBlockId' => 3,
-			'rewardsMainPlugId' => 16,
-			'phoneFooterIBlockId' => 4,
-			'catalogMeatIBlockId' => 5,
-			'bodyClassesTemplates' => array(
+			'sliderMainIBlockId'      => 1,
+			'sliderMainPlugId'        => 5,
+			'advantageMainIBlockId'   => 2,
+			'advantageMainPlugId'     => 16,
+			'rewardsMainIBlockId'     => 3,
+			'rewardsMainPlugId'       => 16,
+			'phoneFooterIBlockId'     => 4,
+			'catalogMeatIBlockId'     => 5,
+			'bodyClassesTemplates'    => array(
 				'/catalog_meat/' => '_catalog'
 			),
 			'contentClassesTemplates' => array(
-				'/catalog_meat/' => '_catalog'
+				'/catalog_meat/' => '_catalog',
+				'/catalog_smf/'  => '_preparing',
+				'/contacts/'     => '_preparing',
+				'/news/'         => '_preparing',
 			),
 		)
 	)
