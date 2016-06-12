@@ -1,5 +1,6 @@
 .catalog {
     padding-bottom: get-width(50);
+    position: relative;
 
     &__title {
         font-size: get-width(26);
@@ -7,6 +8,127 @@
         margin-bottom: get-width(40);
         font-weight: bold;
         color: #543b2f;
+    }
+
+    &__sticker-h {
+        position: absolute;
+    }
+
+    &__sticker {
+        position: absolute;
+        padding-top: get-width(60);
+        display: block;
+        left: get-width(809);
+        padding-bottom: get-width(20);
+
+        &:before {
+            display: block;
+            content: '';
+            width: get-width(350);
+            height: get-width(180);
+            background: url('../images/pig-part-0.png') no-repeat;
+            background-size: cover;
+        }
+
+        &._sticked {
+            position: fixed;
+            z-index: 1000;
+            left: get-width(1025);
+            top: get-width(240);
+        }
+
+        &._part-1:before {
+            background: url('../images/pig-part-1.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-2:before {
+            background: url('../images/pig-part-2.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-3:before {
+            background: url('../images/pig-part-3.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-4:before {
+            background: url('../images/pig-part-4.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-5:before {
+            background: url('../images/pig-part-5.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-6:before {
+            background: url('../images/pig-part-6.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-7:before {
+            background: url('../images/pig-part-7.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-8:before {
+            background: url('../images/pig-part-8.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-9:before {
+            background: url('../images/pig-part-9.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-10:before {
+            background: url('../images/pig-part-10.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-11:before {
+            background: url('../images/pig-part-11.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-12:before {
+            background: url('../images/pig-part-12.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-13:before {
+            background: url('../images/pig-part-13.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-14:before {
+            background: url('../images/pig-part-14.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-15:before {
+            background: url('../images/pig-part-15.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-16:before {
+            background: url('../images/pig-part-16.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-17:before {
+            background: url('../images/pig-part-17.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-18:before {
+            background: url('../images/pig-part-18.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-19:before {
+            background: url('../images/pig-part-19.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-20:before {
+            background: url('../images/pig-part-20.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-21:before {
+            background: url('../images/pig-part-21.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-22:before {
+            background: url('../images/pig-part-22.png') no-repeat;
+            background-size: cover;
+        }
+        &._part-23:before {
+            background: url('../images/pig-part-23.png') no-repeat;
+            background-size: cover;
+        }
     }
 
     &__list {
@@ -31,87 +153,19 @@
     padding: get-width(28) get-width(30) get-width(10) get-width(20);
     box-shadow: get-width(2) get-width(2) get-width(8) rgba(0,0,0,0.2);
 
-    &._part-1:before {
-        background: url('../images/pig-part-1.png') no-repeat;
-    }
-    &._part-2:before {
-        background: url('../images/pig-part-2.png') no-repeat;
-    }
-    &._part-3:before {
-        background: url('../images/pig-part-3.png') no-repeat;
-    }
-    &._part-4:before {
-        background: url('../images/pig-part-4.png') no-repeat;
-    }
-    &._part-5:before {
-        background: url('../images/pig-part-5.png') no-repeat;
-    }
-    &._part-6:before {
-        background: url('../images/pig-part-6.png') no-repeat;
-    }
-    &._part-7:before {
-        background: url('../images/pig-part-7.png') no-repeat;
-    }
-    &._part-8:before {
-        background: url('../images/pig-part-8.png') no-repeat;
-    }
-    &._part-9:before {
-        background: url('../images/pig-part-9.png') no-repeat;
-    }
-    &._part-10:before {
-        background: url('../images/pig-part-10.png') no-repeat;
-    }
-    &._part-11:before {
-        background: url('../images/pig-part-11.png') no-repeat;
-    }
-    &._part-12:before {
-        background: url('../images/pig-part-12.png') no-repeat;
-    }
-    &._part-13:before {
-        background: url('../images/pig-part-13.png') no-repeat;
-    }
-    &._part-14:before {
-        background: url('../images/pig-part-14.png') no-repeat;
-    }
-    &._part-15:before {
-        background: url('../images/pig-part-15.png') no-repeat;
-    }
-    &._part-16:before {
-        background: url('../images/pig-part-16.png') no-repeat;
-    }
-    &._part-17:before {
-        background: url('../images/pig-part-17.png') no-repeat;
-    }
-    &._part-18:before {
-        background: url('../images/pig-part-18.png') no-repeat;
-    }
-    &._part-19:before {
-        background: url('../images/pig-part-19.png') no-repeat;
-    }
-    &._part-20:before {
-        background: url('../images/pig-part-20.png') no-repeat;
-    }
-    &._part-21:before {
-        background: url('../images/pig-part-21.png') no-repeat;
-    }
-    &._part-22:before {
-        background: url('../images/pig-part-22.png') no-repeat;
-    }
-    &._part-23:before {
-        background: url('../images/pig-part-23.png') no-repeat;
-    }
-    &:hover {
-        border: get-width(5) solid #a62626;
 
-        &:before {
-            position: absolute;
-            content: '';
-            width: get-width(350);
-            height: get-width(180);
-            background-size: cover;
-            right: get-width(-440);
-            top: get-width(30);
-        }
+    &._active {
+        border: get-width(5) solid #a62626;
+        //
+        // &:before {
+        //     position: absolute;
+        //     content: '';
+        //     width: get-width(350);
+        //     height: get-width(180);
+        //     background-size: cover;
+        //     right: get-width(-440);
+        //     top: get-width(30);
+        // }
     }
 
     & + & {
@@ -123,11 +177,11 @@
         position: absolute;
         width: get-width(20);
         height: get-width(32);
-        top: get-width(60);
+        top: get-width(110);
         right: get-width(-20);
         overflow: hidden;
 
-        .catalog-item:hover & {
+        .catalog-item._active & {
             display: block;
         }
 

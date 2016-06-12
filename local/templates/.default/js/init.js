@@ -97,4 +97,56 @@ $(function () {
     })
 
     // $el.data('header')
-})
+});
+
+
+// Каталог. Ездящая свинья
+// Кнопка наверх
+$(function () {
+    var modMatcher = /_part-[0-9]+/;
+    var $sticker = $('.catalog__sticker');
+
+    $(window).on('scroll', () => {
+        var padding = parseInt($sticker.css('padding-top'), 10)
+        var stickerOffet = $('.catalog__sticker-h').offset().top - (padding * 4);
+        var scrollTop = $('body').scrollTop();
+
+        if (scrollTop > stickerOffet) {
+            $sticker.addClass('_sticked');
+        } else {
+            $sticker.removeClass('_sticked');
+        }
+
+        var $activeEl = null;
+        $('.catalog-item').each(function () {
+            var $el = $(this);
+            var height = $el.height();
+            var offset = $el.offset().top - (padding * 6);
+
+            if (
+                scrollTop > offset - (padding * 0.625) &&
+                scrollTop < offset + height + (padding * 0.625)
+            ) {
+                $activeEl = $el;
+                $el.addClass('_active');
+            } else {
+                $el.removeClass('_active');
+            }
+        });
+
+        var mod
+        if ($activeEl) {
+            mod = $activeEl.attr('class').match(modMatcher);
+            if (mod) {
+                $sticker.addClass(mod[0]);
+            }
+        } else {
+            mod = $sticker.attr('class').match(modMatcher);
+            if (mod) {
+                $sticker.removeClass(mod[0]);
+            }
+        }
+    });
+
+
+});

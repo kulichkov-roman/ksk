@@ -1,10 +1,10 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /**
-* 
+*
 * @author dev2fun (darkfriend)
 * @copyright darkfriend
 * @version 0.2.1
-* 
+*
 */
 /** @var array $arParams */
 /** @var array $arResult */
@@ -21,5 +21,6 @@ $this->setFrameMode(true);
 $GLOBALS['arParams'] = $arParams;
 ?>
 <div class="catalog">
+	<div class="catalog__sticker-h"><i class="catalog__sticker"></i></div>
 	<?=$component->render($arResult,$arParams,$templateFile);?>
 </div>
