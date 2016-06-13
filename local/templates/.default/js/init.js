@@ -134,16 +134,14 @@ $(function () {
             }
         });
 
-        var mod
+        var mod = $sticker.attr('class').match(modMatcher);
+        if (mod) {
+            $sticker.removeClass(mod[0]);
+        }
         if ($activeEl) {
             mod = $activeEl.attr('class').match(modMatcher);
             if (mod) {
                 $sticker.addClass(mod[0]);
-            }
-        } else {
-            mod = $sticker.attr('class').match(modMatcher);
-            if (mod) {
-                $sticker.removeClass(mod[0]);
             }
         }
     });
