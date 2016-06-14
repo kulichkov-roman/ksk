@@ -1,5 +1,5 @@
 .catalog {
-    padding-bottom: get-width(50);
+    padding-bottom: get-width(30);
     position: relative;
 
     &__title {
@@ -147,6 +147,7 @@
     width: get-width(770);
     min-height: get-width(240);
     margin-left: get-width(-45);
+    margin-bottom: get-width(20);
     border-radius: get-width(7);
     background: #fff;
     box-sizing: border-box;
@@ -166,10 +167,6 @@
         //     right: get-width(-440);
         //     top: get-width(30);
         // }
-    }
-
-    & + & {
-        margin-top: get-width(20);
     }
 
     &__corner {

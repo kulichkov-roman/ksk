@@ -120,12 +120,13 @@ $(function () {
         var $activeEl = null;
         $('.catalog-item').each(function () {
             var $el = $(this);
-            var height = $el.height();
+            var height = $el.outerHeight();
             var offset = $el.offset().top - (padding * 6);
+            var marginBottom = parseInt($el.css('marginBottom'), 10);
 
             if (
-                scrollTop > offset - (padding * 0.625) &&
-                scrollTop < offset + height + (padding * 0.625)
+                scrollTop > offset - marginBottom &&
+                scrollTop < offset + height
             ) {
                 $activeEl = $el;
                 $el.addClass('_active');
@@ -145,6 +146,17 @@ $(function () {
             }
         }
     });
+
+    $('.catalog-item').click(function (e) {
+        e.preventDefault();
+        var padding = parseInt();
+        var $el = $(this);
+        var height = $el.outerHeight();
+        var offset = $el.offset().top;
+        $('body, html').animate({
+            scrollTop: offset - (height / 2) - ($sticker.outerHeight() / 2)
+        }, 300);
+    })
 
 
 });
