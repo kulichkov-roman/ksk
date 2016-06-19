@@ -29,6 +29,7 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->AddHeadString('
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500italic,400italic,500" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="favicon.ico">
 	');
 
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/slick-1.4.1/slick.css');
