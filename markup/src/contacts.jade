@@ -1,0 +1,95 @@
+doctype html
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+html
+    <!--<![endif]-->
+    head
+        include ./includes/head.jade
+
+    body._catalog
+        .wrapper
+            header.header
+                nav.menu
+                    ul.menu__list
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Гостевая
+                        li.menu__item._active
+                            a.menu__link(href="#")
+                                span.menu__text Мясо и Субпродукты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Полуфабрикаты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Контакты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Новости
+
+
+                section.header-slider._contacts
+
+            section.content._contacts
+                .content__inner
+                    .content__substrate
+                    .content__content
+                        .content__tab
+                            span.content__tab-text Контактная информация
+
+                        .contacts-content
+                            .contacts-content__col
+                                .contacts-content-block
+                                    strong.contacts-content-block__title Телефоны:
+                                    ul.contacts-content-block__list
+                                        li.contacts-content-block__row
+                                            b 8 (800) 200-20-20
+                                            | &#32;- Единая справочная
+
+                                        li.contacts-content-block__row
+                                            b 8 (800) 200-20-20
+                                            | &#32;- Отдел продаж
+
+                                        li.contacts-content-block__row
+                                            b 8 (800) 200-20-20
+                                            | &#32;- Бухгалтерия
+
+                                .contacts-content-block
+                                    strong.contacts-content-block__title E-mail:
+                                    ul.contacts-content-block__list
+                                        li.contacts-content-block__row
+                                            b svino_kompleks@mail.ru
+                                            | &#32;- Поддержка
+
+                                        li.contacts-content-block__row
+                                            b sales@ksk.ru
+                                            | &#32;- Отдел продаж
+
+                            .contacts-content__col
+                                .contacts-content-block
+                                    strong.contacts-content-block__title Адрес:
+                                    ul.contacts-content-block__list
+                                        li.contacts-content-block__row
+                                            | Россия, индекс: 93847, Новосибирская область, пос. Название посёлка<br>
+                                            | (69 км трассы Новосибирск-Кемерово)
+
+                                .contacts-content-block
+                                    strong.contacts-content-block__title Реквизиты:
+                                    ul.contacts-content-block__list
+                                        li.contacts-content-block__row
+                                            | ООО «Корниловский Свинокомплекс»<br>
+                                            | ИНН<br>
+                                            | ЗАО Сбербанк
+                        .contacts-map
+                            .contacts-map__inner
+
+
+            footer.footer
+                .footer__inner
+
+                    .footer__copyrights
+                        | Права защищены. 2016 г. © ООО «Корниловский Свинокомплекс»
+
+                    .footer__developers
+                        a.footer__developers-link(href="#") Сайт разработали

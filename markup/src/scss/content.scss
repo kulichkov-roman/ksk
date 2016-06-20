@@ -26,6 +26,12 @@
             right: get-width(-230);
         }
 
+        .content._contacts & {
+            background: #f0eed5;
+            width: get-width(900 + 230 + 40);
+            right: get-width(-230);
+        }
+
         .content._preparing & {
             background: #f0eed5;
         }

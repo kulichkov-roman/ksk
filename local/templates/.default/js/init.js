@@ -106,6 +106,10 @@ $(function () {
     var modMatcher = /_part-[0-9]+/;
     var $sticker = $('.catalog__sticker');
 
+    if (!$sticker.length) {
+        return;
+    }
+
     $(window).on('scroll', function() {
         var padding = parseInt($sticker.css('padding-top'), 10)
         var stickerOffet = $('.catalog__sticker-h').offset().top - (padding * 4);

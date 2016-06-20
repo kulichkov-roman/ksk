@@ -1,0 +1,66 @@
+.contacts-content {
+    @include cf;
+    line-height: get-width(24);
+    font-size: get-width(15);
+    color: #4f5050;
+    padding: get-width(45) 0 get-width(45) get-width(352);
+
+    &__col {
+        float: left;
+
+        &:first-child {
+            width: get-width(356);
+        }
+
+        &:last-child {
+            width: get-width(492);
+        }
+    }
+}
+
+.contacts-content-block {
+    & + & {
+        margin-top: get-width(25);
+    }
+
+    &__title {
+        font-weight: normal;
+        color: #9b9b9b;
+    }
+
+    &__list {
+
+    }
+
+    &__row {
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contacts-map {
+    width: 100%;
+    background: #fff;
+    border-radius: get-width(7);
+    height: get-width(592);
+    padding: get-width(45);
+    margin-left: get-width(-45);
+
+    &__inner {
+        height: 100%;
+        background: url('../images/contacts-map.jpg') no-repeat;
+        background-size: cover;
+    }
+}

@@ -247,6 +247,10 @@ address {
     background: url("../images/bg-slider_catalog.jpg") center no-repeat;
     background-size: cover;
     padding-bottom: 23.2%; }
+  .header-slider._contacts {
+    background: url("../images/bg-slider_contacts.jpg") center no-repeat;
+    background-size: cover;
+    padding-bottom: 22.3%; }
   .header-slider__list {
     position: absolute;
     z-index: 10;
@@ -424,6 +428,10 @@ address {
       background: #f0eed5 url("../images/bg-substrate_catalog.jpg") left top no-repeat;
       background-size: cover;
       width: 65.15152vw;
+      right: -13.93939vw; }
+    .content._contacts .content__substrate {
+      background: #f0eed5;
+      width: 70.90909vw;
       right: -13.93939vw; }
     .content._preparing .content__substrate {
       background: #f0eed5; }
@@ -688,6 +696,41 @@ address {
     color: #ae0c0c; }
   .catalog-item-info__item-notice {
     color: #9b9b9b; }
+
+.contacts-content {
+  line-height: 1.45455vw;
+  font-size: 0.90909vw;
+  color: #4f5050;
+  padding: 2.72727vw 0 2.72727vw 21.33333vw; }
+  .contacts-content:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .contacts-content__col {
+    float: left; }
+    .contacts-content__col:first-child {
+      width: 21.57576vw; }
+    .contacts-content__col:last-child {
+      width: 29.81818vw; }
+
+.contacts-content-block + .contacts-content-block {
+  margin-top: 1.51515vw; }
+
+.contacts-content-block__title {
+  font-weight: normal;
+  color: #9b9b9b; }
+
+.contacts-map {
+  width: 100%;
+  background: #fff;
+  border-radius: 0.42424vw;
+  height: 35.87879vw;
+  padding: 2.72727vw;
+  margin-left: -2.72727vw; }
+  .contacts-map__inner {
+    height: 100%;
+    background: url("../images/contacts-map.jpg") no-repeat;
+    background-size: cover; }
 
 .feed {
   position: relative;

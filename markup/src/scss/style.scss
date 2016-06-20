@@ -1,4 +1,4 @@
-// 1:1 на 1650px 
+// 1:1 на 1650px
 @function get-width($width) {
 	@return ($width / 16.5) + vw;
 }
@@ -21,6 +21,7 @@ $ff-tech: 'Roboto', Tahoma, sans-serif;
 @import "menu";
 @import "content";
 @import "catalog";
+@import "contacts";
 @import "feed";
 @import "catalog";
 @import "rewards";
