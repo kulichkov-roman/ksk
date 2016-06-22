@@ -7,7 +7,7 @@ html
     head
         include ./includes/head.jade
 
-    body._catalog
+    body._contacts
         .wrapper
             header.header
                 nav.menu
@@ -84,6 +84,31 @@ html
                         .contacts-map
                             .contacts-map__inner
 
+
+                        .contacts-form
+                            form(action="/")
+                                h4.contacts-form__title Возникли вопросы?
+                                .contacts-form__description
+                                    | Оставьте сообщение, воспользовавшись формой обратной связи, и мы свяжемся с вами в ближайшее время!
+                                .contacts-form-fields
+                                    .contacts-form-fields__col
+                                        textarea.contacts-form-fields__message(
+                                            placeholder="Введите текст сообщения"
+                                        )
+                                    .contacts-form-fields__col
+                                        .contacts-form-fields__row
+                                            input.contacts-form-fields__input(
+                                                type="text" name="NAME" placeholder="Представьтесь пожалуйста"
+                                            )
+                                        .contacts-form-fields__row
+                                            input.contacts-form-fields__input(
+                                                type="text" name="NAME" placeholder="Контактных номер"
+                                            )
+                                        .contacts-form-fields__row
+                                            button.contacts-form-fields__submit(
+                                                type="submit"
+                                            )
+                                                | Отправить
 
             footer.footer
                 .footer__inner

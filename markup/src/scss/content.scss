@@ -2,6 +2,10 @@
     position: relative;
     z-index: 40;
 
+    &._contacts {
+        margin-bottom: get-width(-300);
+    }
+
     &__inner {
         position: relative;
         @include content;
@@ -27,9 +31,9 @@
         }
 
         .content._contacts & {
-            background: #f0eed5;
-            width: get-width(900 + 230 + 40);
-            right: get-width(-230);
+            background: #f0eed5 url('../images/bg-substrate_contacts.jpg') right bottom no-repeat;
+            width: get-width(900 + 300 + 40);
+            right: get-width(-300);
         }
 
         .content._preparing & {

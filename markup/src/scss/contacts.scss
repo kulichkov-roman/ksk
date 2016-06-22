@@ -39,17 +39,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 .contacts-map {
     width: 100%;
     background: #fff;
@@ -62,5 +51,101 @@
         height: 100%;
         background: url('../images/contacts-map.jpg') no-repeat;
         background-size: cover;
+    }
+}
+
+
+.contacts-form {
+    padding: get-width(45) 0 get-width(45) get-width(352);
+
+    &__title {
+        font-size: get-width(24);
+        line-height: get-width(30);
+        color: #4f5050;
+        font-weight: bold;
+        margin-bottom: get-width(8);
+    }
+
+    &__description {
+        font-size: get-width(15);
+        line-height: get-width(24);
+    }
+}
+
+.contacts-form-fields {
+    @include cf;
+    padding-top: get-width(18);
+
+    &__col {
+        box-sizing: border-box;
+        float: left;
+
+        &:first-child {
+            width: get-width(590);
+        }
+
+        &:last-child {
+            width: get-width(258);
+            padding-left: get-width(20);
+        }
+    }
+
+    &__row {
+        & + & {
+             margin-top: get-width(20);
+        }
+    }
+
+    &__message,
+    &__input {
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid #b2b2b2;
+        background: transparent;
+        padding: get-width(10) get-width(15);
+        font-family: $ff-regular;
+        font-size: get-width(15);
+        line-height: get-width(24);
+        @include placeholder(#7c7c7c);
+        color: #4f5050;
+    }
+
+    &__message {
+        height: get-width(178);
+    }
+
+    &__input {
+        height: get-width(46);
+    }
+
+    &__submit {
+        width: 100%;
+        border: 0;
+        cursor: pointer;
+        font-family: $ff-regular;
+        position: relative;
+        background: #a8231f;
+        opacity: 0.85;
+        font-weight: 600;
+        font-size: get-width(20);
+        line-height: get-width(42);
+        box-sizing: border-box;
+        color: #fff;
+        height: get-width(46);
+        border-radius: get-width(5);
+        padding: 0 0 get-width(2) get-width(95);
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: get-width(25);
+            margin: auto 0;
+            width: get-width(54);
+            height: get-width(22);
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAAWCAYAAACL6W/rAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGYSURBVHja7JcxSwNBEIXfJjEiglYqio3YiYKtP8BOJSkkjY2FNjZi7R+wESwFO0ErK4tICvUPWFmIdUBQEQsLUUk+mz1ZIkkul9szCQ5Mcdzcm30z73ZnDSAP5gW0FUupRy0pYkVJeUnGgy9JevqtGRDxmBwPrAS8AJ/AA7AKjNfEtuMHTq5XYMNdTNojsRFgB7i2z2/ACZAHsm0QytXkLgJTbm55chd/AJgGDi2xiq3uPjAK9LWAOwGc1ZBat80RkEqSmOubwDnwZd9fAGvAcAjMZaDsYB83yp00MQGzwBbwbGPK9l+ZrBOfdaQMcA/M1Ik1f0ks8AXgysoT4AZYcTaXDLDrYH0Ae1ba9TBDSTGOzaNZAeasPG+BKvAIHAEF4M7BKdtCmCZ4plOIBZ0ZA07t0QDw7mBsR1GL8TxSmRa+GbKHbUHSoqSSpFyEgaMiSWGImQazXzoAioGYJPVLGpQ0L+kyQkGNpGpYYkl1LNbcvTYE/xQyE+N1xHQAsVSvXlsqUTtmuoXh/0Wz2yzjGZ//jsVs3wMA0Y3BPx53IN8AAAAASUVORK5CYII=');
+            background-size: 100%;
+        }
     }
 }

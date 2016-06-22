@@ -49,6 +49,9 @@ body {
   body._catalog {
     background: #ded2ad url("../images/bg_catalog.jpg") center 22.42424vw no-repeat;
     background-size: cover; }
+  body._contacts {
+    background: #ded2ad url("../images/bg_contacts.jpg") center 0 no-repeat;
+    background-size: cover; }
 
 /* =============================================================================
    Links
@@ -408,6 +411,8 @@ address {
 .content {
   position: relative;
   z-index: 40; }
+  .content._contacts {
+    margin-bottom: -18.18182vw; }
   .content__inner {
     position: relative;
     width: 72.72727vw;
@@ -430,9 +435,9 @@ address {
       width: 65.15152vw;
       right: -13.93939vw; }
     .content._contacts .content__substrate {
-      background: #f0eed5;
-      width: 70.90909vw;
-      right: -13.93939vw; }
+      background: #f0eed5 url("../images/bg-substrate_contacts.jpg") right bottom no-repeat;
+      width: 75.15152vw;
+      right: -18.18182vw; }
     .content._preparing .content__substrate {
       background: #f0eed5; }
   .content__content {
@@ -731,6 +736,86 @@ address {
     height: 100%;
     background: url("../images/contacts-map.jpg") no-repeat;
     background-size: cover; }
+
+.contacts-form {
+  padding: 2.72727vw 0 2.72727vw 21.33333vw; }
+  .contacts-form__title {
+    font-size: 1.45455vw;
+    line-height: 1.81818vw;
+    color: #4f5050;
+    font-weight: bold;
+    margin-bottom: 0.48485vw; }
+  .contacts-form__description {
+    font-size: 0.90909vw;
+    line-height: 1.45455vw; }
+
+.contacts-form-fields {
+  padding-top: 1.09091vw; }
+  .contacts-form-fields:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .contacts-form-fields__col {
+    box-sizing: border-box;
+    float: left; }
+    .contacts-form-fields__col:first-child {
+      width: 35.75758vw; }
+    .contacts-form-fields__col:last-child {
+      width: 15.63636vw;
+      padding-left: 1.21212vw; }
+  .contacts-form-fields__row + .contacts-form-fields__row {
+    margin-top: 1.21212vw; }
+  .contacts-form-fields__message, .contacts-form-fields__input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #b2b2b2;
+    background: transparent;
+    padding: 0.60606vw 0.90909vw;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 0.90909vw;
+    line-height: 1.45455vw;
+    color: #4f5050; }
+    .contacts-form-fields__message::-webkit-input-placeholder, .contacts-form-fields__input::-webkit-input-placeholder {
+      color: #7c7c7c;
+      opacity: 1; }
+    .contacts-form-fields__message::-moz-placeholder, .contacts-form-fields__input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #7c7c7c;
+      opacity: 1; }
+    .contacts-form-fields__message:-ms-input-placeholder, .contacts-form-fields__input:-ms-input-placeholder {
+      color: #7c7c7c;
+      opacity: 1; }
+  .contacts-form-fields__message {
+    height: 10.78788vw; }
+  .contacts-form-fields__input {
+    height: 2.78788vw; }
+  .contacts-form-fields__submit {
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    font-family: "Open Sans", Arial, sans-serif;
+    position: relative;
+    background: #a8231f;
+    opacity: 0.85;
+    font-weight: 600;
+    font-size: 1.21212vw;
+    line-height: 2.54545vw;
+    box-sizing: border-box;
+    color: #fff;
+    height: 2.78788vw;
+    border-radius: 0.30303vw;
+    padding: 0 0 0.12121vw 5.75758vw; }
+    .contacts-form-fields__submit:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 1.51515vw;
+      margin: auto 0;
+      width: 3.27273vw;
+      height: 1.33333vw;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAAWCAYAAACL6W/rAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGYSURBVHja7JcxSwNBEIXfJjEiglYqio3YiYKtP8BOJSkkjY2FNjZi7R+wESwFO0ErK4tICvUPWFmIdUBQEQsLUUk+mz1ZIkkul9szCQ5Mcdzcm30z73ZnDSAP5gW0FUupRy0pYkVJeUnGgy9JevqtGRDxmBwPrAS8AJ/AA7AKjNfEtuMHTq5XYMNdTNojsRFgB7i2z2/ACZAHsm0QytXkLgJTbm55chd/AJgGDi2xiq3uPjAK9LWAOwGc1ZBat80RkEqSmOubwDnwZd9fAGvAcAjMZaDsYB83yp00MQGzwBbwbGPK9l+ZrBOfdaQMcA/M1Ik1f0ks8AXgysoT4AZYcTaXDLDrYH0Ae1ba9TBDSTGOzaNZAeasPG+BKvAIHAEF4M7BKdtCmCZ4plOIBZ0ZA07t0QDw7mBsR1GL8TxSmRa+GbKHbUHSoqSSpFyEgaMiSWGImQazXzoAioGYJPVLGpQ0L+kyQkGNpGpYYkl1LNbcvTYE/xQyE+N1xHQAsVSvXlsqUTtmuoXh/0Wz2yzjGZ//jsVs3wMA0Y3BPx53IN8AAAAASUVORK5CYII=");
+      background-size: 100%; }
 
 .feed {
   position: relative;
