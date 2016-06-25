@@ -13,13 +13,14 @@
 			'rewardsMainPlugId'       => 16,
 			'phoneFooterIBlockId'     => 4,
 			'catalogMeatIBlockId'     => 5,
+			'emailListIBlockId'       => 6,
 			'bodyClassesTemplates'    => array(
 				'/catalog_meat/' => '_catalog'
 			),
 			'contentClassesTemplates' => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_preparing',
-				'/contacts/'     => '_preparing',
+				'/contacts/'     => '_contacts',
 				'/news/'         => '_preparing',
 			),
 		)
