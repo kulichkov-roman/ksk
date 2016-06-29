@@ -22,6 +22,7 @@ IncludeTemplateLangFile(__FILE__);
 
 	$arBodyClasses    = $environment->get('bodyClassesTemplates');
 	$arContentClasses = $environment->get('contentClassesTemplates');
+	$arHeaderSliderClasses = $environment->get('headerSliderClassesTemplates');
 
 	$isMain = CSite::InDir(SITE_DIR.'index.php');
 	$isCatalogMeat = CSite::InDir(SITE_DIR.'catalog_meat/');
@@ -29,7 +30,7 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->AddHeadString('
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500italic,400italic,500" rel="stylesheet" type="text/css">
-		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="shortcut icon" href="/favicon.ico">
 	');
 
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/slick-1.4.1/slick.css');
@@ -72,7 +73,7 @@ IncludeTemplateLangFile(__FILE__);
 			}
 			else
 			{
-				?><section class="header-slider _catalog"></section><?
+				?><section class="header-slider <?=$arHeaderSliderClasses[$APPLICATION->GetCurDir()] ? $arHeaderSliderClasses[$APPLICATION->GetCurDir()] : '';?>"></section><?
 			}
 			?>
 		</header>

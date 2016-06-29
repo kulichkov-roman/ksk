@@ -14,8 +14,13 @@
 			'phoneFooterIBlockId'     => 4,
 			'catalogMeatIBlockId'     => 5,
 			'emailListIBlockId'       => 6,
+			'headerSliderClassesTemplates'    => array(
+				'/catalog_meat/' => '_catalog',
+				'/contacts/'     => '_contacts'
+			),
 			'bodyClassesTemplates'    => array(
-				'/catalog_meat/' => '_catalog'
+				'/catalog_meat/' => '_catalog',
+				'/contacts/'     => '_contacts'
 			),
 			'contentClassesTemplates' => array(
 				'/catalog_meat/' => '_catalog',
