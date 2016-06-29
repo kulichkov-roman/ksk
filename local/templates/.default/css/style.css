@@ -727,15 +727,44 @@ address {
 
 .contacts-map {
   width: 100%;
+  position: relative;
   background: #fff;
   border-radius: 0.42424vw;
-  height: 35.87879vw;
-  padding: 2.72727vw;
+  height: 36.60606vw;
+  padding: 1.93939vw 2.72727vw 2.72727vw;
   margin-left: -2.72727vw; }
   .contacts-map__inner {
     height: 100%;
-    background: url("../images/contacts-map.jpg") no-repeat;
+    background: url("../images/map.jpg") no-repeat;
     background-size: cover; }
+
+.contacts-map-magnifier {
+  position: absolute;
+  top: 1.21212vw;
+  left: 24.24242vw;
+  cursor: pointer; }
+  .contacts-map-magnifier__frame {
+    display: block;
+    width: 32.72727vw;
+    height: 42.12121vw;
+    background: url("../images/magnifier.png") no-repeat;
+    background-size: cover;
+    z-index: 2;
+    position: relative; }
+  .contacts-map-magnifier__viewport {
+    overflow: hidden;
+    position: absolute;
+    border-radius: 50%;
+    top: 2.24242vw;
+    left: 3.27273vw;
+    width: 18.66667vw;
+    height: 18.60606vw;
+    z-index: 1; }
+  .contacts-map-magnifier__map {
+    background: url("../images/map-zoomed.jpg") no-repeat;
+    background-size: cover;
+    width: 30.60606vw;
+    height: 30.36364vw; }
 
 .contacts-form {
   padding: 2.72727vw 0 2.72727vw 21.33333vw; }

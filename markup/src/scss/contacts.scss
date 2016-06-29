@@ -41,16 +41,52 @@
 
 .contacts-map {
     width: 100%;
+    position: relative;
     background: #fff;
     border-radius: get-width(7);
-    height: get-width(592);
-    padding: get-width(45);
+    height: get-width(604);
+    padding: get-width(32) get-width(45) get-width(45);
     margin-left: get-width(-45);
 
     &__inner {
         height: 100%;
-        background: url('../images/contacts-map.jpg') no-repeat;
+        background: url('../images/map.jpg') no-repeat;
         background-size: cover;
+    }
+}
+
+.contacts-map-magnifier {
+    position: absolute;
+    top: get-width(20);
+    left: get-width(400);
+    cursor: pointer;
+
+    &__frame {
+        display: block;
+        width: get-width(540);
+        height: get-width(695);
+        background: url('../images/magnifier.png') no-repeat;
+        background-size: cover;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__viewport {
+        overflow: hidden;
+        position: absolute;
+        border-radius: 50%;
+        top: get-width(37);
+        left: get-width(54);
+        width: get-width(308);
+        height: get-width(307);
+        z-index: 1;
+    }
+
+    &__map {
+        background: url('../images/map-zoomed.jpg') no-repeat;
+        background-size: cover;
+        width: get-width(505);
+        height: get-width(501);
     }
 }
 
