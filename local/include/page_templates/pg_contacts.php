@@ -85,4 +85,18 @@
     <div class="contacts-map">
         <div class="contacts-map__inner"></div>
     </div>
+    <div class="contacts-form">
+        <?
+        $APPLICATION->IncludeComponent(
+            'bitrix:main.include',
+            '',
+            Array(
+                'AREA_FILE_SHOW' => 'file',
+                'PATH' => '/local/include/page_templates/pg_contacts_feedback.php',
+                'EDIT_TEMPLATE' => ''
+            ),
+            false
+        );
+        ?>
+    </div>
 </div>
