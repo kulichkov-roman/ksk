@@ -1,3 +1,6 @@
-.main-cars__pic._zoom  {
+/*.main-cars__pic._zoom  {
     max-width: 84%; !important;
+}*/
+.footer__developers-link {
+    font-size: 0.8888vw !important;
 }

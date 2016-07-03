@@ -100,7 +100,8 @@
                 'PATH' => '/local/include/page_templates/pg_contacts_feedback.php',
                 'EDIT_TEMPLATE' => ''
             ),
-            false
+            false,
+            Array('HIDE_ICONS' => 'Y')
         );
         ?>
     </div>

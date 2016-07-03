@@ -28,6 +28,8 @@
 				'/contacts/'     => '_contacts',
 				'/news/'         => '_preparing',
 			),
+			'feedbackIBlockId'   => '7',
+		    'feedbackPropPhoneId' => '7'
 		)
 	)
 );
