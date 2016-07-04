@@ -170,20 +170,23 @@ $(function () {
         return
     }
 
+    var $viewport = $('.contacts-map-magnifier__viewport');
+    var $map = $('.contacts-map-magnifier__map');
     var dragged = false;
     var multiplier = 2;
     var edges = {
         top: {
-            min: 17,
-            max: 98
+            min: parseInt($magnifier.css('top')),
+            max: null
         },
         left: {
-            min: 332,
-            max: 410
+            min: parseInt($magnifier.css('left')),
+            max: null
         }
     }
+    edges.top.max = edges.top.min + ($map.outerHeight() - $viewport.outerHeight()) / multiplier;
+    edges.left.max = edges.left.min + ($map.outerWidth() - $viewport.outerWidth()) / multiplier;
     var zeroPoint = $magnifier.position();
-    var $map = $('.contacts-map-magnifier__map');
 
     $('body').on('mouseup', function (e) {
         if (e.button === 0) {
