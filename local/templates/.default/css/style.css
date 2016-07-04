@@ -780,7 +780,8 @@ address {
     background: url("../images/map-zoomed.jpg") no-repeat;
     background-size: cover;
     width: 30.60606vw;
-    height: 30.36364vw; }
+    height: 30.36364vw;
+    position: relative; }
 
 .contacts-form {
   padding: 2.72727vw 0 2.72727vw 21.33333vw; }

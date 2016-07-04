@@ -161,6 +161,83 @@ $(function () {
             scrollTop: offset - (height / 2) - ($sticker.outerHeight() / 2)
         }, 300);
     })
-
-
 });
+
+
+$(function () {
+    var $magnifier = $('.contacts-map-magnifier');
+    if (!$magnifier.length) {
+        return
+    }
+
+    var dragged = false;
+    var multiplier = 2;
+    var edges = {
+        top: {
+            min: 17,
+            max: 98
+        },
+        left: {
+            min: 332,
+            max: 410
+        }
+    }
+    var zeroPoint = $magnifier.position();
+    var $map = $('.contacts-map-magnifier__map');
+
+    $('body').on('mouseup', function (e) {
+        if (e.button === 0) {
+            dragged = false;
+        }
+    });
+
+    $magnifier
+        .on('mousedown', function (e) {
+            if (e.button === 0) {
+                var position = $magnifier.position();
+                dragged = {
+                    top: -e.pageY + position.top,
+                    left: -e.pageX + position.left
+                };
+            }
+        })
+        .on('mouseleave', function (e) {
+            // dragged = false;
+        })
+        .on('mousemove', function (e) {
+            if (dragged) {
+                var diff = {
+                    top: dragged.top + e.pageY,
+                    left: dragged.left + e.pageX
+                };
+
+                if (diff.top > edges.top.max) {
+                    diff.top = edges.top.max;
+                }
+                if (diff.top < edges.top.min) {
+                    diff.top = edges.top.min;
+                }
+                if (diff.left > edges.left.max) {
+                    diff.left = edges.left.max;
+                }
+                if (diff.left < edges.left.min) {
+                    diff.left = edges.left.min;
+                }
+
+                $magnifier.css({
+                    top: diff.top,
+                    left: diff.left
+                });
+
+                var mapPos = {
+                    top: -(diff.top - zeroPoint.top) * multiplier,
+                    left: -(diff.left - zeroPoint.left) * multiplier
+                }
+
+                $map.css({
+                    top: mapPos.top,
+                    left: mapPos.left
+                })
+            }
+        });
+})
