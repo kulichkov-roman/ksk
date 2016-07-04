@@ -87,6 +87,30 @@
             background: url('../images/icon-info.png');
             background-size: cover;
         }
+
+        .content._catalog & {
+            padding-left: get-width(50);
+            padding-right: get-width(50);
+
+            &:before {
+                width: get-width(56);
+                height: get-width(35);
+                background: url('../images/icon-catalog.png');
+                background-size: cover;
+            }
+        }
+
+        .content._contacts & {
+            padding-left: get-width(45);
+            padding-right: get-width(50);
+
+            &:before {
+                width: get-width(83);
+                height: get-width(35);
+                background: url('../images/icon-contacts.png');
+                background-size: cover;
+            }
+        }
     }
 
     &__tab-text {

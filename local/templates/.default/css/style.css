@@ -478,6 +478,22 @@ address {
       vertical-align: middle;
       background: url("../images/icon-info.png");
       background-size: cover; }
+    .content._catalog .content__tab {
+      padding-left: 3.0303vw;
+      padding-right: 3.0303vw; }
+      .content._catalog .content__tab:before {
+        width: 3.39394vw;
+        height: 2.12121vw;
+        background: url("../images/icon-catalog.png");
+        background-size: cover; }
+    .content._contacts .content__tab {
+      padding-left: 2.72727vw;
+      padding-right: 3.0303vw; }
+      .content._contacts .content__tab:before {
+        width: 5.0303vw;
+        height: 2.12121vw;
+        background: url("../images/icon-contacts.png");
+        background-size: cover; }
   .content__tab-text {
     vertical-align: middle;
     color: #8b8b8b;
