@@ -33,6 +33,14 @@ IncludeTemplateLangFile(__FILE__);
 		<link rel="shortcut icon" href="/favicon.ico">
 	');
 
+	$APPLICATION->AddHeadString('
+		<meta property="og:image:width" content="300"/>
+        <meta property="og:image:height" content="300"/>
+        <meta property="og:url" content="http://мясо54.рф/local/images/logo_share.png"/>
+        <meta property="og:title" content="Корниловский свинокомплекс"/>
+        <meta property="og:description" content="Полезное и вкусное мяcо, только натуральные корма, племенной репродуктор"/>
+	');
+
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/slick-1.4.1/slick.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/jquery.fancybox.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/helpers/jquery.fancybox-thumbs.css');
@@ -45,6 +53,7 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/helpers/jquery.fancybox-thumbs.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/init.js');
 	?>
+
 	<?$APPLICATION->ShowHead()?>
 </head>
 <body <?=$arBodyClasses[$APPLICATION->GetCurDir()] ? 'class="'.$arBodyClasses[$APPLICATION->GetCurDir()].'"' : '';?>>
