@@ -106,19 +106,24 @@ $(function () {
     var modMatcher = /_part-[0-9]+/;
     var $sticker = $('.catalog__sticker');
 
+
     if (!$sticker.length) {
         return;
     }
 
+    var offset = $sticker.offset();
+
     $(window).on('scroll', function() {
         var padding = parseInt($sticker.css('padding-top'), 10)
         var stickerOffet = $('.catalog__sticker-h').offset().top - (padding * 4);
-        var scrollTop = $('body').scrollTop();
+        var scrollTop = $(window).scrollTop();
 
         if (scrollTop > stickerOffet) {
             $sticker.addClass('_sticked');
+            $sticker.css({left: offset.left});
         } else {
             $sticker.removeClass('_sticked');
+            $sticker.css({left: ''});
         }
 
         var $activeEl = null;
