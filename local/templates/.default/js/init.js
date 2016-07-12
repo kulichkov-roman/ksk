@@ -190,62 +190,52 @@ $(function () {
         }
     }
     edges.top.max = edges.top.min + ($map.outerHeight() - $viewport.outerHeight()) / multiplier;
+    edges.top.range = edges.top.max - edges.top.min;
     edges.left.max = edges.left.min + ($map.outerWidth() - $viewport.outerWidth()) / multiplier;
+    edges.left.range = edges.left.max - edges.left.min;
     var zeroPoint = $magnifier.position();
+    var screenSize = {
+        width: $(window).width(),
+        height: $(window).height()
+    };
 
-    $('body').on('mouseup', function (e) {
-        if (e.button === 0) {
-            dragged = false;
+    $(window).on('mousemove', function (e) {
+        var progress = {
+            x: 100 / screenSize.width * e.screenX,
+            y: 100 / screenSize.height * e.screenY
+        };
+
+        var diff = {
+            top: edges.top.min + (edges.top.range / 100 * progress.y),
+            left: edges.left.min + (edges.left.range / 100 * progress.x)
+        };
+
+        if (diff.top > edges.top.max) {
+            diff.top = edges.top.max;
         }
-    });
+        if (diff.top < edges.top.min) {
+            diff.top = edges.top.min;
+        }
+        if (diff.left > edges.left.max) {
+            diff.left = edges.left.max;
+        }
+        if (diff.left < edges.left.min) {
+            diff.left = edges.left.min;
+        }
 
-    $magnifier
-        .on('mousedown', function (e) {
-            if (e.button === 0) {
-                var position = $magnifier.position();
-                dragged = {
-                    top: -e.pageY + position.top,
-                    left: -e.pageX + position.left
-                };
-            }
-        })
-        .on('mouseleave', function (e) {
-            // dragged = false;
-        })
-        .on('mousemove', function (e) {
-            if (dragged) {
-                var diff = {
-                    top: dragged.top + e.pageY,
-                    left: dragged.left + e.pageX
-                };
-
-                if (diff.top > edges.top.max) {
-                    diff.top = edges.top.max;
-                }
-                if (diff.top < edges.top.min) {
-                    diff.top = edges.top.min;
-                }
-                if (diff.left > edges.left.max) {
-                    diff.left = edges.left.max;
-                }
-                if (diff.left < edges.left.min) {
-                    diff.left = edges.left.min;
-                }
-
-                $magnifier.css({
-                    top: diff.top,
-                    left: diff.left
-                });
-
-                var mapPos = {
-                    top: -(diff.top - zeroPoint.top) * multiplier,
-                    left: -(diff.left - zeroPoint.left) * multiplier
-                }
-
-                $map.css({
-                    top: mapPos.top,
-                    left: mapPos.left
-                })
-            }
+        $magnifier.css({
+            top: diff.top,
+            left: diff.left
         });
+
+        var mapPos = {
+            top: -(diff.top - zeroPoint.top) * multiplier,
+            left: -(diff.left - zeroPoint.left) * multiplier
+        };
+
+        $map.css({
+            top: mapPos.top,
+            left: mapPos.left
+        });
+    });
 })
