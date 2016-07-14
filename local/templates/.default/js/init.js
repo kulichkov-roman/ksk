@@ -175,6 +175,7 @@ $(function () {
         return
     }
 
+    var $box = $('.contacts-map');
     var $viewport = $('.contacts-map-magnifier__viewport');
     var $map = $('.contacts-map-magnifier__map');
     var dragged = false;
@@ -194,16 +195,26 @@ $(function () {
     edges.left.max = edges.left.min + ($map.outerWidth() - $viewport.outerWidth()) / multiplier;
     edges.left.range = edges.left.max - edges.left.min;
     var zeroPoint = $magnifier.position();
-    var screenSize = {
-        width: $(window).width(),
-        height: $(window).height()
+    var boxSize = {
+        width: $box.outerWidth(),
+        height: $box.outerHeight()
     };
+    var boxOffset = $box.offset();
 
-    $(window).on('mousemove', function (e) {
+    $box.on('mousemove', function (e) {
+        var mouseOffset = {
+            x: (e.pageX - boxOffset.left),
+            y: (e.pageY - boxOffset.top)
+        }
         var progress = {
-            x: 100 / screenSize.width * e.screenX,
-            y: 100 / screenSize.height * e.screenY
+            x: 100 / boxSize.width * mouseOffset.x,
+            y: 100 / boxSize.height * mouseOffset.y
         };
+
+        // Движение вне карты (за счёт вылезающей за пределы лупы)
+        if (mouseOffset.y > boxSize.height) {
+            return;
+        }
 
         var diff = {
             top: edges.top.min + (edges.top.range / 100 * progress.y),
