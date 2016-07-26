@@ -27,6 +27,12 @@
         padding-bottom: 22.3%;
     }
 
+    &._products {
+        background: url('../images/bg-slider_products.jpg') center no-repeat;
+        background-size: cover;
+        padding-bottom: 22.3%;
+    }
+
     &__list {
         // height: 100%;
         position: absolute;

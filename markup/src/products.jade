@@ -1,0 +1,123 @@
+doctype html
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+html
+    <!--<![endif]-->
+    head
+        include ./includes/head.jade
+
+    body._products
+        .wrapper
+            header.header
+                nav.menu
+                    ul.menu__list
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Гостевая
+                        li.menu__item._active
+                            a.menu__link(href="#")
+                                span.menu__text Мясо и Субпродукты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Полуфабрикаты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Контакты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Новости
+
+
+                section.header-slider._products
+
+            section.content._products
+                .content__inner
+                    .content__substrate
+                    .content__content
+                        .content__tab
+                            span.content__tab-text Полуфабрикаты
+
+                        .content__description.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        // Вот тут классец нужно менять: _even/_odd (в зависимости от кол-ва элементов: чётное или нечётное)
+                        .products._odd
+                            each val in [1, 2, 3]
+                                article.products-item._part-3
+                                    span.products-item__corner
+                                    a.products-item__link(href="#")
+                                        .products-item__img-h
+                                            img.products-item__img(src="images/pelmeni.jpg" alt="")
+                                        .products-item__inner
+                                            h3.products-item__title
+                                                span.products-item__title-text
+                                                    | Пельмени ручной лепки
+                                            .products-item-info
+                                                .products-item-info__item
+                                                    span.products-item-info__item-text
+                                                        | Самовывоз -&#32;
+                                                        span.products-item-info__item-value 520
+                                                        | &#32;р/кг,
+
+                                                .products-item-info__item
+                                                    span.products-item-info__item-text
+                                                        | Доставка -&#32;
+                                                        span.products-item-info__item-value 550
+                                                        | &#32;р/кг
+
+                                                    span.products-item-info__item-notice
+                                                        | &#32;(при заказе от 120кг)
+                                            .products-item__description.
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                                            .products-item-composition
+                                                strong.products-item-composition__title Состав
+                                                ul.products-item-composition__list
+                                                    li.products-item-composition__item
+                                                        span.products-item-composition__item-value - Тесто дрожжевое
+                                                        span.products-item-composition__item-notice
+                                                            | (мука пшеничная 1с., яцйо куриное, соль, масло сливочное)
+                                                    li.products-item-composition__item
+                                                        span.products-item-composition__item-value - Фарш свинной
+                                                        span.products-item-composition__item-notice
+                                                            | (60% мясо, 10% жилы, 30% жир)
+                                                    li.products-item-composition__item
+                                                        span.products-item-composition__item-value - Лук репчатый
+                                                        span.products-item-composition__item-notice
+                                                            | (классический белый)
+            footer.footer
+                .footer__inner
+                    button.footer__up-btn(type="button") Вернуться наверх
+                    section.footer-content
+                        .footer-content__col
+                            .footer-phones
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Бухгалтерия:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (930) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                .footer-phones__note
+                                    | Звонки принимаем с 10:00 до 19:00 по Москве
+
+                        .footer-content__col
+                            ul.footer-contacts
+                                li.footer-contacts__item._location
+                                    | Россия, индекс: 93847, Новосибирская область, пос. Название посёлка<br>
+                                    | (69 км трассы Новосибирск-Кемерово)
+                                li.footer-contacts__item._email
+                                    a.footer-contacts__link(href="#") svinki_kompleks@mail.ru
+
+
+                    .footer__copyrights
+                        | Права защищены. 2016 г. © ООО «Корниловский Свинокомплекс»
+
+                    .footer__developers
+                        a.footer__developers-link(href="#") Сайт разработали

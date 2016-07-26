@@ -36,6 +36,15 @@
             right: get-width(-300);
         }
 
+        .content._products & {
+            background: #f0eed5;
+            width: get-width(875);
+            right: 0;
+            left: 0;
+            bottom: get-width(-45);
+            margin: 0 auto;
+        }
+
         .content._preparing & {
             background: #f0eed5;
         }
@@ -111,6 +120,23 @@
                 background-size: cover;
             }
         }
+
+        .content._products & {
+            padding-left: 0;
+            padding-right: 0;
+            width: get-width(435);
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+
+            &:before {
+                margin-right: get-width(26);
+                width: get-width(47);
+                height: get-width(40);
+                background: url('../images/icon-products.png');
+                background-size: cover;
+            }
+        }
     }
 
     &__tab-text {
@@ -140,6 +166,14 @@
 
         .content._catalog & {
         }
+
+        .content._products & {
+            width: get-width(875);
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: get-width(45) get-width(50);
+        }
+
     }
 
 }
