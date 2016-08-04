@@ -1,10 +1,18 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-$APPLICATION->SetTitle('Полуфабрикаты');
+$APPLICATION->SetTitle("Полуфабрикаты");
 ?>
-<div class="content__preparing">
-    <div class="content__preparing-inner">Материалы раздела подготавливаются.</div>
-</div>
+<?
+$APPLICATION->IncludeComponent("bitrix:main.include", "",
+    Array(
+        "AREA_FILE_SHOW" => "file",
+        "PATH" => "/local/include/page_templates/pg_catalog_smf.php",
+        "EDIT_TEMPLATE" => ""
+    ),
+    false,
+    Array('HIDE_ICONS' => 'Y')
+);
+?>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>

@@ -14,22 +14,25 @@
 			'phoneFooterIBlockId'     => 4,
 			'catalogMeatIBlockId'     => 5,
 			'emailListIBlockId'       => 6,
-			'headerSliderClassesTemplates'    => array(
+			'headerSliderClassesTemplates'  => array(
 				'/catalog_meat/' => '_catalog',
+				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts'
 			),
 			'bodyClassesTemplates'    => array(
 				'/catalog_meat/' => '_catalog',
+				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts'
 			),
 			'contentClassesTemplates' => array(
 				'/catalog_meat/' => '_catalog',
-				'/catalog_smf/'  => '_preparing',
+				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts',
 				'/news/'         => '_preparing',
 			),
-			'feedbackIBlockId'   => '7',
-		    'feedbackPropPhoneId' => '7'
+			'feedbackIBlockId'    => '7',
+		    'feedbackPropPhoneId' => '7',
+			'catalogSmfIBlockId'  => '8',
 		)
 	)
 );
@@ -57,6 +60,15 @@ if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
 			'type' => 'jpg'
 		)
 	);
+
+	itc\Resizer::addPreset('catalogSmfPreview', array(
+			'mode' => 'auto',
+			'width' => '554',
+			'height' => '354',
+			'type' => 'jpg'
+		)
+	);
+
 
 	itc\Resizer::addPreset('rewardsMainPreview', array(
 			'mode' => 'auto',

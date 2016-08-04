@@ -32,7 +32,7 @@ if(sizeof($arIds) > 0)
     while($arItem = $rsFile->GetNext())
     {
         $arPreviewPicture[$arItem['ID']] = $arItem;
-        $urlPreviewPicture = itc\Resizer::get($arItem['ID'], 'advantageMainPreview');
+        $urlPreviewPicture = itc\Resizer::get($arItem['ID'], 'catalogSmfPreview');
         $urlDetailPicture  = itc\Resizer::get($arItem['ID'], 'rewardsMainDetail');
 
         $arPreviewPicture[$arItem['ID']]['SRC'] = $urlPreviewPicture;
