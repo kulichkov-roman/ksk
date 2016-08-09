@@ -33,7 +33,9 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
 					<div class="catalog-item-info__item">
 						<span class="catalog-item-info__item-text">Доставка -&#32;
 							<span class="catalog-item-info__item-value"><?=$arResult['PROPERTIES']['PRICE_DELIVERY']['VALUE']?></span>&#32;р/кг,
-							<span class="catalog-item-info__item-notice">&#32;(при заказе от 120кг)</span>
+							<?if($arResult['PROPERTIES']['PRICE_DELIVERY']['DESCRIPTION']){?>
+								<span class="catalog-item-info__item-notice">&#32;(<?=$arResult['PROPERTIES']['PRICE_DELIVERY']['DESCRIPTION']?>)</span>
+							<?}?>
 						</span>
 					</div>
 				<?}?>
