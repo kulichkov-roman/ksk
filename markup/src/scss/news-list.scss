@@ -58,33 +58,6 @@
         border: get-width(5) solid $color-red;
     }
 
-    &__corner {
-        display: none;
-        position: absolute;
-        width: get-width(20);
-        height: get-width(32);
-        top: get-width(110);
-        right: get-width(-20);
-        overflow: hidden;
-
-        .news-list-item._active & {
-            display: block;
-        }
-
-        &:before {
-            content: '';
-            display: block;
-            border: get-width(5) solid $color-red;
-            background: #fff;
-            position: relative;
-            width: get-width(15);
-            height: get-width(15);
-            left: get-width(-14);
-            top: get-width(3);
-            @include rotate(45);
-        }
-    }
-
     &__link {
         text-decoration: none;
         display: block;

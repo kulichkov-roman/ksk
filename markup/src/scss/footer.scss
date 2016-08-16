@@ -53,6 +53,15 @@
                 top: get-width(32);
             }
         }
+
+        &._sticked {
+            top: get-width(-75);
+            padding-top: get-width(44);
+
+            &:before {
+                top: get-width(62);
+            }
+        }
     }
 
     &__copyrights {

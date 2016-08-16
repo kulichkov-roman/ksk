@@ -75,6 +75,11 @@ body {
 		background: #ded2ad url('../images/bg_news-list.jpg') center get-width(340) no-repeat;
 		background-size: cover;
 	}
+
+	&._news-page {
+		background: #ded2ad url('../images/bg_news-page.jpg') center get-width(340) no-repeat;
+		background-size: cover;
+	}
 }
 
 

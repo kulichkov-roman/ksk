@@ -1,0 +1,95 @@
+doctype html
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+html
+    <!--<![endif]-->
+    head
+        include ./includes/head.jade
+
+    body._news-page
+        .wrapper
+            header.header
+                nav.menu
+                    ul.menu__list
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Гостевая
+                        li.menu__item._active
+                            a.menu__link(href="#")
+                                span.menu__text Мясо и Субпродукты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Полуфабрикаты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Контакты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Новости
+
+
+                section.header-slider._news-page
+
+            section.content._news-page
+                .content__inner
+                    .content__substrate
+                    .content__content
+                        .content__tab
+                            span.content__tab-text Новости свиндустрии
+
+                        article.news-page
+                            .news-page-img-box
+                                each val in [1, 2]
+                                    .news-page-img-box__item
+                                        img.news-page-img-box__img(src="images/news-pig.jpg" alt="")
+                                        .news-page-img-box__description
+                                            | краткое описание фотографии
+
+                            .news-page__inner
+                                h3.news-page__title
+                                    span.news-page__title-text
+                                        | В России вновь разрешено прививать свиней
+                                .news-page-info
+                                    span.news-page-info__date 22.06.2016г.
+
+                                .news-page__description.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+            footer.footer
+                .footer__inner
+                    // Вот тут добавился класс-модификатор!!!!! (_sticked)
+                    button.footer__up-btn._sticked(type="button") Вернуться наверх
+                    section.footer-content
+                        .footer-content__col
+                            .footer-phones
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Бухгалтерия:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (930) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                .footer-phones__note
+                                    | Звонки принимаем с 10:00 до 19:00 по Москве
+
+                        .footer-content__col
+                            ul.footer-contacts
+                                li.footer-contacts__item._location
+                                    | Россия, индекс: 93847, Новосибирская область, пос. Название посёлка<br>
+                                    | (69 км трассы Новосибирск-Кемерово)
+                                li.footer-contacts__item._email
+                                    a.footer-contacts__link(href="#") svinki_kompleks@mail.ru
+
+
+                    .footer__copyrights
+                        | Права защищены. 2016 г. © ООО «Корниловский Свинокомплекс»
+
+                    .footer__developers
+                        a.footer__developers-link(href="#") Сайт разработали

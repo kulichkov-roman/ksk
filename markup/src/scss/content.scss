@@ -52,6 +52,14 @@
             right: get-width(-230);
         }
 
+        .content._news-page & {
+            background: #f0eed5 url('../images/bg-substrate_news-page.jpg') right get-width(655) no-repeat;
+            background-size: 100%;
+            width: get-width(1030 + 50 + 10);
+            right: get-width(-230);
+            max-height: get-width(1090);
+        }
+
         .content._preparing & {
             background: #f0eed5;
         }
@@ -145,7 +153,8 @@
             }
         }
 
-        .content._news-list & {
+        .content._news-list &,
+        .content._news-page & {
             padding-left: get-width(40);
             padding-right: get-width(40);
 
