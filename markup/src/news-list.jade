@@ -1,0 +1,114 @@
+doctype html
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+html
+    <!--<![endif]-->
+    head
+        include ./includes/head.jade
+
+    body._news-list
+        .wrapper
+            header.header
+                nav.menu
+                    ul.menu__list
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Гостевая
+                        li.menu__item._active
+                            a.menu__link(href="#")
+                                span.menu__text Мясо и Субпродукты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Полуфабрикаты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Контакты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Новости
+
+
+                section.header-slider._news-list
+
+            section.content._news-list
+                .content__inner
+                    .content__substrate
+                    .content__content
+                        .content__tab
+                            span.content__tab-text Новости свиндустрии
+
+                        .content__description.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        .news-list
+                            .news-list__list
+                                each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                                    // Для тех элементов, которые должны быть скрыты на сервере,
+                                    // просто назначь style="display: none"
+                                    article.news-list-item
+                                        span.news-list-item__corner
+                                        a.news-list-item__link(href="#")
+                                            .news-list-item__img-h
+                                                img.news-list-item__img(src="images/news-pig.jpg" alt="")
+                                            .news-list-item__inner
+                                                h3.news-list-item__title
+                                                    span.news-list-item__title-text
+                                                        | В России вновь разрешено прививать свиней
+                                                .news-list-item-info
+                                                    span.news-list-item-info__date 22.06.2016г.
+
+                                                .news-list-item__description.
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                                                .news-list-item-read-more
+                                                    span.news-list-item-read-more__text Читать подробнее >>
+
+                            .news-list__footer
+                                button.news-list__show-more(
+                                    type="button"
+                                ) Показать ещё 5 новостей
+
+                        // Вспомогательный шлак. Удалить при интеграции
+                        script.
+                            $('.news-list-item').each(function() {
+                                if ($(this).index() > 4) {
+                                    $(this).hide();
+                                }
+                            });
+            footer.footer
+                .footer__inner
+                    // Вот тут добавился класс-модификатор!! (_compact)
+                    button.footer__up-btn._compact(type="button") Вернуться наверх
+                    section.footer-content
+                        .footer-content__col
+                            .footer-phones
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Бухгалтерия:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (930) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                .footer-phones__note
+                                    | Звонки принимаем с 10:00 до 19:00 по Москве
+
+                        .footer-content__col
+                            ul.footer-contacts
+                                li.footer-contacts__item._location
+                                    | Россия, индекс: 93847, Новосибирская область, пос. Название посёлка<br>
+                                    | (69 км трассы Новосибирск-Кемерово)
+                                li.footer-contacts__item._email
+                                    a.footer-contacts__link(href="#") svinki_kompleks@mail.ru
+
+
+                    .footer__copyrights
+                        | Права защищены. 2016 г. © ООО «Корниловский Свинокомплекс»
+
+                    .footer__developers
+                        a.footer__developers-link(href="#") Сайт разработали

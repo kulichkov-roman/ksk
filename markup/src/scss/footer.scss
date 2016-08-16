@@ -42,6 +42,17 @@
             background: url('../images/icon-up.png');
             background-size: 100%;
         }
+
+        &._compact {
+            padding-top: get-width(5);
+            border-radius: get-width(7);
+            height: get-width(80);
+            top: get-width(-20);
+
+            &:before {
+                top: get-width(32);
+            }
+        }
     }
 
     &__copyrights {

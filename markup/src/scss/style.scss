@@ -13,6 +13,8 @@
 $ff-regular: 'Open Sans', Arial, sans-serif;
 $ff-tech: 'Roboto', Tahoma, sans-serif;
 
+$color-red: #c32021;
+
 @import "mixins";
 // @import "fonts";
 @import "base";
@@ -25,6 +27,7 @@ $ff-tech: 'Roboto', Tahoma, sans-serif;
 @import "products";
 @import "feed";
 @import "catalog";
+@import "news-list";
 @import "rewards";
 @import "footer";
 

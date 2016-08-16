@@ -249,4 +249,32 @@ $(function () {
             left: mapPos.left
         });
     });
-})
+});
+
+
+// Новости
+
+$(function() {
+    function getInvisible () {
+        var step = 5;
+        var counter = 0;
+        return $('.news-list-item').filter(':hidden').filter(function () {
+            if (counter === 5) {
+                return false;
+            }
+            counter++;
+            return true;
+        });
+    }
+
+    if (!getInvisible().length) {
+        $('.news-list__show-more').hide();
+    }
+    $('.news-list__show-more').click(function () {
+        var $filtered = getInvisible();
+        $filtered.show();
+        if (!getInvisible().length) {
+            $('.news-list__show-more').hide();
+        }
+    });
+});

@@ -45,6 +45,13 @@
             margin: 0 auto;
         }
 
+        .content._news-list & {
+            background: #f0eed5 url('../images/bg-substrate_news-list.jpg') get-width(100) get-width(50) no-repeat;
+            background-size: 100%;
+            width: get-width(1030 + 50 + 10);
+            right: get-width(-230);
+        }
+
         .content._preparing & {
             background: #f0eed5;
         }
@@ -137,6 +144,19 @@
                 background-size: cover;
             }
         }
+
+        .content._news-list & {
+            padding-left: get-width(40);
+            padding-right: get-width(40);
+
+            &:before {
+                width: get-width(56);
+                height: get-width(50);
+                background: url('../images/icon-news-list.png');
+                background-size: cover;
+            }
+        }
+
     }
 
     &__tab-text {
@@ -174,6 +194,10 @@
             padding: get-width(45) get-width(50);
         }
 
+        .content._news-list & {
+            padding-left: get-width(430);
+            margin-bottom: get-width(40);
+        }
     }
 
 }

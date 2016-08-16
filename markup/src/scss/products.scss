@@ -74,7 +74,7 @@
     }
 
     &._active {
-        border: get-width(5) solid #a62626;
+        border: get-width(5) solid $color-red;
         //
         // &:before {
         //     position: absolute;
@@ -103,7 +103,7 @@
         &:before {
             content: '';
             display: block;
-            border: get-width(5) solid #a62626;
+            border: get-width(5) solid $color-red;
             background: #fff;
             position: relative;
             width: get-width(15);
