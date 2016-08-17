@@ -5,6 +5,9 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
 $isMain = CSite::InDir(SITE_DIR.'index.php');
 $isContacts = CSite::InDir(SITE_DIR.'contacts/');
+
+$environment = \Your\Environment\EnvironmentManager::getInstance();
+$arFooterClasses = $environment->get('footerClassesTemplates');
 ?>
 				</div><!--content__content-->
 			</div><!--content__inner-->
@@ -24,7 +27,7 @@ $isContacts = CSite::InDir(SITE_DIR.'contacts/');
 		<footer class="footer">
 			<div class="footer__inner">
 				<?if(!$isContacts){?>
-					<button type="button" class="footer__up-btn">Вернуться наверх</button>
+					<button type="button" class="footer__up-btn <?=$arFooterClasses[$APPLICATION->GetCurDir()] ? $arFooterClasses[$APPLICATION->GetCurDir()] : '';?>">Вернуться наверх</button>
 					<section class="footer-content">
 						<div class="footer-content__col">
 							<div class="footer-phones">

@@ -17,22 +17,28 @@
 			'headerSliderClassesTemplates'  => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_products',
-				'/contacts/'     => '_contacts'
+				'/contacts/'     => '_contacts',
+				'/news/'         => '_news-list'
 			),
 			'bodyClassesTemplates'    => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_products',
-				'/contacts/'     => '_contacts'
+				'/contacts/'     => '_contacts',
+				'/news/'         => '_news-list'
+			),
+			'footerClassesTemplates'    => array(
+				'/news/'         => '_compact'
 			),
 			'contentClassesTemplates' => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts',
-				'/news/'         => '_preparing',
+				'/news/'         => '_news-list',
 			),
 			'feedbackIBlockId'    => '7',
 		    'feedbackPropPhoneId' => '7',
 			'catalogSmfIBlockId'  => '8',
+			'newsPlugId'          => '181',
 		)
 	)
 );
@@ -82,6 +88,14 @@ if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
 			'mode' => 'width',
 			'width' => '1024',
 			'height' => null,
+			'type' => 'jpg'
+		)
+	);
+
+	itc\Resizer::addPreset('newsPicture', array(
+			'mode' => 'auto',
+			'width' => '311',
+			'height' => '250',
 			'type' => 'jpg'
 		)
 	);
