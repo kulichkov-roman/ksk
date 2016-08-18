@@ -34,10 +34,10 @@ IncludeTemplateLangFile(__FILE__);
 	');
 
 	$APPLICATION->AddHeadString('
-		<meta property="og:image:width" content="300"/>
-        <meta property="og:image:height" content="300"/>
-        <meta property="og:url" content="http://мясо54.рф/local/images/logo_share.png"/>
         <meta property="og:title" content="Корниловский свинокомплекс"/>
+        <meta property="og:url" content="http://мясо54.рф/"/>
+        <meta property="og:image" content="http://мясо54.рф/local/images/logo_share.png"/>
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:description" content="Полезное и вкусное мяcо, только натуральные корма, племенной репродуктор"/>
 	');
 

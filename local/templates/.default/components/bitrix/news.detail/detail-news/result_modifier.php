@@ -29,9 +29,31 @@ if($id <> '')
     if($arItem = $rsFile->GetNext())
     {
         $arDetailPicture[$arItem['ID']] = $arItem;
-        $urlDetailPicture = itc\Resizer::get($arItem['ID'], 'w1280');
+        $urlDetailPicture = itc\Resizer::get($arItem['ID'], 'newsPicture');
 
         $arResult['DETAIL_PICTURE']['SRC'] = $urlDetailPicture;
+    }
+}
+
+$arPictIds = array();
+if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']))
+{
+    $arPictIds = $arResult['PROPERTIES']['MORE_PHOTO']['VALUE'];
+
+    echo "<pre>"; var_dump($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']); echo "</pre>";
+
+    $arPicturePreview = array();
+    foreach($arPictIds as $pictId)
+    {
+        $arPicture[]  = array(
+            'PREVIEW_PICTURE' => itc\Resizer::get($pictId, 'newsPicture'),
+            'DETAIL_PICTURE'  => itc\Resizer::get($pictId, 'newsPicture')
+        );
+    }
+
+    if(!empty($arPicturePreview))
+    {
+        $arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] = $arPicture;
     }
 }
 ?>
