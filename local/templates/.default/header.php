@@ -26,6 +26,13 @@ IncludeTemplateLangFile(__FILE__);
 
 	$isMain = CSite::InDir(SITE_DIR.'index.php');
 	$isCatalogMeat = CSite::InDir(SITE_DIR.'catalog_meat/');
+	$isNewsDetail = preg_match('~^/news/[^/]+/~', $_SERVER['REQUEST_URI']);
+
+	if(!$isNewsDetail) {
+		$curDir = $APPLICATION->GetCurDir();
+	} else {
+		$curDir = $environment->get('newsDetailDir');
+	}
 
 	$APPLICATION->AddHeadString('
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
@@ -34,11 +41,7 @@ IncludeTemplateLangFile(__FILE__);
 	');
 
 	$APPLICATION->AddHeadString('
-        <meta property="og:title" content="Корниловский свинокомплекс"/>
-        <meta property="og:url" content="http://мясо54.рф/"/>
-        <meta property="og:image" content="http://мясо54.рф/local/images/logo_share.png"/>
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:description" content="Полезное и вкусное мяcо, только натуральные корма, племенной репродуктор"/>
+        
 	');
 
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/slick-1.4.1/slick.css');
@@ -55,8 +58,14 @@ IncludeTemplateLangFile(__FILE__);
 	?>
 
 	<?$APPLICATION->ShowHead()?>
+
+	<meta property="og:title" content="Корниловский свинокомплекс"/>
+	<meta property="og:url" content="http://мясо54.рф/"/>
+	<meta property="og:image" content="http://xn--54-7lcio7f.xn--p1ai/local/templates/.default/images/pig-part-0.png"/>
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:description" content="Полезное и вкусное мяcо, только натуральные корма, племенной репродуктор"/>
 </head>
-<body <?=$arBodyClasses[$APPLICATION->GetCurDir()] ? 'class="'.$arBodyClasses[$APPLICATION->GetCurDir()].'"' : '';?>>
+<body <?=$arBodyClasses[$curDir] ? 'class="'.$arBodyClasses[$curDir].'"' : '';?>>
 	<?$APPLICATION->ShowPanel();?>
 	<div class="wrapper">
 		<header class="header">
@@ -83,11 +92,11 @@ IncludeTemplateLangFile(__FILE__);
 			}
 			else
 			{
-				?><section class="header-slider <?=$arHeaderSliderClasses[$APPLICATION->GetCurDir()] ? $arHeaderSliderClasses[$APPLICATION->GetCurDir()] : '';?>"></section><?
+				?><section class="header-slider <?=$arHeaderSliderClasses[$curDir] ? $arHeaderSliderClasses[$curDir] : '';?>"></section><?
 			}
 			?>
 		</header>
-		<section class="content <?=$arContentClasses[$APPLICATION->GetCurDir()] ? $arContentClasses[$APPLICATION->GetCurDir()] : '';?>">
+		<section class="content <?=$arContentClasses[$curDir] ? $arContentClasses[$curDir] : '';?>">
 			<div class="content__inner">
 				<div class="content__substrate"></div>
 				<div class="content__content">

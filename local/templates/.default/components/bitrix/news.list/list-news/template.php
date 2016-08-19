@@ -28,7 +28,7 @@ $this->setFrameMode(true);
 				<div class="news-list-item-info"><span class="news-list-item-info__date"><?=$arItem["DISPLAY_ACTIVE_FROM"]?></span></div>
 				<?if($arItem['PREVIEW_TEXT'] <> ''){?>
 					<div class="news-list-item__description">
-						<?=$arItem['PREVIEW_TEXT']?>
+						<?=TruncateText($arItem['PREVIEW_TEXT'], 250)?>
 					</div>
 				<?}?>
 				<div class="news-list-item-read-more">

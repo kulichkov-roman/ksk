@@ -18,10 +18,9 @@ $this->setFrameMode(true);
 			<div class="news-page-img-box__description"><?=$arResult['DETAIL_PICTURE']['DESCRIPTION']?></div>
 		</div>
 		<?if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'])){
-			foreach($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']['PREVIEW_PICTURE'] as $key=>$src)
-			{
+			foreach($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] as $key=>$arSrc){
 				?>
-				<div class="news-page-img-box__item"><img src="<?=$src?>" alt="" class="news-page-img-box__img">
+				<div class="news-page-img-box__item"><img src="<?=$arSrc['PREVIEW_PICTURE']?>" alt="<?=$arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$key]?>" class="news-page-img-box__img">
 					<div class="news-page-img-box__description"><?=$arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$key]?></div>
 				</div>
 				<?

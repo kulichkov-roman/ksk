@@ -18,27 +18,33 @@
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts',
-				'/news/'         => '_news-list'
+				'/news/'         => '_news-list',
+				'/news_detail/'  => '_news-page'
 			),
 			'bodyClassesTemplates'    => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts',
-				'/news/'         => '_news-list'
+				'/news/'         => '_news-list',
+				'/news_detail/'  => '_news-page'
 			),
 			'footerClassesTemplates'    => array(
-				'/news/'         => '_compact'
+				'/news/'         => '_compact',
+				'/news_detail/'  => '_compact'
 			),
 			'contentClassesTemplates' => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts',
 				'/news/'         => '_news-list',
+				'/news_detail/'  => '_news-page'
 			),
 			'feedbackIBlockId'    => '7',
 		    'feedbackPropPhoneId' => '7',
 			'catalogSmfIBlockId'  => '8',
 			'newsPlugId'          => '181',
+			'newsDir'             => '/news/',
+			'newsDetailDir'       => '/news_detail/',
 		)
 	)
 );

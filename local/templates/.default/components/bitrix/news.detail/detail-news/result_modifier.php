@@ -40,9 +40,7 @@ if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']))
 {
     $arPictIds = $arResult['PROPERTIES']['MORE_PHOTO']['VALUE'];
 
-    echo "<pre>"; var_dump($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']); echo "</pre>";
-
-    $arPicturePreview = array();
+    $arPicture = array();
     foreach($arPictIds as $pictId)
     {
         $arPicture[]  = array(
@@ -51,7 +49,7 @@ if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']))
         );
     }
 
-    if(!empty($arPicturePreview))
+    if(!empty($arPicture))
     {
         $arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] = $arPicture;
     }
