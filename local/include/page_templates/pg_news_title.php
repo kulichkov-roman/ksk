@@ -1,1 +1,1 @@
-<span class="content__tab-text">Новости свиндустрии</span>
+<span class="content__tab-text">Наши новости</span>

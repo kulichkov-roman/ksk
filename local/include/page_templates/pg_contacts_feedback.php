@@ -28,7 +28,7 @@ $APPLICATION->IncludeComponent(
 		"LEVEL_LAST" => "Y",
 		"USE_CAPTCHA" => "N",
 		"USER_MESSAGE_EDIT" => "",
-		"USER_MESSAGE_ADD" => "",
+		"USER_MESSAGE_ADD" => "Спасибо за вопрос, наш менеджер свяжется в ближайшее время!",
 		"DEFAULT_INPUT_SIZE" => "30",
 		"RESIZE_IMAGES" => "N",
 		"MAX_FILE_SIZE" => "0",
