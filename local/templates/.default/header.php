@@ -59,6 +59,15 @@ IncludeTemplateLangFile(__FILE__);
 
 	<?$APPLICATION->ShowHead()?>
 
+	<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
+		Array(
+			'AREA_FILE_SHOW' => 'file',
+			'PATH' => '/local/include/site_templates/hd_ga.php',
+			'EDIT_TEMPLATE' => ''
+		),
+		false
+	);?>
+
 	<meta property="og:title" content="Корниловский свинокомплекс"/>
 	<meta property="og:url" content="http://мясо54.рф/"/>
 	<meta property="og:image" content="http://xn--54-7lcio7f.xn--p1ai/local/templates/.default/images/pig-part-0.png"/>
@@ -67,6 +76,14 @@ IncludeTemplateLangFile(__FILE__);
 </head>
 <body <?=$arBodyClasses[$curDir] ? 'class="'.$arBodyClasses[$curDir].'"' : '';?>>
 	<?$APPLICATION->ShowPanel();?>
+	<?$APPLICATION->IncludeComponent('bitrix:main.include', '',
+		Array(
+			'AREA_FILE_SHOW' => 'file',
+			'PATH' => '/local/include/site_templates/hd_ya.php',
+			'EDIT_TEMPLATE' => ''
+		),
+		false
+	);?>
 	<div class="wrapper">
 		<header class="header">
 			<?
