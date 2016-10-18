@@ -101,11 +101,9 @@ $(function () {
 
 
 // Каталог. Ездящая свинья
-// Кнопка наверх
 $(function () {
     var modMatcher = /_part-[0-9]+/;
     var $sticker = $('.catalog__sticker');
-
 
     if (!$sticker.length) {
         return;
@@ -116,6 +114,7 @@ $(function () {
     $(window).on('scroll', function() {
         var padding = parseInt($sticker.css('padding-top'), 10)
         var stickerOffet = $('.catalog__sticker-h').offset().top - (padding * 4);
+        var scrollTopLimit = $('.catalog').height() + $('.catalog').offset().top - stickerOffet - (padding * 2.5);
         var scrollTop = $(window).scrollTop();
 
         if (scrollTop > stickerOffet) {
@@ -127,7 +126,7 @@ $(function () {
         }
 
         var $activeEl = null;
-        $('.catalog-item').each(function () {
+        $('.catalog-item').each(function (index) {
             var $el = $(this);
             var height = $el.outerHeight();
             var offset = $el.offset().top - (padding * 6);
@@ -141,6 +140,13 @@ $(function () {
                 $el.addClass('_active');
             } else {
                 $el.removeClass('_active');
+            }
+
+            // Заставляем свинку не уезжать дальше конца списка
+            if (scrollTop > scrollTopLimit) {
+                $sticker.css({marginTop: -(scrollTop - scrollTopLimit)});
+            } else {
+                $sticker.css({marginTop: ''});
             }
         });
 
@@ -168,7 +174,7 @@ $(function () {
     })
 });
 
-
+// Контакты (лупа)
 $(function () {
     var $magnifier = $('.contacts-map-magnifier');
     if (!$magnifier.length) {
@@ -253,7 +259,6 @@ $(function () {
 
 
 // Новости
-
 $(function() {
     function getInvisible () {
         var step = 5;
