@@ -114,7 +114,7 @@ $(function () {
     $(window).on('scroll', function() {
         var padding = parseInt($sticker.css('padding-top'), 10)
         var stickerOffet = $('.catalog__sticker-h').offset().top - (padding * 4);
-        var scrollTopLimit = $('.catalog').height() + $('.catalog').offset().top - stickerOffet - (padding * 2.5);
+        var scrollTopLimit = $('.catalog').height() + $('.catalog').offset().top - stickerOffet - (padding * 2.8);
         var scrollTop = $(window).scrollTop();
 
         if (scrollTop > stickerOffet) {
@@ -282,4 +282,28 @@ $(function() {
             $('.news-list__show-more').hide();
         }
     });
+});
+
+$(function () {
+    var $seoBlock = $('.seo-block');
+    if (!$seoBlock.length) {
+        return;
+    }
+
+    $('.seo-block__toggle').click(function () {
+        var $content = $('.seo-block__content');
+
+        if ($content.is(':hidden')) {
+            $content.show();
+            var height = $content.outerHeight();
+            $seoBlock.css('marginBottom', -height);
+            $('.seo-block__toggle-text._expand').hide();
+            $('.seo-block__toggle-text._minimize').show();
+        } else {
+            $content.hide();
+            $seoBlock.css('marginBottom', '');
+            $('.seo-block__toggle-text._expand').show();
+            $('.seo-block__toggle-text._minimize').hide();
+        }
+    })
 });

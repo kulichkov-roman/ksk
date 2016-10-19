@@ -5,19 +5,27 @@
     &._contacts {
         margin-bottom: get-width(-300);
     }
+    //
+    // &._catalog {
+    //     padding-bottom: get-width(30);
+    // }
 
     &__inner {
         position: relative;
         @include content;
+
+        .content._catalog & {
+            // padding-bottom: get-width(30);
+        }
     }
 
     &__substrate {
         z-index: 100;
         position: absolute;
-        width: get-width(1125);
-        right: get-width(-330);
+        width: get-width(973);
+        right: get-width(-178);
         top: get-width(15);
-        bottom: 0px;
+        bottom: 0;
         background: #f0eed5 url('../images/bg-substrate.jpg') bottom no-repeat;
         background-size: cover;
         border-radius: get-width(7);
@@ -26,14 +34,12 @@
         .content._catalog & {
             background: #f0eed5 url('../images/bg-substrate_catalog.jpg') left top no-repeat;
             background-size: cover;
-            width: get-width(1025 + 50);
-            right: get-width(-230);
+            width: get-width(1025);
         }
 
         .content._contacts & {
             background: #f0eed5 url('../images/bg-substrate_contacts.jpg') right bottom no-repeat;
-            width: get-width(900 + 300 + 40);
-            right: get-width(-300);
+            width: get-width(1118);
         }
 
         .content._products & {
@@ -41,22 +47,19 @@
             width: get-width(875);
             right: 0;
             left: 0;
-            bottom: get-width(-45);
             margin: 0 auto;
         }
 
         .content._news-list & {
             background: #f0eed5 url('../images/bg-substrate_news-list.jpg') get-width(100) get-width(50) no-repeat;
             background-size: 100%;
-            width: get-width(1030 + 50 + 10);
-            right: get-width(-230);
+            width: get-width(1038);
         }
 
         .content._news-page & {
             background: #f0eed5 url('../images/bg-substrate_news-page.jpg') right get-width(655) no-repeat;
             background-size: 100%;
-            width: get-width(1030 + 50 + 10);
-            right: get-width(-230);
+            width: get-width(1038);
             max-height: get-width(1090);
         }
 
