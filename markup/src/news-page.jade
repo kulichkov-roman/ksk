@@ -38,6 +38,13 @@ html
                         .content__tab
                             span.content__tab-text Новости свиндустрии
 
+                        .content__description
+                            ul.breadcrumbs
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link(href="#") Главная
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link._current(href="#") Новости свиндустрии
+
                         article.news-page
                             .news-page-img-box
                                 each val in [1, 2]

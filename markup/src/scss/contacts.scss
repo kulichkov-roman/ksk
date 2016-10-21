@@ -7,10 +7,7 @@
 
     &__col {
         float: left;
-
-        &:first-child {
-            width: get-width(356);
-        }
+        width: get-width(356);
 
         &:last-child {
             width: get-width(492);

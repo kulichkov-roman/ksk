@@ -571,6 +571,14 @@ address {
     line-height: 1.81818vw;
     padding-left: 26.90909vw;
     margin-top: 2.72727vw; }
+    .content._contacts .content__description {
+      padding: 2.72727vw 0 0 21.33333vw;
+      margin-top: 0;
+      margin-bottom: -2.12121vw; }
+    .content._preparing .content__description {
+      margin-top: 2.42424vw;
+      padding-left: 29.09091vw;
+      margin-bottom: -0.60606vw; }
     .content._products .content__description {
       width: 53.0303vw;
       margin: 0 auto;
@@ -579,6 +587,9 @@ address {
     .content._news-list .content__description {
       padding-left: 26.06061vw;
       margin-bottom: 2.42424vw; }
+    .content._news-page .content__description {
+      padding-left: 26.06061vw;
+      margin-bottom: -1.51515vw; }
 
 .catalog {
   position: relative; }
@@ -792,9 +803,8 @@ address {
     display: table;
     clear: both; }
   .contacts-content__col {
-    float: left; }
-    .contacts-content__col:first-child {
-      width: 21.57576vw; }
+    float: left;
+    width: 21.57576vw; }
     .contacts-content__col:last-child {
       width: 29.81818vw; }
 
@@ -1803,6 +1813,30 @@ address {
 .footer-contacts__link {
   color: #201811;
   text-decoration: none; }
+
+.breadcrumbs {
+  font-size: 0;
+  line-height: 1.09091vw;
+  margin-bottom: 0.72727vw; }
+  .breadcrumbs__item {
+    display: inline-block;
+    vertical-align: top; }
+    .breadcrumbs__item + .breadcrumbs__item:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAAaElEQVQImVXMQQ3DMBBE0T9WGYWCKdQUgmCNofIgCIUEQkKhmLYnS+4c30gf29sYY2NZAd6Sbtt1ogBsn0DNzNZ7fzRf22dmVkmtLKldEsCx4gGQmftfE2gR8RTbnxUAXsAFXBHxnZ0fc7sm8jM4imkAAAAASUVORK5CYII=");
+      background-size: cover;
+      width: 0.30303vw;
+      height: 0.54545vw;
+      margin: 0 0.36364vw 0 0.42424vw; }
+  .breadcrumbs__link {
+    font-size: 0.84848vw;
+    vertical-align: middle;
+    color: #666666;
+    text-decoration: none; }
+    .breadcrumbs__link._current {
+      color: #8b8b8b; }
 
 .fancybox-header {
   font-size: 24px;

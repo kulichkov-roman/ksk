@@ -199,6 +199,18 @@
         .content._catalog & {
         }
 
+        .content._contacts & {
+            padding: get-width(45) 0 0 get-width(352);
+            margin-top: 0;
+            margin-bottom: get-width(-35);
+        }
+
+        .content._preparing & {
+            margin-top: get-width(40);
+            padding-left: get-width(480);
+            margin-bottom: get-width(-10);
+        }
+
         .content._products & {
             width: get-width(875);
             margin: 0 auto;
@@ -209,6 +221,11 @@
         .content._news-list & {
             padding-left: get-width(430);
             margin-bottom: get-width(40);
+        }
+
+        .content._news-page & {
+            padding-left: get-width(430);
+            margin-bottom: get-width(-25);
         }
     }
 
