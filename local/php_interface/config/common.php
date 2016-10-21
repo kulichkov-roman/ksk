@@ -14,6 +14,7 @@
 			'phoneFooterIBlockId'     => 4,
 			'catalogMeatIBlockId'     => 5,
 			'emailListIBlockId'       => 6,
+			'seoSecDescIBlockId'      => 10,
 			'headerSliderClassesTemplates'  => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_products',

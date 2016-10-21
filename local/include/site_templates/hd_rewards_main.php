@@ -1,4 +1,15 @@
 <div class="rewards">
+	<?
+	$APPLICATION->IncludeComponent("bitrix:main.include", "",
+		Array(
+			"AREA_FILE_SHOW" => "file",
+			"PATH" => "/local/include/site_templates/hd_seo_description.php",
+			"EDIT_TEMPLATE" => ""
+		),
+		false,
+		Array('HIDE_ICONS' => 'Y')
+	);
+	?>
 	<div class="rewards__inner">
 		<div class="rewards__substrate"></div>
 		<div class="rewards__content">

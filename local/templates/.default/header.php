@@ -115,5 +115,17 @@ IncludeTemplateLangFile(__FILE__);
 		</header>
 		<section class="content <?=$arContentClasses[$curDir] ? $arContentClasses[$curDir] : '';?>">
 			<div class="content__inner">
-				<div class="content__substrate"></div>
+				<div class="content__substrate">
+					<?
+					$APPLICATION->IncludeComponent("bitrix:main.include", "",
+						Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/local/include/site_templates/hd_seo_description.php",
+							"EDIT_TEMPLATE" => ""
+						),
+						false,
+						Array('HIDE_ICONS' => 'Y')
+					);
+					?>
+				</div>
 				<div class="content__content">
