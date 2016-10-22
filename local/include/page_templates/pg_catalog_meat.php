@@ -16,6 +16,16 @@
 		$APPLICATION->IncludeComponent("bitrix:main.include", "",
 			Array(
 				"AREA_FILE_SHOW" => "file",
+				"PATH" => "/local/include/site_templates/hd_breadcrumbs.php",
+				"EDIT_TEMPLATE" => ""
+			),
+			false
+		);
+		?>
+		<?
+		$APPLICATION->IncludeComponent("bitrix:main.include", "",
+			Array(
+				"AREA_FILE_SHOW" => "file",
 				"PATH" => "/local/include/page_templates/pg_catalog_meat_text.php",
 				"EDIT_TEMPLATE" => ""
 			),

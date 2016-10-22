@@ -11,6 +11,18 @@
         );
         ?>
     </div>
+    <div class="content__description">
+        <?
+        $APPLICATION->IncludeComponent("bitrix:main.include", "",
+            Array(
+                "AREA_FILE_SHOW" => "file",
+                "PATH" => "/local/include/site_templates/hd_breadcrumbs.php",
+                "EDIT_TEMPLATE" => ""
+            ),
+            false
+        );
+        ?>
+    </div>
     <div class="contacts-content">
         <div class="contacts-content__col">
             <div class="contacts-content-block"><strong class="contacts-content-block__title">Телефоны:</strong>
