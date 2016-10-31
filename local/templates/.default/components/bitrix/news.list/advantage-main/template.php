@@ -24,7 +24,7 @@ $this->setFrameMode(true);
 				<a href="<?=$arItem['DETAIL_PICTURE']['SRC']?>"
 				   data-header="<?=$arItem['NAME']?>" title="<?=$arItem['DETAIL_PICTURE']['DESCRIPTION']?>"
 				   rel="fancybox-feed" class="feed__img-link _fancybox">
-					<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['PREVIEW_PICTURE']['DESCRIPTION']?>" class="feed__img">
+					<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" title="<?=$arItem['NAME']?>" alt="<?=$arItem['NAME']?>" class="feed__img">
 				</a>
 			</figure>
 			<div class="feed__content _bg-<?=$index?>">

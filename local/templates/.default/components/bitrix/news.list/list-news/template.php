@@ -21,7 +21,7 @@ $this->setFrameMode(true);
 	<article <?=$index > 6 ? 'style="display: none"' : '';?> class="news-list-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 		<a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="news-list-item__link">
 			<div class="news-list-item__img-h">
-				<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['PREVIEW_PICTURE']['DESCRIPTION']?>" class="news-list-item__img">
+				<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" title="<?=$arItem['NAME']?>" alt="<?=$arItem['NAME']?>" class="news-list-item__img">
 			</div>
 			<div class="news-list-item__inner">
 				<h3 class="news-list-item__title"><span class="news-list-item__title-text"><?=$arItem['NAME']?></span></h3>

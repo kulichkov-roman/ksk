@@ -21,7 +21,7 @@ $this->setFrameMode(true);
 		?>
 		<article class="products-item _part-3" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 			<span class="products-item__corner"></span>
-				<div class="products-item__img-h"><img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['DETAIL_PICTURE']['DESCRIPTION']?>" title="<?=$arItem['DETAIL_PICTURE']['DESCRIPTION']?>" class="products-item__img"></div>
+				<div class="products-item__img-h"><img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['NAME']?>" title="<?=$arItem['NAME']?>" class="products-item__img"></div>
 				<div class="products-item__inner">
 					<h3 class="products-item__title"><span class="products-item__title-text"><?=$arItem['NAME']?></span></h3>
 					<div class="products-item-info">
