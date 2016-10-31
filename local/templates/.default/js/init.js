@@ -299,11 +299,20 @@ $(function () {
             $seoBlock.css('marginBottom', -height);
             $('.seo-block__toggle-text._expand').hide();
             $('.seo-block__toggle-text._minimize').show();
+
+
+            var heightRequired = $seoBlock.offset().top + $seoBlock.outerHeight();
+            var heightAvailable = $('body').outerHeight();
+
+            if (heightRequired > heightAvailable) {
+                $('.wrapper').css('padding-bottom', heightRequired - heightAvailable);
+            }
         } else {
             $content.hide();
             $seoBlock.css('marginBottom', '');
             $('.seo-block__toggle-text._expand').show();
             $('.seo-block__toggle-text._minimize').hide();
+            $('.wrapper').css('padding-bottom', '');
         }
     })
 });
