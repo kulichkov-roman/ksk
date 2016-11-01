@@ -66,6 +66,14 @@ IncludeTemplateLangFile(__FILE__);
 			'EDIT_TEMPLATE' => ''
 		),
 		false
+	);
+	$APPLICATION->IncludeComponent('bitrix:main.include', '',
+		Array(
+			'AREA_FILE_SHOW' => 'file',
+			'PATH' => '/local/include/site_templates/hd_jvs.php',
+			'EDIT_TEMPLATE' => ''
+		),
+		false
 	);?>
 
 	<meta property="og:title" content="Корниловский свинокомплекс"/>
