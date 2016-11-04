@@ -66,6 +66,11 @@
         .content._preparing & {
             background: #f0eed5;
         }
+
+        .content._404 & {
+            background: #f0eed5;
+            width: get-width(1118);
+        }
     }
 
     &__content {
@@ -169,6 +174,17 @@
             }
         }
 
+        .content._404 & {
+            padding-left: get-width(140);
+            padding-right: get-width(140);
+
+            &:before {
+                width: get-width(31);
+                height: get-width(29);
+                background: url('../images/icon-warning.png');
+                background-size: cover;
+            }
+        }
     }
 
     &__tab-text {
@@ -226,6 +242,15 @@
         .content._news-page & {
             padding-left: get-width(430);
             margin-bottom: get-width(-25);
+        }
+
+        .content._404 & {
+            color: #505050;
+            line-height: get-width(26);
+            font-size: get-width(17);
+            padding-left: get-width(350);
+            padding-bottom: get-width(45);
+            margin-bottom: get-width(220);
         }
     }
 

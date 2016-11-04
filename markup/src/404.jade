@@ -1,0 +1,92 @@
+doctype html
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+html
+    <!--<![endif]-->
+    head
+        include ./includes/head.jade
+
+    body._404
+        .wrapper
+            header.header
+                nav.menu
+                    ul.menu__list
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Гостевая
+                        li.menu__item._active
+                            a.menu__link(href="#")
+                                span.menu__text Мясо и Субпродукты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Полуфабрикаты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Контакты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Новости
+
+
+                section.header-slider._404
+
+            section.content._404
+                .content__inner
+                    .content__substrate
+                    .content__content
+                        .content__tab
+                            span.content__tab-text Ошибка 404
+
+                        .content__description
+                            | Oops, такой страницы нет, вы можете выбрать из списка необходимый раздел
+
+                            .site-map
+                                .site-map__root
+                                    a.site-map__link(href="#") Главная
+                                ul.site-map__list
+                                    li.site-map__item
+                                        a.site-map__link(href="#") Мясо и субпродукты
+                                    li.site-map__item
+                                        a.site-map__link(href="#") Полуфабрикаты
+                                    li.site-map__item
+                                        a.site-map__link(href="#") Контакты
+                                    li.site-map__item
+                                        a.site-map__link(href="#") Новости
+
+
+            footer.footer
+                .footer__inner
+                    button.footer__up-btn._compact(type="button") Вернуться наверх
+                    section.footer-content
+                        .footer-content__col
+                            .footer-phones
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Бухгалтерия:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (930) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                .footer-phones__note
+                                    | Звонки принимаем с 10:00 до 19:00 по Москве
+
+                        .footer-content__col
+                            ul.footer-contacts
+                                li.footer-contacts__item._location
+                                    | Россия, индекс: 93847, Новосибирская область, пос. Название посёлка<br>
+                                    | (69 км трассы Новосибирск-Кемерово)
+                                li.footer-contacts__item._email
+                                    a.footer-contacts__link(href="#") svinki_kompleks@mail.ru
+
+
+                    .footer__copyrights
+                        | Права защищены. 2016 г. © ООО «Корниловский Свинокомплекс»
+
+                    .footer__developers
+                        a.footer__developers-link(href="#") Сайт разработали

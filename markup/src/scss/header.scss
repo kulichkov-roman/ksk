@@ -45,6 +45,12 @@
         padding-bottom: 22.3%;
     }
 
+    &._404 {
+        background: url('../images/bg-slider_404.jpg') center no-repeat;
+        background-size: cover;
+        padding-bottom: 22.3%;
+    }
+
     &__list {
         // height: 100%;
         position: absolute;

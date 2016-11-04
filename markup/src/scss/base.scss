@@ -80,6 +80,11 @@ body {
 		background: #ded2ad url('../images/bg_news-page.jpg') center get-width(340) no-repeat;
 		background-size: cover;
 	}
+
+	&._404 {
+		background: #ded2ad url('../images/bg_404.jpg') center get-width(364) no-repeat;
+		background-size: 100%;
+	}
 }
 
 
@@ -208,7 +213,7 @@ ul {
 	margin: 0;
 	padding: 0;
 	text-indent: 0;
-	list-style: none;
+	list-style-type: none;
 	list-style-position: outside;
 }
 

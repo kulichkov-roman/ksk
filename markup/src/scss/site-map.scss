@@ -1,0 +1,31 @@
+.site-map {
+    font-size: get-width(17);
+    line-height: get-width(26);
+    margin-top: get-width(6);
+
+    &__list {
+        padding-left: get-width(15);
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: '';
+            width: get-width(5);
+            height: get-width(5);
+            border-radius: get-width(5);
+            background: #505050;
+            position: absolute;
+            left: get-width(-15);
+            top: 50%;
+            margin-top: get-width(-2);
+        }
+    }
+
+    &__link {
+        color: #505050;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}

@@ -61,6 +61,9 @@ body {
   body._news-page {
     background: #ded2ad url("../images/bg_news-page.jpg") center 20.60606vw no-repeat;
     background-size: cover; }
+  body._404 {
+    background: #ded2ad url("../images/bg_404.jpg") center 22.06061vw no-repeat;
+    background-size: 100%; }
 
 /* =============================================================================
    Links
@@ -151,7 +154,7 @@ ul {
   margin: 0;
   padding: 0;
   text-indent: 0;
-  list-style: none;
+  list-style-type: none;
   list-style-position: outside; }
 
 dl {
@@ -273,6 +276,10 @@ address {
     padding-bottom: 22.3%; }
   .header-slider._news-page {
     background: url("../images/bg-slider_news-page.jpg") center no-repeat;
+    background-size: cover;
+    padding-bottom: 22.3%; }
+  .header-slider._404 {
+    background: url("../images/bg-slider_404.jpg") center no-repeat;
     background-size: cover;
     padding-bottom: 22.3%; }
   .header-slider__list {
@@ -474,6 +481,9 @@ address {
       max-height: 66.06061vw; }
     .content._preparing .content__substrate {
       background: #f0eed5; }
+    .content._404 .content__substrate {
+      background: #f0eed5;
+      width: 67.75758vw; }
   .content__content {
     position: relative;
     z-index: 200;
@@ -551,6 +561,14 @@ address {
         height: 3.0303vw;
         background: url("../images/icon-news-list.png");
         background-size: cover; }
+    .content._404 .content__tab {
+      padding-left: 8.48485vw;
+      padding-right: 8.48485vw; }
+      .content._404 .content__tab:before {
+        width: 1.87879vw;
+        height: 1.75758vw;
+        background: url("../images/icon-warning.png");
+        background-size: cover; }
   .content__tab-text {
     vertical-align: middle;
     color: #8b8b8b;
@@ -590,6 +608,13 @@ address {
     .content._news-page .content__description {
       padding-left: 26.06061vw;
       margin-bottom: -1.51515vw; }
+    .content._404 .content__description {
+      color: #505050;
+      line-height: 1.57576vw;
+      font-size: 1.0303vw;
+      padding-left: 21.21212vw;
+      padding-bottom: 2.72727vw;
+      margin-bottom: 13.33333vw; }
 
 .catalog {
   position: relative; }
@@ -1837,6 +1862,29 @@ address {
     text-decoration: none; }
     .breadcrumbs__link._current {
       color: #8b8b8b; }
+
+.site-map {
+  font-size: 1.0303vw;
+  line-height: 1.57576vw;
+  margin-top: 0.36364vw; }
+  .site-map__list {
+    padding-left: 0.90909vw; }
+  .site-map__item {
+    position: relative; }
+    .site-map__item:before {
+      content: '';
+      width: 0.30303vw;
+      height: 0.30303vw;
+      border-radius: 0.30303vw;
+      background: #505050;
+      position: absolute;
+      left: -0.90909vw;
+      top: 50%;
+      margin-top: -0.12121vw; }
+  .site-map__link {
+    color: #505050;
+    cursor: pointer;
+    text-decoration: none; }
 
 .fancybox-header {
   font-size: 24px;
