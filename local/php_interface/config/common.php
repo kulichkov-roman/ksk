@@ -20,14 +20,16 @@
 				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts',
 				'/news/'         => '_news-list',
-				'/news_detail/'  => '_news-page'
+				'/news_detail/'  => '_news-page',
+				'/404.php'       => '_404'
 			),
 			'bodyClassesTemplates'    => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts',
 				'/news/'         => '_news-list',
-				'/news_detail/'  => '_news-page'
+				'/news_detail/'  => '_news-page',
+				'/404.php'       => '_404'
 			),
 			'footerClassesTemplates'    => array(
 				'/news/'         => '_compact',
@@ -38,7 +40,8 @@
 				'/catalog_smf/'  => '_products',
 				'/contacts/'     => '_contacts',
 				'/news/'         => '_news-list',
-				'/news_detail/'  => '_news-page'
+				'/news_detail/'  => '_news-page',
+				'/404.php'       => '_404'
 			),
 			'feedbackIBlockId'    => '7',
 		    'feedbackPropPhoneId' => '7',
@@ -46,6 +49,7 @@
 			'newsPlugId'          => '181',
 			'newsDir'             => '/news/',
 			'newsDetailDir'       => '/news_detail/',
+			'page404'             => '/404.php',
 		)
 	)
 );

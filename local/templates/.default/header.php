@@ -27,11 +27,16 @@ IncludeTemplateLangFile(__FILE__);
 	$isMain = CSite::InDir(SITE_DIR.'index.php');
 	$isCatalogMeat = CSite::InDir(SITE_DIR.'catalog_meat/');
 	$isNewsDetail = preg_match('~^/news/[^/]+/~', $_SERVER['REQUEST_URI']);
+	$is404 = CSite::InDir(SITE_DIR.'404.php') || defined('ERROR_404') === true;
 
 	if(!$isNewsDetail) {
 		$curDir = $APPLICATION->GetCurDir();
 	} else {
 		$curDir = $environment->get('newsDetailDir');
+	}
+
+	if($is404) {
+		$curDir = $environment->get('page404');
 	}
 
 	$APPLICATION->AddHeadString('
@@ -124,7 +129,7 @@ IncludeTemplateLangFile(__FILE__);
 		<section class="content <?=$arContentClasses[$curDir] ? $arContentClasses[$curDir] : '';?>">
 			<div class="content__inner">
 				<div class="content__substrate">
-					<?if(!$isMain){?>
+					<?if(!$isMain && !$is404){?>
 						<?
 						$APPLICATION->IncludeComponent("bitrix:main.include", "",
 							Array(

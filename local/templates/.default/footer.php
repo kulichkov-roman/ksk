@@ -7,11 +7,16 @@ $environment = \Your\Environment\EnvironmentManager::getInstance();
 $isMain = CSite::InDir(SITE_DIR.'index.php');
 $isContacts = CSite::InDir(SITE_DIR.'contacts/');
 $isNewsDetail = preg_match("~^/news/[^/]+/~", $_SERVER['REQUEST_URI']);
+$is404 = CSite::InDir(SITE_DIR.'404.php') || defined('ERROR_404') === true;
 
 if(!$isNewsDetail) {
 	$curDir = $APPLICATION->GetCurDir();
 } else {
 	$curDir = $curDir = $environment->get('newsDetailDir');
+}
+
+if($is404) {
+	$curDir = $environment->get('page404');
 }
 
 $arFooterClasses = $environment->get('footerClassesTemplates');
@@ -33,7 +38,7 @@ $arFooterClasses = $environment->get('footerClassesTemplates');
 		?>
 		<footer class="footer">
 			<div class="footer__inner">
-				<?if(!$isContacts){?>
+				<?if(!$isContacts && !$is404){?>
 					<button type="button" class="footer__up-btn <?=$arFooterClasses[$curDir] ? $arFooterClasses[$curDir] : '';?>">Вернуться наверх</button>
 					<section class="footer-content">
 						<div class="footer-content__col">
