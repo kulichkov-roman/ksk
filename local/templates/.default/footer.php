@@ -8,6 +8,7 @@ $isMain = CSite::InDir(SITE_DIR.'index.php');
 $isContacts = CSite::InDir(SITE_DIR.'contacts/');
 $isNewsDetail = preg_match("~^/news/[^/]+/~", $_SERVER['REQUEST_URI']);
 $is404 = CSite::InDir(SITE_DIR.'404.php') || defined('ERROR_404') === true;
+$isMap = CSite::InDir(SITE_DIR.'search/map.php');
 
 if(!$isNewsDetail) {
 	$curDir = $APPLICATION->GetCurDir();
@@ -17,6 +18,10 @@ if(!$isNewsDetail) {
 
 if($is404) {
 	$curDir = $environment->get('page404');
+}
+
+if($isMap) {
+	$curDir = $environment->get('pageMap');
 }
 
 $arFooterClasses = $environment->get('footerClassesTemplates');
@@ -38,7 +43,7 @@ $arFooterClasses = $environment->get('footerClassesTemplates');
 		?>
 		<footer class="footer">
 			<div class="footer__inner">
-				<?if(!$isContacts && !$is404){?>
+				<?if(!$isContacts && !$is404 && !$isMap){?>
 					<button type="button" class="footer__up-btn <?=$arFooterClasses[$curDir] ? $arFooterClasses[$curDir] : '';?>">Вернуться наверх</button>
 					<section class="footer-content">
 						<div class="footer-content__col">
