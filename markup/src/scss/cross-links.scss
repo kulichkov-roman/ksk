@@ -1,0 +1,26 @@
+.cross-links {
+    margin-bottom: get-width(32);
+
+    &__item {
+        & + & {
+            margin-top: get-width(3);
+        }
+    }
+
+    &__link {
+        font-size: get-width(18);
+        line-height: get-width(26);
+        color: #a8231f;
+        text-decoration: none;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            margin-right: get-width(8);
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAYAAACXDi8zAAAAj0lEQVQImT3LQRHCQBREwTdTayAnzmABJBArWQloQMLGARqChVjAAg7+cEnR99brfJqEl1BPyRAIhSVfgAcwkgJAmJbULjxL3pIiVBemSSapXfEsvCEg9JYUwgA7Yk5qA74WJhQIgKvwJPxp4T+WpAbQgbUdYyEMyZ2whqKFukseQE9qPTZN8jupG7BzEOYH459DHu9/th8AAAAASUVORK5CYII=');
+            background-size: cover;
+            width: get-width(7);
+            height: get-width(11);
+        }
+    }
+}

@@ -1886,6 +1886,24 @@ address {
     cursor: pointer;
     text-decoration: none; }
 
+.cross-links {
+  margin-bottom: 1.93939vw; }
+  .cross-links__item + .cross-links__item {
+    margin-top: 0.18182vw; }
+  .cross-links__link {
+    font-size: 1.09091vw;
+    line-height: 1.57576vw;
+    color: #a8231f;
+    text-decoration: none; }
+    .cross-links__link:before {
+      content: '';
+      display: inline-block;
+      margin-right: 0.48485vw;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAYAAACXDi8zAAAAj0lEQVQImT3LQRHCQBREwTdTayAnzmABJBArWQloQMLGARqChVjAAg7+cEnR99brfJqEl1BPyRAIhSVfgAcwkgJAmJbULjxL3pIiVBemSSapXfEsvCEg9JYUwgA7Yk5qA74WJhQIgKvwJPxp4T+WpAbQgbUdYyEMyZ2whqKFukseQE9qPTZN8jupG7BzEOYH459DHu9/th8AAAAASUVORK5CYII=");
+      background-size: cover;
+      width: 0.42424vw;
+      height: 0.66667vw; }
+
 .fancybox-header {
   font-size: 24px;
   line-height: 30px;
