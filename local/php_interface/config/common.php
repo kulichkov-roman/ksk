@@ -15,6 +15,7 @@
 			'catalogMeatIBlockId'     => 5,
 			'emailListIBlockId'       => 6,
 			'seoSecDescIBlockId'      => 10,
+			'newsIBlockId'            => 9,
 			'headerSliderClassesTemplates'  => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_smf/'  => '_products',

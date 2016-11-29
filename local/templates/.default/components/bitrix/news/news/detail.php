@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+$environment = \Your\Environment\EnvironmentManager::getInstance();
 ?>
 <div class="content__content">
 	<div class="content__tab">
@@ -94,7 +96,94 @@ $this->setFrameMode(true);
 			);?>
 		</div>
 		<div class="news-list__footer">
-			<button type="button" class="news-list__show-more">Показать ещё 5 новостей</button>
+			<?
+			$arSecIds = array();
+			$obCache = new \CPHPCache();
+			$arSeeMoreList = array();
+			$cacheLifeTime = 3600;
+			$cacheID = 'arSeeMoreList'.$ElementID;
+			$cachePath = '/yt/'.$cacheID;
+			if($obCache->InitCache($cacheLifeTime, $cacheID, $cachePath))
+			{
+				$vars = $obCache->GetVars();
+				$arSeeMoreList = $vars['arSeeMoreList'];
+			}
+			elseif($obCache->StartDataCache())
+			{
+				$arNewsDetailSort = array();
+				$arNewsDetailSelect = array(
+					'ID',
+					'NAME',
+					'PROPERTY_SEE_ALSO_LINK'
+				);
+				$arNewsDetailFilter = array(
+					'IBLOCK_ID' => $environment->get('newsIBlockId'),
+					'ACTIVE'    => 'Y',
+					'ID'        => $ElementID
+				);
+				$rsNewsDetailElements = \CIBlockElement::GetList(
+					$arNewsDetailSort,
+					$arNewsDetailFilter,
+					false,
+					false,
+					$arNewsDetailSelect
+				);
+				if($arNewsDetailItem = $rsNewsDetailElements->Fetch())
+				{
+					if(!empty($arNewsDetailItem['PROPERTY_SEE_ALSO_LINK_VALUE']))
+					{
+						$arSeeMoreSort = array();
+						$arSeeMoreSelect = array(
+							'ID',
+							'NAME',
+							'DETAIL_PAGE_URL'
+						);
+						$arSeeMoreFilter = array(
+							'IBLOCK_ID' => $environment->get('newsIBlockId'),
+							'ACTIVE'    => 'Y',
+							'ID'        => $arNewsDetailItem['PROPERTY_SEE_ALSO_LINK_VALUE']
+						);
+						$rsSeeMoreElements = \CIBlockElement::GetList(
+							$arSeeMoreSort,
+							$arSeeMoreFilter,
+							false,
+							false,
+							$arSeeMoreSelect
+						);
+						while($arSeeMoreItem = $rsSeeMoreElements->Fetch())
+						{
+							$arSeeMoreItem['DETAIL_PAGE_URL'] = '#SITE_DIR#/news/#ELEMENT_CODE#/';
+							$pattern = array('#SITE_DIR#', '#ELEMENT_CODE#');
+							$replace = array('', $arSeeMoreItem['CODE']);
+							$arSeeMoreItem['DETAIL_PAGE_URL'] = str_replace($pattern, $replace, $arSeeMoreItem['DETAIL_PAGE_URL']);
+							$arSeeMoreList[$arSeeMoreItem['ID']] = $arSeeMoreItem;
+						}
+					}
+				}
+				$obCache->EndDataCache(array('arSeeMoreList' => $arSeeMoreList));
+			}
+			if(!empty($arSeeMoreList))
+			{
+				$obCache = new \CPageCache;
+				$cacheId = $ElementID.$arParams['IBLOCK_TYPE'].$USER->GetUserGroupString();
+				$cacheLifeTime = 3600;
+				if($obCache->StartDataCache($cacheLifeTime, $cacheId, "/"))
+				{
+					?>
+					<ul class="cross-links">
+						<?foreach($arSeeMoreList as $arSeeMoreItem){?>
+							<li class="cross-links__item">
+								<a href="<?=$arSeeMoreItem['DETAIL_PAGE_URL']?>" class="cross-links__link">
+									<?=$arSeeMoreItem['NAME']?>
+								</a>
+							</li>
+						<?}?>
+					</ul>
+					<?
+					$obCache->EndDataCache();
+				}
+			}
+			?>
 		</div>
 	</div>
 </div>
