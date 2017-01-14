@@ -1,10 +1,10 @@
 .site-map {
-    font-size: get-width(17);
-    line-height: get-width(26);
-    margin-top: get-width(6);
+    font-size: gs(17);
+    line-height: gs(26);
+    margin-top: gs(6);
 
     &__list {
-        padding-left: get-width(15);
+        padding-left: gs(15);
     }
 
     &__item {
@@ -12,14 +12,14 @@
 
         &:before {
             content: '';
-            width: get-width(5);
-            height: get-width(5);
-            border-radius: get-width(5);
+            width: gs(5);
+            height: gs(5);
+            border-radius: gs(5);
             background: #505050;
             position: absolute;
-            left: get-width(-15);
+            left: gs(-15);
             top: 50%;
-            margin-top: get-width(-2);
+            margin-top: gs(-2);
         }
     }
 

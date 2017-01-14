@@ -1,23 +1,23 @@
 .contacts-content {
     @include cf;
-    line-height: get-width(24);
-    font-size: get-width(15);
+    line-height: gs(24);
+    font-size: gs(15);
     color: #4f5050;
-    padding: get-width(45) 0 get-width(45) get-width(352);
+    padding: gs(45) 0 gs(45) gs(352);
 
     &__col {
         float: left;
-        width: get-width(356);
+        width: gs(356);
 
         &:last-child {
-            width: get-width(492);
+            width: gs(492);
         }
     }
 }
 
 .contacts-content-block {
     & + & {
-        margin-top: get-width(25);
+        margin-top: gs(25);
     }
 
     &__title {
@@ -40,10 +40,10 @@
     width: 100%;
     position: relative;
     background: #fff;
-    border-radius: get-width(7);
-    height: get-width(604);
-    padding: get-width(32) get-width(45) get-width(45);
-    margin-left: get-width(-45);
+    border-radius: gs(7);
+    height: gs(604);
+    padding: gs(32) gs(45) gs(45);
+    margin-left: gs(-45);
 
     &__inner {
         height: 100%;
@@ -54,14 +54,14 @@
 
 .contacts-map-magnifier {
     position: absolute;
-    top: get-width(20);
-    left: get-width(400);
+    top: gs(20);
+    left: gs(400);
     cursor: pointer;
 
     &__frame {
         display: block;
-        width: get-width(540);
-        height: get-width(695);
+        width: gs(540);
+        height: gs(695);
         background: url('../images/magnifier.png') no-repeat;
         background-size: cover;
         z-index: 2;
@@ -72,61 +72,61 @@
         overflow: hidden;
         position: absolute;
         border-radius: 50%;
-        top: get-width(37);
-        left: get-width(54);
-        width: get-width(308);
-        height: get-width(307);
+        top: gs(37);
+        left: gs(54);
+        width: gs(308);
+        height: gs(307);
         z-index: 1;
     }
 
     &__map {
         background: url('../images/map-zoomed.jpg') no-repeat;
         background-size: cover;
-        width: get-width(505);
-        height: get-width(501);
+        width: gs(505);
+        height: gs(501);
         position: relative;
     }
 }
 
 
 .contacts-form {
-    padding: get-width(45) 0 get-width(45) get-width(352);
+    padding: gs(45) 0 gs(45) gs(352);
 
     &__title {
-        font-size: get-width(24);
-        line-height: get-width(30);
+        font-size: gs(24);
+        line-height: gs(30);
         color: #4f5050;
         font-weight: bold;
-        margin-bottom: get-width(8);
+        margin-bottom: gs(8);
     }
 
     &__description {
-        font-size: get-width(15);
-        line-height: get-width(24);
+        font-size: gs(15);
+        line-height: gs(24);
     }
 }
 
 .contacts-form-fields {
     @include cf;
-    padding-top: get-width(18);
+    padding-top: gs(18);
 
     &__col {
         box-sizing: border-box;
         float: left;
 
         &:first-child {
-            width: get-width(590);
+            width: gs(590);
         }
 
         &:last-child {
-            width: get-width(258);
-            padding-left: get-width(20);
+            width: gs(258);
+            padding-left: gs(20);
         }
     }
 
     &__row {
         & + & {
-             margin-top: get-width(20);
+             margin-top: gs(20);
         }
     }
 
@@ -136,20 +136,20 @@
         width: 100%;
         border: 1px solid #b2b2b2;
         background: transparent;
-        padding: get-width(10) get-width(15);
+        padding: gs(10) gs(15);
         font-family: $ff-regular;
-        font-size: get-width(15);
-        line-height: get-width(24);
+        font-size: gs(15);
+        line-height: gs(24);
         @include placeholder(#7c7c7c);
         color: #4f5050;
     }
 
     &__message {
-        height: get-width(178);
+        height: gs(178);
     }
 
     &__input {
-        height: get-width(46);
+        height: gs(46);
     }
 
     &__submit {
@@ -161,23 +161,23 @@
         background: #a8231f;
         opacity: 0.85;
         font-weight: 600;
-        font-size: get-width(20);
-        line-height: get-width(42);
+        font-size: gs(20);
+        line-height: gs(42);
         box-sizing: border-box;
         color: #fff;
-        height: get-width(46);
-        border-radius: get-width(5);
-        padding: 0 0 get-width(2) get-width(95);
+        height: gs(46);
+        border-radius: gs(5);
+        padding: 0 0 gs(2) gs(95);
 
         &:before {
             content: '';
             position: absolute;
             top: 0;
             bottom: 0;
-            left: get-width(25);
+            left: gs(25);
             margin: auto 0;
-            width: get-width(54);
-            height: get-width(22);
+            width: gs(54);
+            height: gs(22);
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAAWCAYAAACL6W/rAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAGYSURBVHja7JcxSwNBEIXfJjEiglYqio3YiYKtP8BOJSkkjY2FNjZi7R+wESwFO0ErK4tICvUPWFmIdUBQEQsLUUk+mz1ZIkkul9szCQ5Mcdzcm30z73ZnDSAP5gW0FUupRy0pYkVJeUnGgy9JevqtGRDxmBwPrAS8AJ/AA7AKjNfEtuMHTq5XYMNdTNojsRFgB7i2z2/ACZAHsm0QytXkLgJTbm55chd/AJgGDi2xiq3uPjAK9LWAOwGc1ZBat80RkEqSmOubwDnwZd9fAGvAcAjMZaDsYB83yp00MQGzwBbwbGPK9l+ZrBOfdaQMcA/M1Ik1f0ks8AXgysoT4AZYcTaXDLDrYH0Ae1ba9TBDSTGOzaNZAeasPG+BKvAIHAEF4M7BKdtCmCZ4plOIBZ0ZA07t0QDw7mBsR1GL8TxSmRa+GbKHbUHSoqSSpFyEgaMiSWGImQazXzoAioGYJPVLGpQ0L+kyQkGNpGpYYkl1LNbcvTYE/xQyE+N1xHQAsVSvXlsqUTtmuoXh/0Wz2yzjGZ//jsVs3wMA0Y3BPx53IN8AAAAASUVORK5CYII=');
             background-size: 100%;
         }

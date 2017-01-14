@@ -3,11 +3,11 @@
     z-index: 40;
 
     &._contacts {
-        margin-bottom: get-width(-300);
+        margin-bottom: gs(-300);
     }
     //
     // &._catalog {
-    //     padding-bottom: get-width(30);
+    //     padding-bottom: gs(30);
     // }
 
     &__inner {
@@ -15,52 +15,52 @@
         @include content;
 
         .content._catalog & {
-            // padding-bottom: get-width(30);
+            // padding-bottom: gs(30);
         }
     }
 
     &__substrate {
         z-index: 100;
         position: absolute;
-        width: get-width(973);
-        right: get-width(-178);
-        top: get-width(15);
+        width: gs(973);
+        right: gs(-178);
+        top: gs(15);
         bottom: 0;
         background: #f0eed5 url('../images/bg-substrate.jpg') bottom no-repeat;
         background-size: cover;
-        border-radius: get-width(7);
-        box-shadow: 0 get-width(5) get-width(12) rgba(0,0,0,0.2);
+        border-radius: gs(7);
+        box-shadow: 0 gs(5) gs(12) rgba(0,0,0,0.2);
 
         .content._catalog & {
             background: #f0eed5 url('../images/bg-substrate_catalog.jpg') left top no-repeat;
             background-size: cover;
-            width: get-width(1025);
+            width: gs(1025);
         }
 
         .content._contacts & {
             background: #f0eed5 url('../images/bg-substrate_contacts.jpg') right bottom no-repeat;
-            width: get-width(1118);
+            width: gs(1118);
         }
 
         .content._products & {
             background: #f0eed5;
-            width: get-width(875);
+            width: gs(875);
             right: 0;
             left: 0;
             margin: 0 auto;
         }
 
         .content._news-list & {
-            background: #f0eed5 url('../images/bg-substrate_news-list.jpg') get-width(100) get-width(50) no-repeat;
+            background: #f0eed5 url('../images/bg-substrate_news-list.jpg') gs(100) gs(50) no-repeat;
             background-size: 100%;
-            width: get-width(1038);
+            width: gs(1038);
         }
 
         .content._news-page & {
-            background: #f0eed5 url('../images/bg-substrate_news-page.jpg') right get-width(655) no-repeat;
+            background: #f0eed5 url('../images/bg-substrate_news-page.jpg') right gs(655) no-repeat;
             background-size: 100%;
-            width: get-width(1038);
-            max-height: get-width(1090);
+            width: gs(1038);
+            max-height: gs(1090);
         }
 
         .content._preparing & {
@@ -69,51 +69,60 @@
 
         .content._404 & {
             background: #f0eed5;
-            width: get-width(1118);
+            width: gs(1118);
+        }
+
+        .content._product-page & {
+            background: #f0eed5 url('../images/bg-substrate_product-page.jpg') right bottom no-repeat;
+            // width: gs(973);
+            // right: gs(-178);
+            width: gs(1038);
+            // right: 0;
+            // max-height: gs(1090);
         }
     }
 
     &__content {
         position: relative;
         z-index: 200;
-        padding-top: get-width(15);
-        min-height: get-width(100);
+        padding-top: gs(15);
+        min-height: gs(100);
 
         .content._catalog & {
-            // padding-top: get-width(80);
+            // padding-top: gs(80);
         }
     }
 
     &__preparing {
-        padding: get-width(25) 0 get-width(50);
+        padding: gs(25) 0 gs(50);
         width: 70%;
     }
 
     &__preparing-inner {
-        box-shadow: 0 get-width(5) get-width(12) rgba(0,0,0,0.2);
-        border-radius: get-width(7);
-        padding: get-width(50) get-width(35);
+        box-shadow: 0 gs(5) gs(12) rgba(0,0,0,0.2);
+        border-radius: gs(7);
+        padding: gs(50) gs(35);
         background: #fff;
-        font-size: get-width(24);
-        line-height: get-width(26);
+        font-size: gs(24);
+        line-height: gs(26);
     }
 
     &__tab {
         background: #f0eed5;
         text-align: center;
-        padding: 0 get-width(80) 0 get-width(74);
-        height: get-width(96);
-        border-radius: get-width(7);
+        padding: 0 gs(80) 0 gs(74);
+        height: gs(96);
+        border-radius: gs(7);
         position: absolute;
         right: 0px;
-        top: get-width(-37);
+        top: gs(-37);
         @include middler;
 
         &:before {
             content: '';
-            width: get-width(29);
-            height: get-width(29);
-            margin-right: get-width(22);
+            width: gs(29);
+            height: gs(29);
+            margin-right: gs(22);
             display: inline-block;
             vertical-align: middle;
             background: url('../images/icon-info.png');
@@ -121,24 +130,24 @@
         }
 
         .content._catalog & {
-            padding-left: get-width(50);
-            padding-right: get-width(50);
+            padding-left: gs(50);
+            padding-right: gs(50);
 
             &:before {
-                width: get-width(56);
-                height: get-width(35);
+                width: gs(56);
+                height: gs(35);
                 background: url('../images/icon-catalog.png');
                 background-size: cover;
             }
         }
 
         .content._contacts & {
-            padding-left: get-width(45);
-            padding-right: get-width(50);
+            padding-left: gs(45);
+            padding-right: gs(50);
 
             &:before {
-                width: get-width(83);
-                height: get-width(35);
+                width: gs(83);
+                height: gs(35);
                 background: url('../images/icon-contacts.png');
                 background-size: cover;
             }
@@ -147,15 +156,15 @@
         .content._products & {
             padding-left: 0;
             padding-right: 0;
-            width: get-width(435);
+            width: gs(435);
             right: 0;
             left: 0;
             margin: 0 auto;
 
             &:before {
-                margin-right: get-width(26);
-                width: get-width(47);
-                height: get-width(40);
+                margin-right: gs(26);
+                width: gs(47);
+                height: gs(40);
                 background: url('../images/icon-products.png');
                 background-size: cover;
             }
@@ -163,94 +172,113 @@
 
         .content._news-list &,
         .content._news-page & {
-            padding-left: get-width(40);
-            padding-right: get-width(40);
+            padding-left: gs(40);
+            padding-right: gs(40);
 
             &:before {
-                width: get-width(56);
-                height: get-width(50);
+                width: gs(56);
+                height: gs(50);
                 background: url('../images/icon-news-list.png');
                 background-size: cover;
             }
         }
 
         .content._404 & {
-            padding-left: get-width(140);
-            padding-right: get-width(140);
+            padding-left: gs(140);
+            padding-right: gs(140);
 
             &:before {
-                width: get-width(31);
-                height: get-width(29);
+                width: gs(31);
+                height: gs(29);
                 background: url('../images/icon-warning.png');
                 background-size: cover;
             }
         }
+
+        .content._product-page & {
+            padding-left: gs(50);
+            padding-right: gs(110);
+
+            &:before {
+                width: gs(47);
+                height: gs(40);
+                background: url('../images/icon-meat.png');
+                background-size: cover;
+            }
+        }
+
     }
 
     &__tab-text {
         vertical-align: middle;
         color: #8b8b8b;
-        font-size: get-width(26);
-        line-height: get-width(28);
+        font-size: gs(26);
+        line-height: gs(28);
         font-weight: bold;
     }
 
     &__title {
-        margin-top: get-width(65);
-        margin-left: get-width(516);
-        margin-bottom: get-width(24);
-        font-size: get-width(39);
-        line-height: get-width(45);
+        margin-top: gs(65);
+        margin-left: gs(516);
+        margin-bottom: gs(24);
+        font-size: gs(39);
+        line-height: gs(45);
         font-weight: bold;
         color: #543b2f;
     }
 
     &__description {
         color: #7c7c7c;
-        font-size: get-width(15);
-        line-height: get-width(30);
-        padding-left: get-width(444);
-        margin-top: get-width(45);
+        font-size: gs(15);
+        line-height: gs(30);
+        padding-left: gs(444);
+        margin-top: gs(45);
 
         .content._catalog & {
         }
 
         .content._contacts & {
-            padding: get-width(45) 0 0 get-width(352);
+            padding: gs(45) 0 0 gs(352);
             margin-top: 0;
-            margin-bottom: get-width(-35);
+            margin-bottom: gs(-35);
         }
 
         .content._preparing & {
-            margin-top: get-width(40);
-            padding-left: get-width(480);
-            margin-bottom: get-width(-10);
+            margin-top: gs(40);
+            padding-left: gs(480);
+            margin-bottom: gs(-10);
         }
 
         .content._products & {
-            width: get-width(875);
+            width: gs(875);
             margin: 0 auto;
             box-sizing: border-box;
-            padding: get-width(45) get-width(50);
+            padding: gs(45) gs(50);
         }
 
         .content._news-list & {
-            padding-left: get-width(430);
-            margin-bottom: get-width(40);
+            padding-left: gs(430);
+            margin-bottom: gs(40);
         }
 
         .content._news-page & {
-            padding-left: get-width(430);
-            margin-bottom: get-width(-25);
+            padding-left: gs(430);
+            margin-bottom: gs(-25);
         }
 
         .content._404 & {
             color: #505050;
-            line-height: get-width(26);
-            font-size: get-width(17);
-            padding-left: get-width(350);
-            padding-bottom: get-width(45);
-            margin-bottom: get-width(220);
+            line-height: gs(26);
+            font-size: gs(17);
+            padding-left: gs(350);
+            padding-bottom: gs(45);
+            margin-bottom: gs(220);
+        }
+
+        .content._product-page & {
+            padding-left: gs(402);
+            margin-top: gs(22);
+            margin-bottom: gs(-32);
         }
     }
 

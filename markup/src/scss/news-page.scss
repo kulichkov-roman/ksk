@@ -1,22 +1,22 @@
 .news-page {
     @include cf;
     position: relative;
-    min-height: get-width(240);
-    margin-top: get-width(50);
-    margin-bottom: get-width(30);
-    border-radius: get-width(7);
+    min-height: gs(240);
+    margin-top: gs(50);
+    margin-bottom: gs(30);
+    border-radius: gs(7);
     background: #fff;
     box-sizing: border-box;
-    padding: get-width(20) get-width(45) get-width(60) get-width(20);
-    box-shadow: get-width(2) get-width(2) get-width(8) rgba(0,0,0,0.2);
+    padding: gs(20) gs(45) gs(60) gs(20);
+    box-shadow: gs(2) gs(2) gs(8) rgba(0,0,0,0.2);
 
     &__inner {
-        margin-left: get-width(376 + 30);
+        margin-left: gs(376 + 30);
     }
 
     &__title {
-        padding: get-width(18) 0 get-width(20);
-        margin-bottom: get-width(18);
+        padding: gs(18) 0 gs(20);
+        margin-bottom: gs(18);
         position: relative;
 
         &:after {
@@ -24,16 +24,16 @@
             content: '';
             height: 1px;
             bottom: -1px;
-            left: get-width(2);
-            right: get-width(50);
+            left: gs(2);
+            right: gs(50);
             background: url('../images/line.png') no-repeat left;
             background-size: 100%;
         }
     }
 
     &__title-text {
-        font-size: get-width(24);
-        line-height: get-width(28);
+        font-size: gs(24);
+        line-height: gs(28);
         font-weight: bold;
         color: #505050;
         display: inline-block;
@@ -41,20 +41,20 @@
     }
 
     &__description {
-        font-size: get-width(15);
-        line-height: get-width(24);
+        font-size: gs(15);
+        line-height: gs(24);
         color: #646464;
     }
 }
 
 .news-page-img-box {
     float: left;
-    width: get-width(376);
+    width: gs(376);
     box-sizing: border-box;
 
     &__item {
         & + & {
-            margin-top: get-width(18);
+            margin-top: gs(18);
         }
     }
 
@@ -64,18 +64,18 @@
 
     &__description {
         color: #9b9b9b;
-        font-size: get-width(12);
-        line-height: get-width(20);
-        margin-top: get-width(4);
+        font-size: gs(12);
+        line-height: gs(20);
+        margin-top: gs(4);
     }
 }
 
 .news-page-info {
-    margin: 0 0 get-width(6);
+    margin: 0 0 gs(6);
 
     &__date {
         color: #9b9b9b;
-        font-size: get-width(12);
-        line-height: get-width(20);
+        font-size: gs(12);
+        line-height: gs(20);
     }
 }

@@ -43,12 +43,12 @@ html {
 	-ms-text-size-adjust: 100%;
 	height: 100%;
     font-family: $ff-regular;
-    font-size: get-width(14);
-    line-height: get-width(20);
+    font-size: gs(14);
+    line-height: gs(20);
 }
 
 body {
-    background: #e2d3ac url('../images/bg.jpg') center get-width(400) no-repeat;
+    background: #e2d3ac url('../images/bg.jpg') center gs(400) no-repeat;
 	background-size: cover;
     color: #3c3c3c;
     margin: 0;
@@ -57,7 +57,7 @@ body {
 	// min-width: 1000px;
 
 	&._catalog {
-		background: #ded2ad url('../images/bg_catalog.jpg') center get-width(370) no-repeat;
+		background: #ded2ad url('../images/bg_catalog.jpg') center gs(370) no-repeat;
 		background-size: cover;
 	}
 
@@ -67,23 +67,29 @@ body {
 	}
 
 	&._products {
-		background: #ded2ad url('../images/bg_products.jpg') center get-width(340) no-repeat;
+		background: #ded2ad url('../images/bg_products.jpg') center gs(340) no-repeat;
 		background-size: cover;
 	}
 
 	&._news-list {
-		background: #ded2ad url('../images/bg_news-list.jpg') center get-width(340) no-repeat;
+		background: #ded2ad url('../images/bg_news-list.jpg') center gs(340) no-repeat;
 		background-size: cover;
 	}
 
 	&._news-page {
-		background: #ded2ad url('../images/bg_news-page.jpg') center get-width(340) no-repeat;
+		background: #ded2ad url('../images/bg_news-page.jpg') center gs(340) no-repeat;
 		background-size: cover;
 	}
 
 	&._404 {
-		background: #ded2ad url('../images/bg_404.jpg') center get-width(364) no-repeat;
+		background: #ded2ad url('../images/bg_404.jpg') center gs(364) no-repeat;
 		background-size: 100%;
+	}
+
+	&._product-page {
+		background: #ded2ad url('../images/bg_product-page.jpg') center gs(340) no-repeat;
+		// background: #ded2ad url('../images/bg_news-page.jpg') center gs(340) no-repeat;
+		background-size: cover;
 	}
 }
 

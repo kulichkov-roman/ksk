@@ -1,0 +1,67 @@
+.b-send-form {
+    font-family: $ff-regular;
+    padding: gs(26) gs(30) gs(40);
+
+    &__row {
+        & + & {
+            margin-top: gs(20);
+        }
+    }
+
+    &__input {
+        border-radius: gs(5);
+        font-family: $ff-regular;
+        font-weight: 300;
+        font-size: gs(18);
+        box-sizing: border-box;
+        height: gs(46);
+        width: 100%;
+        border: 1px solid #d6d6d6;
+        padding: gs(10) gs(15);
+
+        &._error {
+            border-color: #ff6666;
+            box-shadow: inset 0 0 0px 1px #ff6666;
+        }
+
+        &._success {
+            border-color: #8fd896;
+            box-shadow: inset 0 0 0px 1px #8fd896;
+        }
+    }
+
+    &__field-error,
+    &__note {
+        font-size: gs(12);
+        line-height: gs(20);
+        font-weight: 300;
+        margin-top: gs(8);
+    }
+
+    &__field-error {
+        color: #a42828;
+    }
+
+    &__note {
+        color: #656565;
+    }
+
+    &__submit {
+        margin-top: gs(30);
+        width: 100%;
+        border: 0;
+        cursor: pointer;
+        font-family: $ff-regular;
+        font-weight: 400;
+        position: relative;
+        background: #a8231f;
+        font-weight: 300;
+        font-size: gs(20);
+        text-align: center;
+        line-height: gs(42);
+        height: gs(46);
+        box-sizing: border-box;
+        color: #fff;
+        border-radius: gs(5);
+    }
+}

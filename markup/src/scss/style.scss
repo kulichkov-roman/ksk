@@ -1,12 +1,12 @@
 // 1:1 на 1650px
-@function get-width($width) {
+@function gs($width) {
 	@return ($width / 16.5) + vw;
 }
 
 @mixin content() {
-	width: get-width(1200);
+	width: gs(1200);
 	// min-width: 1130px;
-	padding: 0 get-width(40);
+	padding: 0 gs(40);
 	margin: 0 auto;
 }
 
@@ -34,8 +34,56 @@ $color-red: #c32021;
 @import "breadcrumbs";
 @import "site-map";
 @import "cross-links";
+@import "product-page";
+@import "send-form";
 
 
 
 @import "fancybox";
 @import "seoBlock";
+
+
+
+.ui-widget-overlay {
+    background: rgba(0,0,0,0.5);
+}
+
+
+.ui-dialog {
+	background: #fff;
+	border-radius: gs(9);
+
+	.ui-dialog-title {
+		text-align: center;
+		font-family: $ff-regular;
+		font-weight: bold;
+		font-size: gs(24);
+		line-height: gs(30);
+		float: none;
+		display: block;
+		width: 100%;
+		margin: gs(25) 0 gs(0);
+	}
+
+	.ui-dialog-titlebar-close {
+		position: absolute;
+		top: gs(20);
+	    right: gs(20);
+	    margin: 0;
+	    padding: 0;
+		width: gs(14);
+		height: gs(14);
+		opacity: 0.6;
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAA5ElEQVQokX3STUpDMRAA4O+9dF/86aqtegQrVARXrjyEgtiLFfy7g2tt97YeQXoBt+Jz0QRiCJ1dMvNlyCTBNqa4xgqderS4R8CmF9EsJlrM8VtBs1g7RRNwhZNYMMQAH1nn1Ok8rht8B3yij+OYGGW4KRC84SXExRp7OCrwpIKe0YVsc1XBwyz/npA4oTxKnGKBp+ze2qKgqRyWGjTlRn7IHS4qcIRD2TuHHWiBL4wzfJBw2IEebZ9kP8PjhANucJmhZURpEOsK7gf0cBo7L/Hg/3/tCvyD15Q8w61ickW0sWYCf1HHMGa8R4N7AAAAAElFTkSuQmCC');
+		background-size: cover;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		.ui-icon-closethick,
+		.ui-button-icon-space {
+			display: none;
+		}
+	}
+}

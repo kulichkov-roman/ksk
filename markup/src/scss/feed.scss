@@ -1,23 +1,23 @@
 .feed {
     position: relative;
-    padding-bottom: get-width(55);
+    padding-bottom: gs(55);
 
     &__item {
         position: relative;
 
         & + & {
-            margin-top: get-width(16);
+            margin-top: gs(16);
         }
     }
 
     &__img-h {
-        margin-left: get-width(-10);
+        margin-left: gs(-10);
         background: #fff;
-        border-radius: get-width(7);
-        box-shadow: get-width(2) get-width(2) get-width(8) rgba(0,0,0,0.2);
-        padding: get-width(10);
-        width: get-width(554);
-        height: get-width(354);
+        border-radius: gs(7);
+        box-shadow: gs(2) gs(2) gs(8) rgba(0,0,0,0.2);
+        padding: gs(10);
+        width: gs(554);
+        height: gs(354);
     }
 
     &__img-link {
@@ -31,11 +31,11 @@
     &__content {
         position: absolute;
         right: 0px;
-        height: get-width(294);
-        width: get-width(724);
-        top: get-width(40);
+        height: gs(294);
+        width: gs(724);
+        top: gs(40);
         box-sizing: border-box;
-        padding: get-width(32) get-width(42) get-width(20);
+        padding: gs(32) gs(42) gs(20);
         background: rgba(255,255,255,0.7);
 
         &._bg-0 {
@@ -66,12 +66,12 @@
 
     &__title {
         position: relative;
-        font-size: get-width(24);
-        line-height: get-width(28);
+        font-size: gs(24);
+        line-height: gs(28);
         color: #505050;
         font-weight: bold;
-        padding-bottom: get-width(30);
-        margin-bottom: get-width(24);
+        padding-bottom: gs(30);
+        margin-bottom: gs(24);
 
         &:after {
             position: absolute;
@@ -87,23 +87,23 @@
 
     &__text {
         color: #646464;
-        font-size: get-width(15);
-        line-height: get-width(30);
+        font-size: gs(15);
+        line-height: gs(30);
     }
 
     &__photos-btn {
         background: rgba(#891b16, 0.85);
         font-weight: 300;
-        font-size: get-width(24);
-        line-height: get-width(56);
+        font-size: gs(24);
+        line-height: gs(56);
         box-sizing: border-box;
         color: #fff;
-        height: get-width(58);
-        border-radius: get-width(5);
-        padding: 0 get-width(38) get-width(3) get-width(85);
+        height: gs(58);
+        border-radius: gs(5);
+        padding: 0 gs(38) gs(3) gs(85);
         position: absolute;
         z-index: 100;
-        bottom: get-width(-30);
+        bottom: gs(-30);
         left: 0;
 
         &:before {
@@ -111,10 +111,10 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            left: get-width(28);
+            left: gs(28);
             margin: auto 0;
-            width: get-width(38);
-            height: get-width(33);
+            width: gs(38);
+            height: gs(33);
             background: url('../images/icon-photos.png');
             background-size: 100%;
         }

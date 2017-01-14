@@ -1,7 +1,7 @@
 .breadcrumbs {
     font-size: 0;
-    line-height: get-width(18);
-    margin-bottom: get-width(12);
+    line-height: gs(18);
+    margin-bottom: gs(12);
 
     &__item {
         display: inline-block;
@@ -14,15 +14,15 @@
                 vertical-align: middle;
                 background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAAaElEQVQImVXMQQ3DMBBE0T9WGYWCKdQUgmCNofIgCIUEQkKhmLYnS+4c30gf29sYY2NZAd6Sbtt1ogBsn0DNzNZ7fzRf22dmVkmtLKldEsCx4gGQmftfE2gR8RTbnxUAXsAFXBHxnZ0fc7sm8jM4imkAAAAASUVORK5CYII=');
                 background-size: cover;
-                width: get-width(5);
-                height: get-width(9);
-                margin: 0 get-width(6) 0 get-width(7);
+                width: gs(5);
+                height: gs(9);
+                margin: 0 gs(6) 0 gs(7);
             }
         }
     }
 
     &__link {
-        font-size: get-width(14);
+        font-size: gs(14);
         vertical-align: middle;
         color: #666666;
         text-decoration: none;

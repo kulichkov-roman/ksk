@@ -284,6 +284,7 @@ $(function() {
     });
 });
 
+// SEO-ссылки
 $(function () {
     var $seoBlock = $('.seo-block');
     if (!$seoBlock.length) {
@@ -316,3 +317,356 @@ $(function () {
         }
     })
 });
+
+
+
+// Карточка товара - begin
+var UtilChangeValue = function($field, dir) {
+	var value = parseInt($field.val(), 10);
+	var type = $field.data('type') || 'item';
+	var step = $field.data('step') || 1;
+	var min = $field.data('min') || 0;
+	var quantity;
+
+	if (isNaN(value)) {
+		value = min;
+	}
+
+	if (dir == 'minus') {
+		if (type === 'weight') {
+			if (value > step && value > min) {
+				value -= step;
+			}
+			// else {
+			// 	value = 0;
+			// }
+		}
+
+		if (type === 'item') {
+			if (value > 1 && value > min) {
+				value -= 1;
+			}
+			//  else {
+			// 	value = 0;
+			// }
+		}
+	}
+
+	if (dir == 'plus') {
+		if (type === 'weight') {
+			if (value < 99999) {
+				value += step;
+			}
+		}
+
+		if (type === 'item') {
+			if (value < 99999) {
+				value += 1;
+			}
+		}
+	}
+
+	if (type === 'weight') {
+		quantity = value / step
+	} else if (type === 'item') {
+		quantity = value;
+	}
+
+	$field.val(value);
+
+	return quantity;
+};
+
+var UtilBindIterate = function($el, $field, direction, cbIterate, cdFinish) {
+	var iterate = function() {
+		var quantity = UtilChangeValue($field, direction);
+		if (cbIterate) {
+			cbIterate.call($field[0], quantity);
+		}
+	}
+
+	$el.on('mousedown', function(e) {
+		if (e.button !== 0 || $el.data('iterator')) {
+			return;
+		}
+		var begin = setTimeout(function(argument) {
+			iterate();
+			$el.data('iterator', setInterval(iterate, 200));
+			$el.data('beginFired', true);
+		}, 350);
+
+		$el.data('begin', begin);
+	});
+	$el.on('mouseup mouseleave', function(e) {
+		if (e.button !== 0 || !$el.data('begin')) {
+			return;
+		}
+		if (!$el.data('beginFired')) {
+			iterate();
+		}
+
+		clearTimeout($el.data('begin'))
+		clearInterval($el.data('iterator'));
+
+		$el.data('begin', null);
+		$el.data('beginFired', null);
+		$el.data('iterator', null);
+
+		if (cdFinish) {
+			cdFinish.call($field[0]);
+		}
+	});
+};
+
+var ComponentSendForm = {
+    template: '#sendForm-tpl',
+
+    props: ['offerQuantity'],
+
+    components: {
+        field: {
+            template: '#sendFormField-tpl',
+            props: ['field', 'validateField'],
+
+            mounted: function () {
+                var self = this;
+                if (this.field.name === 'phone') {
+                    // $(this.$refs.input).inputmask('+7 999 999-99-99');
+                }
+
+                $(this.$refs.input).change(function () {
+                    self.field.value = $(self.$refs.input).val();
+                    self.validateField(self.field);
+                });
+            }
+        }
+    },
+
+    computed: {
+        isFormSuccess: function () {
+            var success = true;
+            this.form.forEach(function (field) {
+                if (!field.success) {
+                    success = false;
+                }
+            });
+
+            return success;
+        }
+    },
+
+    data: function () {
+        return {
+            form: [
+                {
+                    name: 'name',
+                    required: true,
+                    // label: 'Ваше имя',
+                    // name: 'NAME',
+                    placeholder: 'Ваше имя',
+                    value: '',
+                    error: false,
+                    success: false,
+                },
+                {
+                    name: 'phone',
+                    required: true,
+                    // label: 'Контактный телефон',
+                    // name: '217',
+                    placeholder: 'Телефон',
+                    value: '',
+                    error: false,
+                    success: false,
+                    validate: function (value) {
+                        return /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(value);
+                    },
+                    message: {
+                        invalid: 'Укажите номер в формате +7 XXX XXX XX XX'
+                    }
+                },
+                {
+                    name: 'email',
+                    required: true,
+                    // label: 'Ваш e-mail',
+                    // name: '218',
+                    placeholder: 'Эл. почта',
+                    value: '',
+                    error: false,
+                    success: false,
+                    validate: function (value) {
+                        return /^.+@.+\..+$/.test(value);
+                    },
+                    message: {
+                        invalid: 'Поле «Эл. почта», заполнено неверно!'
+                    }
+                }
+            ]
+        }
+    },
+
+    methods: {
+        onFormSubmit: function (event) {
+            var hasErrors = false;
+            this.form.forEach(function (item) {
+                if (!this.validateField(item)) {
+                    hasErrors = true;
+                }
+            }.bind(this));
+
+            if (!hasErrors) {
+                var resultData = {};
+                this.form.forEach(function (item) {
+                    resultData[item.name] = item.value;
+                }.bind(this));
+                this.$emit('success', resultData);
+            } else {
+                event.preventDefault();
+            }
+        },
+
+        validateField: function (field) {
+            if (field.required) {
+                if (!field.value) {
+                    field.error = 'required';
+                    field.success = false;
+                    return false;
+                } else {
+                    field.error = false;
+                    field.success = true;
+                }
+            }
+
+            if (field.validate) {
+                if (!field.validate(field.value)) {
+                    field.error = 'invalid';
+                    field.success = false;
+                    return false;
+                } else {
+                    field.error = false;
+                    field.success = true;
+                }
+            }
+
+            return true;
+        },
+
+        getFieldName (name, obj) {
+            return obj[name];
+        }
+    }
+};
+
+$(function() {
+    var photos = [];
+
+    $('.product-page-photo-thumbs__img').each(function () {
+        photos.push({
+            href: $(this).data('full'),
+            title: $(this).data('title')
+        });
+    });
+
+    $('.product-page-photo-main').click(function () {
+        $.fancybox.open(photos, {
+            prevEffect: 'none',
+            nextEffect: 'none',
+            index: $('.product-page-photo-main__img').data('index'),
+            helpers		: {
+                thumbs: {
+                    width: 100,
+                    height: 100
+                },
+                // title	: { type : 'inside' },
+                // buttons	: {}
+            },
+        });
+    });
+
+
+    // Слайдер на главной
+    $('.product-page-photo-thumbs__item').first().addClass('_active');
+    $('.product-page-photo-thumbs')
+        .on('click', '.product-page-photo-thumbs__img', function () {
+            var big = $(this).data('big');
+            var index = $(this).data('index');
+
+            $('.product-page-photo-main__img')
+                .attr('src', big)
+                .data('index', index);
+
+            $('.product-page-photo-thumbs__item').removeClass('_active')
+            $(this).closest('.product-page-photo-thumbs__item').addClass('_active');
+        })
+        .removeClass('_raw')
+        .slick({
+            centerMode: true,
+            speed: 250,
+            // slidesToShow: 4
+            // infinite: false,
+            variableWidth: true,
+            dots: false,
+            autoplay: false
+        });
+
+    var $field = $('.product-page-buy-count__field');
+    UtilBindIterate(
+        $('.product-page-buy-count__less'),
+        $field,
+        'minus',
+        function(quantity) {
+            console.log('minus', quantity);
+        }
+    );
+
+    UtilBindIterate(
+        $('.product-page-buy-count__more'),
+        $field,
+        'plus',
+        function(quantity) {
+            console.log('plus', quantity);
+        }
+    );
+
+    $('.product-page-buy__button').click(function () {
+        const el = document.createElement('div');
+        el.style.display = 'none';
+        document.body.appendChild(el);
+
+        var $dialog = $(el);
+
+        $dialog
+            .dialog({
+                autoOpen: false,
+                resizable: false,
+                draggable: false,
+                modal: true,
+                height: 'auto',
+                width: (440 / 16.5) + 'vw',
+                title: 'Ваши данные'
+            })
+            .on('dialogopen', () => {
+                $('.ui-widget-overlay')
+                    .off('click.dialogClose')
+                    .on('click.dialogClose', () => {
+                        $dialog.dialog('close');
+                    });
+            })
+            .on('dialogclose', () => {
+                $dialog.dialog('destroy');
+                $dialog.remove();
+            })
+            .dialogBodyScroll();
+
+        var Comp = Vue.extend(ComponentSendForm);
+        new Comp({
+            el: el,
+            propsData: {
+                offerQuantity: $('.product-page-buy-count__field').val()
+            }
+        });
+
+        $dialog.dialog('open');
+
+    })
+});
+// Карточка товара - end

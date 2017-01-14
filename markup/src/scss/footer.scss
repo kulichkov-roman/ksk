@@ -1,8 +1,8 @@
 .footer {
     color: #201811;
-    height: get-width(450);
-    margin-top: get-width(-155);
-    padding-top: get-width(155);
+    height: gs(450);
+    // margin-top: gs(-155);
+    // padding-top: gs(155);
     box-sizing: border-box;
     background: url('../images/bg-footer.png') center bottom no-repeat;
     background-size: 100%;
@@ -17,49 +17,49 @@
 
 
     &__up-btn {
-        width: get-width(445);
+        width: gs(445);
         position: absolute;
         z-index: 10;
-        height: get-width(102);
-        top: get-width(-50);
-        line-height: get-width(12);
+        height: gs(102);
+        top: gs(-50);
+        line-height: gs(12);
         box-sizing: border-box;
-        border-radius: 0 0 get-width(7) get-width(7);
+        border-radius: 0 0 gs(7) gs(7);
         background: rgba(0,0,0,0.5);
         font-weight: 300;
         color: #fff;
-        font-size: get-width(24);
+        font-size: gs(24);
         text-align: center;
-        padding: get-width(50) 0 get-width(4) get-width(42);
+        padding: gs(50) 0 gs(4) gs(42);
 
         &:before {
             content: '';
             position: absolute;
-            top: get-width(66);
-            margin-left: get-width(-37);
-            width: get-width(19);
-            height: get-width(18);
+            top: gs(66);
+            margin-left: gs(-37);
+            width: gs(19);
+            height: gs(18);
             background: url('../images/icon-up.png');
             background-size: 100%;
         }
 
         &._compact {
-            padding-top: get-width(5);
-            border-radius: get-width(7);
-            height: get-width(80);
-            top: get-width(-20);
+            padding-top: gs(5);
+            border-radius: gs(7);
+            height: gs(80);
+            top: gs(-20);
 
             &:before {
-                top: get-width(32);
+                top: gs(32);
             }
         }
 
         &._sticked {
-            top: get-width(-75);
-            padding-top: get-width(44);
+            top: gs(-75);
+            padding-top: gs(44);
 
             &:before {
-                top: get-width(62);
+                top: gs(62);
             }
         }
     }
@@ -67,12 +67,12 @@
     &__copyrights {
         position: absolute;
         bottom: 0;
-        font-size: get-width(12);
+        font-size: gs(12);
         color: #7a7a7a;
-        height: get-width(48);
-        line-height: get-width(48);
-        padding: 0 get-width(28);
-        border-radius: get-width(7) get-width(7) 0 0;
+        height: gs(48);
+        line-height: gs(48);
+        padding: 0 gs(28);
+        border-radius: gs(7) gs(7) 0 0;
         background: #fff;
     }
 
@@ -80,15 +80,15 @@
         font-family: $ff-tech;
         color: #fff;
         position: absolute;
-        right: get-width(40);
-        bottom: get-width(16);
+        right: gs(40);
+        bottom: gs(16);
     }
 
     &__developers-link {
         text-decoration: none;
         color: #fff;
-        font-size: get-width(12);
-        line-height: get-width(20);
+        font-size: gs(12);
+        line-height: gs(20);
         border-bottom: 1px solid #fff;
     }
 
@@ -97,10 +97,10 @@
 
 .footer-content {
     @include cf;
-    padding-top: get-width(95);
+    padding-top: gs(95);
     font-family: $ff-tech;
-    font-size: get-width(16);
-    line-height: get-width(20);
+    font-size: gs(16);
+    line-height: gs(20);
     font-weight: 300;
 
     &__col {
@@ -116,8 +116,8 @@
 
 .footer-phones {
     position: relative;
-    padding-left: get-width(30);
-    padding-top: get-width(7);
+    padding-left: gs(30);
+    padding-top: gs(7);
     display: table;
 
     &:before {
@@ -125,20 +125,20 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        width: get-width(13);
-        height: get-width(32);
+        width: gs(13);
+        height: gs(32);
         background: url('../images/icon-phone.png') no-repeat;
         background-size: 100%;
     }
 
     &__row {
         @include cf;
-        margin-bottom: get-width(10);
+        margin-bottom: gs(10);
         display: table-row;
     }
 
     &__title {
-        padding-right: get-width(25);
+        padding-right: gs(25);
         display: table-cell;
     }
 
@@ -153,8 +153,8 @@
     }
 
     &__note {
-        font-size: get-width(12);
-        line-height: get-width(20);
+        font-size: gs(12);
+        line-height: gs(20);
         color: #553e20;
     }
 }
@@ -163,10 +163,10 @@
 
     &__item {
         position: relative;
-        padding-left: get-width(35);
+        padding-left: gs(35);
 
         & + & {
-            margin-top: get-width(35);
+            margin-top: gs(35);
         }
 
         &:before {
@@ -177,10 +177,10 @@
         &._location {
 
             &:before {
-                top: get-width(-6);
-                left: get-width(5);
-                width: get-width(18);
-                height: get-width(29);
+                top: gs(-6);
+                left: gs(5);
+                width: gs(18);
+                height: gs(29);
                 background: url('../images/icon-pin.png') no-repeat;
                 background-size: 100%;
             }
@@ -189,10 +189,10 @@
         &._email {
 
             &:before {
-                top: get-width(2);
+                top: gs(2);
                 left: 0px;
-                width: get-width(27);
-                height: get-width(17);
+                width: gs(27);
+                height: gs(17);
                 background: url('../images/icon-email.png') no-repeat;
                 background-size: 100%;
             }

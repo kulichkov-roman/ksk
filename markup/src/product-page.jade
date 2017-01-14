@@ -1,0 +1,254 @@
+doctype html
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+html
+    <!--<![endif]-->
+    head
+        include ./includes/head.jade
+
+    body._product-page
+        .wrapper
+            header.header
+                nav.menu
+                    ul.menu__list
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Гостевая
+                        li.menu__item._active
+                            a.menu__link(href="#")
+                                span.menu__text Мясо и Субпродукты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Полуфабрикаты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Контакты
+                        li.menu__item
+                            a.menu__link(href="#")
+                                span.menu__text Новости
+
+
+                section.header-slider._product-page
+
+            section.content._product-page
+                .content__inner
+                    .content__substrate
+                    .content__content
+                        .content__tab
+                            span.content__tab-text Карточка товара
+
+                        .content__description
+                            ul.breadcrumbs
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link(href="#") Главная
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link._current(href="#") Мясо и субпродукты
+
+                        article.product-page
+                            .product-page__gallery
+                                .product-page-photo-main
+                                    span.product-page-photo-main__zoom
+                                    .product-page-photo-main__inner
+                                        img.product-page-photo-main__img(
+                                            src="images/main-dummy-meat.jpg"
+                                            data-index="0"
+                                        )
+
+                                .product-page-photo-thumbs._raw
+                                    .product-page-photo-thumbs__item
+                                        .product-page-photo-thumbs__inner
+                                            img.product-page-photo-thumbs__img(
+                                                src="images/thumb-dummy-meat.jpg",
+                                                data-big="images/main-dummy-meat.jpg",
+                                                data-full="images/full-dummy-meat.jpg",
+                                                data-title="Адын",
+                                                data-index="0"
+                                            )
+                                    .product-page-photo-thumbs__item
+                                        .product-page-photo-thumbs__inner
+                                            img.product-page-photo-thumbs__img(
+                                                src="images/thumb-dummy-meat.jpg",
+                                                data-big="images/main-dummy-meat.jpg",
+                                                data-full="images/full-dummy-meat.jpg",
+                                                data-title="Два",
+                                                data-index="1"
+                                            )
+                                    .product-page-photo-thumbs__item
+                                        .product-page-photo-thumbs__inner
+                                            img.product-page-photo-thumbs__img(
+                                                src="images/thumb-dummy-meat.jpg",
+                                                data-big="images/main-dummy-meat.jpg",
+                                                data-full="images/full-dummy-meat.jpg",
+                                                data-title="Три",
+                                                data-index="2"
+                                            )
+                                    .product-page-photo-thumbs__item
+                                        .product-page-photo-thumbs__inner
+                                            img.product-page-photo-thumbs__img(
+                                                src="images/thumb-dummy-meat.jpg",
+                                                data-big="images/main-dummy-meat.jpg",
+                                                data-full="images/full-dummy-meat.jpg",
+                                                data-title="Четые",
+                                                data-index="3"
+                                            )
+                                    .product-page-photo-thumbs__item
+                                        .product-page-photo-thumbs__inner
+                                            img.product-page-photo-thumbs__img(
+                                                src="images/thumb-dummy-meat.jpg",
+                                                data-big="images/main-dummy-meat.jpg",
+                                                data-full="images/full-dummy-meat.jpg",
+                                                data-title="Пять",
+                                                data-index="4"
+                                            )
+                                    .product-page-photo-thumbs__item
+                                        .product-page-photo-thumbs__inner
+                                            img.product-page-photo-thumbs__img(
+                                                src="images/thumb-dummy-meat.jpg",
+                                                data-big="images/main-dummy-meat.jpg",
+                                                data-full="images/full-dummy-meat.jpg",
+                                                data-title="Шесть",
+                                                data-index="5"
+                                            )
+
+
+                            .product-page__inner
+                                .product-page-content
+                                    h3.product-page-content__title
+                                        span.product-page-content__title-text
+                                            | Мясо «Деревенское»
+
+                                    .product-page-content__description.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                                    h4.product-page-content__subtitle
+                                        span.product-page-content__subtitle-text
+                                            | Состав:
+
+                                    .product-page-content-structure
+                                        ul.product-page-content-structure__list
+                                            li.product-page-content-structure__item
+                                                span.product-page-content-structure__item-value
+                                                    | Фарш свиной
+                                                | &#32;
+                                                span.product-page-content-structure__item-notice
+                                                    | (60% мясо, 30% жили, 10% жир)
+
+                                            li.product-page-content-structure__item
+                                                span.product-page-content-structure__item-value
+                                                    | Фарш свиной
+                                                | &#32;
+                                                span.product-page-content-structure__item-notice
+                                                    | (60% мясо, 30% жили, 10% жир)
+
+
+
+                                .product-page-buy
+                                    .product-page-buy__price
+                                        | 3 910
+
+                                    .product-page-buy-count
+                                        input.product-page-buy-count__field(
+                                            type="text" value="1" readonly
+                                        )
+                                        .product-page-buy-count__controls
+                                            span.product-page-buy-count__more
+                                            span.product-page-buy-count__less
+
+                                    .product-page-buy__button-h
+                                        button.product-page-buy__button(
+                                            type="button"
+                                        ) Заказать
+
+
+                        template(id="sendForm-tpl")
+                            .b-send-form
+                                form(
+                                    @submit="onFormSubmit"
+                                )
+                                    input(type="hidden" name="OFFERID" value="2313213")
+                                    input(type="hidden" name="QUANTITY", :value="offerQuantity")
+                                    // Рома, здесь ты можешь подставить любые удобные имена полей для отправки
+                                    input(
+                                        v-for="field in form",
+                                        type="hidden",
+                                        :name=`getFieldName(field.name, {
+                                            name: 'MY_NAME',
+                                            phone: 'MY_PHONE',
+                                            email: 'MY_EMAIL'
+                                        })`,
+                                        :value="field.value"
+                                    )
+
+                                    field(
+                                        v-for="field in form",
+                                        :field="field",
+                                        :validate-field="validateField"
+                                    )
+                                    .b-send-form__field-error(
+                                        v-for="field in form",
+                                        v-if!="field.error && field.message && field.message[field.error]",
+                                        v-html="field.message[field.error]"
+                                    )
+                                    .b-send-form__note(v-if="isFormSuccess")
+                                        | Всё, поля заполнены верно, нажмите «Отправить»
+
+                                    button.b-send-form__submit Отправить
+
+                        template(id="sendFormField-tpl")
+                            .b-send-form__row
+                                input.b-send-form__input(
+                                    type="input",
+                                    :class="{_error: field.error, _success: field.success}",
+                                    :placeholder="field.placeholder",
+                                    autocomplete="off",
+                                    ref="input"
+                                )
+
+                        .product-page__footer
+                            ul.cross-links
+                                li.cross-links__item
+                                    a.cross-links__link(href="#")
+                                        | Где купить мясо в Новосибирске?
+                                li.cross-links__item
+                                    a.cross-links__link(href="#")
+                                        | Вкусные манты: где купить в вашем городе?
+
+
+            footer.footer
+                .footer__inner
+                    // Вот тут добавился класс-модификатор!!!!! (_compact)
+                    button.footer__up-btn._compact(type="button") Вернуться наверх
+                    section.footer-content
+                        .footer-content__col
+                            .footer-phones
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Бухгалтерия:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (930) 800-20-20
+                                dl.footer-phones__row
+                                    dt.footer-phones__title Отдел продаж:
+                                    dd.footer-phones__value
+                                        a.footer-phones__link(href="tel:88008002020") 8 (800) 800-20-20
+                                .footer-phones__note
+                                    | Звонки принимаем с 10:00 до 19:00 по Москве
+
+                        .footer-content__col
+                            ul.footer-contacts
+                                li.footer-contacts__item._location
+                                    | Россия, индекс: 93847, Новосибирская область, пос. Название посёлка<br>
+                                    | (69 км трассы Новосибирск-Кемерово)
+                                li.footer-contacts__item._email
+                                    a.footer-contacts__link(href="#") svinki_kompleks@mail.ru
+
+
+                    .footer__copyrights
+                        | Права защищены. 2016 г. © ООО «Корниловский Свинокомплекс»
+
+                    .footer__developers
+                        a.footer__developers-link(href="#") Сайт разработали

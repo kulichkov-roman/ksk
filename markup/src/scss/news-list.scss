@@ -1,5 +1,5 @@
 .news-list {
-    padding-bottom: get-width(30);
+    padding-bottom: gs(30);
     position: relative;
 
     &__list {
@@ -7,34 +7,35 @@
     }
 
     &__footer {
-        padding: get-width(10) 0 get-width(25) get-width(426);
+        margin-left: gs(426);
+        padding: gs(10) 0 gs(25) 0;
     }
 
     &__show-more {
-        width: get-width(420);
+        width: gs(420);
         border: 0;
         cursor: pointer;
         font-family: $ff-regular;
         position: relative;
         background: #a8231f;
         font-weight: 300;
-        font-size: get-width(24);
-        line-height: get-width(58);
+        font-size: gs(24);
+        line-height: gs(58);
         box-sizing: border-box;
         color: #fff;
-        height: get-width(62);
-        border-radius: get-width(5);
-        padding: 0 0 get-width(2) get-width(86);
+        height: gs(62);
+        border-radius: gs(5);
+        padding: 0 0 gs(2) gs(86);
 
         &:before {
             content: '';
             position: absolute;
             top: 0;
             bottom: 0;
-            left: get-width(46);
+            left: gs(46);
             margin: auto 0;
-            width: get-width(19);
-            height: get-width(18);
+            width: gs(19);
+            height: gs(18);
             @include rotate(180);
             background: url("../images/icon-up.png");
             background-size: 100%;
@@ -45,17 +46,17 @@
 .news-list-item {
     @include cf;
     position: relative;
-    border: get-width(5) solid #fff;
-    min-height: get-width(240);
-    margin-bottom: get-width(30);
-    border-radius: get-width(7);
+    border: gs(5) solid #fff;
+    min-height: gs(240);
+    margin-bottom: gs(30);
+    border-radius: gs(7);
     background: #fff;
     box-sizing: border-box;
-    padding: get-width(5) get-width(45) get-width(5) get-width(5);
-    box-shadow: get-width(2) get-width(2) get-width(8) rgba(0,0,0,0.2);
+    padding: gs(5) gs(45) gs(5) gs(5);
+    box-shadow: gs(2) gs(2) gs(8) rgba(0,0,0,0.2);
 
     &:hover {
-        border: get-width(5) solid $color-red;
+        border: gs(5) solid $color-red;
     }
 
     &__link {
@@ -67,7 +68,7 @@
     &__img-h {
         @include middler;
         float: left;
-        width: get-width(376);
+        width: gs(376);
         box-sizing: border-box;
         text-align: center;
     }
@@ -78,12 +79,12 @@
     }
 
     &__inner {
-        margin-left: get-width(376 + 40);
+        margin-left: gs(376 + 40);
     }
 
     &__title {
-        padding: get-width(24) 0 get-width(20);
-        margin-bottom: get-width(18);
+        padding: gs(24) 0 gs(20);
+        margin-bottom: gs(18);
         position: relative;
 
         &:after {
@@ -91,16 +92,16 @@
             content: '';
             height: 1px;
             bottom: -1px;
-            left: get-width(2);
-            right: get-width(50);
+            left: gs(2);
+            right: gs(50);
             background: url('../images/line.png') no-repeat left;
             background-size: 100%;
         }
     }
 
     &__title-text {
-        font-size: get-width(24);
-        line-height: get-width(28);
+        font-size: gs(24);
+        line-height: gs(28);
         font-weight: bold;
         color: #505050;
         display: inline-block;
@@ -108,27 +109,27 @@
     }
 
     &__description {
-        font-size: get-width(15);
-        line-height: get-width(24);
+        font-size: gs(15);
+        line-height: gs(24);
         color: #646464;
     }
 }
 
 .news-list-item-info {
-    margin: 0 0 get-width(6);
+    margin: 0 0 gs(6);
 
     &__date {
         color: #9b9b9b;
-        font-size: get-width(12);
-        line-height: get-width(20);
+        font-size: gs(12);
+        line-height: gs(20);
     }
 }
 
 
 .news-list-item-read-more {
     &__text {
-        font-size: get-width(15);
-        line-height: get-width(24);
+        font-size: gs(15);
+        line-height: gs(24);
         color: $color-red;
     }
 }
