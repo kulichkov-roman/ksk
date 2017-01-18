@@ -18,7 +18,9 @@
 			'newsIBlockId'            => 9,
 			'headerSliderClassesTemplates'  => array(
 				'/catalog_meat/' => '_catalog',
+				'/catalog_meat_detail/' => '_product-page',
 				'/catalog_smf/'  => '_products',
+				'/catalog_smf_detail/'  => '_product-page',
 				'/contacts/'     => '_contacts',
 				'/news/'         => '_news-list',
 				'/news_detail/'  => '_news-page',
@@ -27,7 +29,9 @@
 			),
 			'bodyClassesTemplates'    => array(
 				'/catalog_meat/' => '_catalog',
+				'/catalog_meat_detail/' => '_product-page',
 				'/catalog_smf/'  => '_products',
+				'/catalog_smf_detail/'  => '_product-page',
 				'/contacts/'     => '_contacts',
 				'/news/'         => '_news-list',
 				'/news_detail/'  => '_news-page',
@@ -36,11 +40,14 @@
 			),
 			'footerClassesTemplates'    => array(
 				'/news/'         => '_compact',
-				'/news_detail/'  => '_compact'
+				'/catalog_meat_detail/' => '_compact',
+				'/catalog_smf_detail/'  => '_compact'
 			),
 			'contentClassesTemplates' => array(
 				'/catalog_meat/' => '_catalog',
+				'/catalog_meat_detail/' => '_product-page',
 				'/catalog_smf/'  => '_products',
+				'/catalog_smf_detail/'  => '_product-page',
 				'/contacts/'     => '_contacts',
 				'/news/'         => '_news-list',
 				'/news_detail/'  => '_news-page',
@@ -51,8 +58,13 @@
 		    'feedbackPropPhoneId' => '7',
 			'catalogSmfIBlockId'  => '8',
 			'newsPlugId'          => '181',
+			'w113_h113_cr'        => '181',
+			'w504_h537_cr'        => '181',
+			'w1024_h768_w'       => '181',
 			'newsDir'             => '/news/',
 			'newsDetailDir'       => '/news_detail/',
+			'catalogMeatDetailDir'  => '/catalog_meat_detail/',
+			'catalogSmfDetailDir'   => '/catalog_smf_detail/',
 			'page404'             => '/404.php',
 			'pageMap'             => '/search/map.php',
 		)
@@ -91,7 +103,6 @@ if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
 		)
 	);
 
-
 	itc\Resizer::addPreset('rewardsMainPreview', array(
 			'mode' => 'auto',
 			'width' => '150',
@@ -115,6 +126,30 @@ if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
 			'type' => 'jpg'
 		)
 	);
+
+	itc\Resizer::addPreset('w111_h115_cr', array(
+			'mode' => 'crop',
+			'width' => '111',
+			'height' => '115',
+			'type' => 'jpg'
+		)
+	);
+
+	itc\Resizer::addPreset('w504_h537_cr', array(
+			'mode' => 'crop',
+			'width' => '504',
+			'height' => '537',
+			'type' => 'jpg'
+		)
+	);
+
+	itc\Resizer::addPreset('w1024_h768_w', array(
+			'mode' => 'width',
+			'width' => '1024',
+			'height' => '768',
+			'type' => 'jpg'
+		)
+	);
 }
 
 /*
@@ -124,14 +159,11 @@ $LastModified_unix = strtotime(date("D, d M Y H:i:s", filectime($_SERVER['SCRIPT
 $LastModified = gmdate("D, d M Y H:i:s \G\M\T", $LastModified_unix);
 $IfModifiedSince = false;
 
-
 if (isset($_ENV['HTTP_IF_MODIFIED_SINCE']))
 	$IfModifiedSince = strtotime(substr($_ENV['HTTP_IF_MODIFIED_SINCE'], 5));
 
-
 if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']))
 	$IfModifiedSince = strtotime(substr($_SERVER['HTTP_IF_MODIFIED_SINCE'], 5));
-
 
 if ($IfModifiedSince && $IfModifiedSince >= $LastModified_unix) {
 	header($_SERVER['SERVER_PROTOCOL'] . ' 304 Not Modified');

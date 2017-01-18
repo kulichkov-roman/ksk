@@ -64,4 +64,5 @@ else
     }
     unset($arItem);
 }
+unset($arItem);
 ?>

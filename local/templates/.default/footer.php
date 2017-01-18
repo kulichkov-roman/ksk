@@ -7,19 +7,34 @@ $environment = \Your\Environment\EnvironmentManager::getInstance();
 $isMain = CSite::InDir(SITE_DIR.'index.php');
 $isContacts = CSite::InDir(SITE_DIR.'contacts/');
 $isNewsDetail = preg_match("~^/news/[^/]+/~", $_SERVER['REQUEST_URI']);
+$isCatalogMeatDetail = preg_match('~^/catalog_meat/[^/]+/~', $_SERVER['REQUEST_URI']);
+$isCatalogSmfDetail  = preg_match('~^/catalog_smf/[^/]+/~', $_SERVER['REQUEST_URI']);
 $is404 = CSite::InDir(SITE_DIR.'404.php') || defined('ERROR_404') === true;
 $isMap = CSite::InDir(SITE_DIR.'search/map.php');
 
-if(!$isNewsDetail) {
-	$curDir = $APPLICATION->GetCurDir();
-} else {
-	$curDir = $curDir = $environment->get('newsDetailDir');
+$curDir = $APPLICATION->GetCurDir();
+
+// Деталка новостей
+if($isNewsDetail) {
+	$curDir = $environment->get('newsDetailDir');
 }
 
+// Деталка каталога с мясом
+if($isCatalogMeatDetail) {
+	$curDir = $environment->get('catalogMeatDetailDir');
+}
+
+// Деталка каталога с полуфабрикатами
+if($isCatalogSmfDetail) {
+	$curDir = $environment->get('catalogSmfDetailDir');
+}
+
+// 404 страница
 if($is404) {
 	$curDir = $environment->get('page404');
 }
 
+// Карта сайта
 if($isMap) {
 	$curDir = $environment->get('pageMap');
 }

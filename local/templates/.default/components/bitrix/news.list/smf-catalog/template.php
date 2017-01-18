@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 
-<?$class = sizeof($arResult) % 2 == 0 ? '_odd' : '';?>
+<?$class = sizeof($arResult["ITEMS"]) % 2 == 0 ? '_even' : '_odd';?>
 <div class="products <?=$class?>">
 	<?foreach($arResult["ITEMS"] as $arItem){
 		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));

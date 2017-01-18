@@ -19,7 +19,7 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
 		</div>
 		<div class="catalog-item__inner">
 			<h3 class="catalog-item__title">
-				<span class="catalog-item__title-text"><?=$arResult["NAME"]?></span>
+				<a href="<?=$arResult['DETAIL_PAGE_URL']?>" class="catalog-item__title-text"><?=$arResult["NAME"]?></a>
 			</h3>
 			<div class="catalog-item-info">
 				<?if($arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']){?>
