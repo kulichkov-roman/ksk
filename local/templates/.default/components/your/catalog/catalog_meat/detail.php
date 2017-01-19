@@ -95,8 +95,8 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 	{
 		$obCache = new \CPageCache;
 		$cacheId = $arVariables['ELEMENT_CODE'].$arParams['IBLOCK_TYPE'].$USER->GetUserGroupString();
-		$cacheLifeTime = 3600;
-		if($obCache->StartDataCache($cacheLifeTime, $cacheId, "/"))
+		$cacheLifeTime = 2628000;
+		if($obCache->StartDataCache($cacheLifeTime, $cacheId, '/'))
 		{
 			?>
 			<ul class="cross-links">

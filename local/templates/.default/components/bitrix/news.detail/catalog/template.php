@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <article class="product-page">
 	<div class="product-page__gallery">
-		<div class="product-page-photo-main"><span class="product-page-photo-main__zoom"></span>
+		<div class="product-page-photo-main"><?if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'])){?><span class="product-page-photo-main__zoom"></span><?}?>
 			<div class="product-page-photo-main__inner">
 				<img
 					src="<?=$arResult['DETAIL_PICTURE']['SRC']?>"
@@ -71,18 +71,24 @@ $this->setFrameMode(true);
 				</div>
 			<?}?>
 		</div>
-		<div class="product-page-buy">
-			<?if($arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']){?>
-				<div class="product-page-buy__price"><?=$arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']?></div>
-			<?}?>
-			<div class="product-page-buy-count">
-				<input type="text" value="1" readonly class="product-page-buy-count__field">
-				<div class="product-page-buy-count__controls"><span class="product-page-buy-count__more"></span><span class="product-page-buy-count__less"></span></div>
+		<?if($USER->isAdmin())
+		{
+			?>
+			<div class="product-page-buy">
+				<?if($arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']){?>
+					<div class="product-page-buy__price"><?=$arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']?></div>
+				<?}?>
+				<div class="product-page-buy-count">
+					<input type="text" value="1" readonly class="product-page-buy-count__field">
+					<div class="product-page-buy-count__controls"><span class="product-page-buy-count__more"></span><span class="product-page-buy-count__less"></span></div>
+				</div>
+				<div class="product-page-buy__button-h">
+					<button type="button" class="product-page-buy__button">Заказать</button>
+				</div>
 			</div>
-			<div class="product-page-buy__button-h">
-				<button type="button" class="product-page-buy__button">Заказать</button>
-			</div>
-		</div>
+			<?
+		}
+		?>
 	</div>
 </article>
 <template id="sendForm-tpl">

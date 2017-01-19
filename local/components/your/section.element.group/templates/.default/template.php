@@ -19,9 +19,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 $GLOBALS['arParams'] = $arParams;
-
-echo "<pre>"; var_dump($arResult); echo "</pre>";
-
 ?>
 <div class="news-list">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>

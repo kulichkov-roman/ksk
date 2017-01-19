@@ -59,7 +59,7 @@
 			'catalogSmfIBlockId'  => '8',
 			'newsPlugId'          => '181',
 			'w111h115crPlugId'    => '181',
-			'w504h537crPlugId'    => '181',
+			'w504h537aPlugId'     => '181',
 			'w1024h768wPlugId'    => '181',
 			'newsDir'             => '/news/',
 			'newsDetailDir'       => '/news_detail/',
@@ -135,8 +135,8 @@ if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
 		)
 	);
 
-	itc\Resizer::addPreset('w504h537cr', array(
-			'mode' => 'crop',
+	itc\Resizer::addPreset('w504h537a', array(
+			'mode' => 'auto',
 			'width' => '504',
 			'height' => '537',
 			'type' => 'jpg'

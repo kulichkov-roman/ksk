@@ -15,7 +15,7 @@ if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']))
     {
         $arPicture[]  = array(
             'PREVIEW_PICTURE'   => itc\Resizer::get($pictId, 'w111h115cr'),
-            'DETAIL_PICTURE'    => itc\Resizer::get($pictId, 'w504h537cr'),
+            'DETAIL_PICTURE'    => itc\Resizer::get($pictId, 'w504h537a'),
             'FULL_PICTURE'      => itc\Resizer::get($pictId, 'w1024h768wd')
         );
     }
@@ -27,7 +27,7 @@ if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']))
     }
     else
     {
-        $arResult['DETAIL_PICTURE']['SRC']  = itc\Resizer::get($environment->get('w504h537crPlugId'), 'w504h537cr');
+        $arResult['DETAIL_PICTURE']['SRC']  = itc\Resizer::get($environment->get('w504h537aPlugId'), 'w504h537a');
     }
 }
 else
@@ -36,9 +36,9 @@ else
      * Одиночная картинка
      */
     $id = '';
-    if(is_array($arResult['PREVIEW_PICTURE']))
+    if(is_array($arResult['DETAIL_PICTURE']))
     {
-        $id = $arResult['PREVIEW_PICTURE']['ID'];
+        $id = $arResult['DETAIL_PICTURE']['ID'];
 
         if($id)
         {
@@ -57,7 +57,7 @@ else
             if($arItem = $rsFile->Fetch())
             {
                 $arDetailPicture[$arItem['ID']] = $arItem;
-                $urlDetailPicture = itc\Resizer::get($arItem['ID'], 'w504h537cr');
+                $urlDetailPicture = itc\Resizer::get($arItem['ID'], 'w504h537a');
 
                 $arResult['DETAIL_PICTURE']['SRC'] = $urlDetailPicture;
             }
@@ -65,7 +65,7 @@ else
     }
     else
     {
-        $arResult['DETAIL_PICTURE']['SRC']  = itc\Resizer::get($environment->get('w504h537crPlugId'), 'w504h537cr');
+        $arResult['DETAIL_PICTURE']['SRC']  = itc\Resizer::get($environment->get('w504h537aPlugId'), 'w504h537cr');
     }
 }
 ?>
