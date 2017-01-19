@@ -11,19 +11,24 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
 ?>
 <article class="product-page">
 	<div class="product-page__gallery">
 		<div class="product-page-photo-main"><span class="product-page-photo-main__zoom"></span>
-			<div class="product-page-photo-main__inner"><img src="<?=$arResult['DETAIL_PICTURE']['SRC']?>" data-index="0" class="product-page-photo-main__img"></div>
+			<div class="product-page-photo-main__inner">
+				<img
+					src="<?=$arResult['DETAIL_PICTURE']['SRC']?>"
+					data-index="0"
+					class="product-page-photo-main__img"
+				>
+			</div>
 		</div>
 		<div class="product-page-photo-thumbs _raw">
 			<?
-			if(is_array($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']))
+			if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']))
 			{
 				$index = 1;
-				foreach($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] as $arPhotoItem)
+				foreach($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] as $key => $arPhotoItem)
 				{
 					?>
 					<div class="product-page-photo-thumbs__item">
@@ -31,7 +36,7 @@ $this->setFrameMode(true);
 							<img src="<?=$arPhotoItem['PREVIEW_PICTURE']?>"
 							     data-big="<?=$arPhotoItem['DETAIL_PICTURE']?>"
 							     data-full="<?=$arPhotoItem['FULL_PICTURE']?>"
-							     data-title="Фото <?=$index?>"
+							     data-title="<?=$arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$key] ? $arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$key] : 'Фото '.$index;?>"
 							     data-index="0"
 							     class="product-page-photo-thumbs__img"
 							>
@@ -48,9 +53,9 @@ $this->setFrameMode(true);
 		<div class="product-page-content">
 			<h3 class="product-page-content__title"><span class="product-page-content__title-text"><?=$arResult['NAME']?></span></h3>
 			<div class="product-page-content__description">
-				<?=$arResult['DETAIL_TEXT']?>
+				<?=$arResult['DETAIL_TEXT'] ? $arResult['DETAIL_TEXT'] : $arResult['PREVIEW_TEXT']?>
 			</div>
-			<?if(is_array($arResult['PROPERTIES']['COMPOSITION']['VALUE']) && sizeof($arResult['PROPERTIES']['COMPOSITION']['VALUE'])){?>
+			<?if(!empty($arResult['PROPERTIES']['COMPOSITION']['VALUE'])){?>
 				<h4 class="product-page-content__subtitle"><span class="product-page-content__subtitle-text">Состав:</span></h4>
 				<div class="product-page-content-structure">
 					<ul class="product-page-content-structure__list">
@@ -58,7 +63,7 @@ $this->setFrameMode(true);
 							<li class="product-page-content-structure__item">
 								<span class="product-page-content-structure__item-value"><?=$value?></span>&#32;
 								<?if($arResult['PROPERTIES']['COMPOSITION']['DESCRIPTION'][$key]){?>
-									<span class="product-page-content-structure__item-notice">(<?=$arItem['PROPERTIES']['COMPOSITION']['DESCRIPTION'][$key]?>)</span>
+									<span class="product-page-content-structure__item-notice">(<?=$arResult['PROPERTIES']['COMPOSITION']['DESCRIPTION'][$key]?>)</span>
 								<?}?>
 							</li>
 						<?}?>
@@ -103,9 +108,4 @@ $this->setFrameMode(true);
 		<input type="input" :class="{_error: field.error, _success: field.success}" :placeholder="field.placeholder" autocomplete="off" ref="input" class="b-send-form__input">
 	</div>
 </template>
-<div class="product-page__footer">
-	<ul class="cross-links">
-		<li class="cross-links__item"><a href="#" class="cross-links__link">Где купить мясо в Новосибирске?</a></li>
-		<li class="cross-links__item"><a href="#" class="cross-links__link">Вкусные манты: где купить в вашем городе?</a></li>
-	</ul>
-</div>
+

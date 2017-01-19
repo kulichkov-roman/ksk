@@ -1,17 +1,15 @@
 Options -Indexes
 ErrorDocument 404 /404.php
 
-<IfModule mod_php5.c>
-    php_flag allow_call_time_pass_reference 1
-    php_flag session.use_trans_sid off
-    php_flag register_globals off
-    php_flag allow_url_fopen Off
-    php_flag display_errors Off
-    php_value mbstring.func_overload 2
-    php_value display_errors 1
-    php_value mbstring.internal_encoding UTF-8
-    php_value max_input_vars 10000
-</IfModule>
+php_flag allow_call_time_pass_reference 1
+php_flag session.use_trans_sid off
+php_flag register_globals off
+php_flag allow_url_fopen Off
+php_flag display_errors Off
+php_value mbstring.func_overload 2
+php_value display_errors 1
+php_value mbstring.internal_encoding UTF-8
+php_value max_input_vars 10000
 
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
@@ -43,3 +41,5 @@ ErrorDocument 404 /404.php
   ExpiresByType application/javascript "access plus 3 day"  
 </IfModule>
 
+AddDefaultCharset utf-8
+AddType 'text/html; charset=utf-8' .html .htm .shtml

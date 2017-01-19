@@ -58,9 +58,9 @@
 		    'feedbackPropPhoneId' => '7',
 			'catalogSmfIBlockId'  => '8',
 			'newsPlugId'          => '181',
-			'w113_h113_cr'        => '181',
-			'w504_h537_cr'        => '181',
-			'w1024_h768_w'       => '181',
+			'w111h115crPlugId'    => '181',
+			'w504h537crPlugId'    => '181',
+			'w1024h768wPlugId'    => '181',
 			'newsDir'             => '/news/',
 			'newsDetailDir'       => '/news_detail/',
 			'catalogMeatDetailDir'  => '/catalog_meat_detail/',
@@ -127,7 +127,7 @@ if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
 		)
 	);
 
-	itc\Resizer::addPreset('w111_h115_cr', array(
+	itc\Resizer::addPreset('w111h115cr', array(
 			'mode' => 'crop',
 			'width' => '111',
 			'height' => '115',
@@ -135,7 +135,7 @@ if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
 		)
 	);
 
-	itc\Resizer::addPreset('w504_h537_cr', array(
+	itc\Resizer::addPreset('w504h537cr', array(
 			'mode' => 'crop',
 			'width' => '504',
 			'height' => '537',
@@ -143,7 +143,7 @@ if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
 		)
 	);
 
-	itc\Resizer::addPreset('w1024_h768_w', array(
+	itc\Resizer::addPreset('w1024h768wd', array(
 			'mode' => 'width',
 			'width' => '1024',
 			'height' => '768',
