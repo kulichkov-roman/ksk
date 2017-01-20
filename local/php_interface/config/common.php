@@ -121,8 +121,8 @@ if(\Bitrix\Main\Loader::includeModule("itconstruct.resizer"))
 
 	itc\Resizer::addPreset('newsPicture', array(
 			'mode' => 'auto',
-			'width' => '311',
-			'height' => '250',
+			'width' => '418',
+			'height' => '241',
 			'type' => 'jpg'
 		)
 	);

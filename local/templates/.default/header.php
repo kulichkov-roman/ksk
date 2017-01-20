@@ -60,11 +60,12 @@ IncludeTemplateLangFile(__FILE__);
 	}
 
 	$APPLICATION->AddHeadString('
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500italic,400italic,500" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold" rel="stylesheet" type="text/css" />
 		<link rel="shortcut icon" href="/favicon.ico">
 	');
 
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/jquery-ui-1.12.1.custom/jquery-ui.min.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/slick-1.4.1/slick.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/jquery.fancybox.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/helpers/jquery.fancybox-thumbs.css');
@@ -72,9 +73,16 @@ IncludeTemplateLangFile(__FILE__);
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/developers.css');
 
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery-1.11.2.min.js');
+	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery-ui-1.12.1.custom/jquery-ui.min.js');
+	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.ui.dialogBodyScroll.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/slick-1.4.1/slick.min.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/jquery.fancybox.pack.js');
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/fancybox-2.1.5/helpers/jquery.fancybox-thumbs.js');
+
+	$APPLICATION->AddHeadString('
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+	');
+
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/init.js');
 	?>
 

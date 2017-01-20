@@ -8,7 +8,7 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
 
 <article class="catalog-item <?=$arResult['PROPERTIES']['PARTS_BODY']['VALUE_XML_ID'] ? '_part-'.$arResult['PROPERTIES']['PARTS_BODY']['VALUE_XML_ID'] : '';?>" id="<?=$this->GetEditAreaId($arResult['ID']);?>">
 	<span class="catalog-item__corner"></span>
-	<a href="javascript:void(0)" class="catalog-item__link">
+	<a href="<?=$arResult['DETAIL_PAGE_URL']?>" class="catalog-item__link">
 		<div class="catalog-item__img-h">
 			<img
 				src="<?=$arResult["PREVIEW_PICTURE"]["SRC"]?>"
@@ -19,7 +19,7 @@ $this->AddDeleteAction($arResult['ID'], $arResult['DELETE_LINK'], CIBlock::GetAr
 		</div>
 		<div class="catalog-item__inner">
 			<h3 class="catalog-item__title">
-				<a href="<?=$arResult['DETAIL_PAGE_URL']?>" class="catalog-item__title-text"><?=$arResult["NAME"]?></a>
+				<span class="catalog-item__title-text"><?=$arResult["NAME"]?></span>
 			</h3>
 			<div class="catalog-item-info">
 				<?if($arResult['PROPERTIES']['PRICE_PICKUP']['VALUE']){?>

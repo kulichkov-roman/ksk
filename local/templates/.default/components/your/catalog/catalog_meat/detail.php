@@ -20,21 +20,21 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 
 	$arVariables = array();
 	CComponentEngine::ParseComponentPath(
-		'/catalog_meat/',
+		'/catalog_smf/',
 		array('#ELEMENT_CODE#/'),
 		$arVariables
 	);
 
 	$arSecIds = array();
 	$obCache = new \CPHPCache();
-	$arSeeMoreCatalogMeatList = array();
+	$arSeeMoreCatalogSmfList = array();
 	$cacheLifeTime = 2628000;
-	$cacheID = 'arSeeMoreCatalogMeatList'.$arVariables['ELEMENT_CODE'];
+	$cacheID = 'arSeeMoreCatalogSmfList'.$arVariables['ELEMENT_CODE'];
 	$cachePath = '/yt/'.$cacheID;
 	if($obCache->InitCache($cacheLifeTime, $cacheID, $cachePath))
 	{
 		$vars = $obCache->GetVars();
-		$arSeeMoreCatalogMeatList = $vars['arSeeMoreCatalogMeatList'];
+		$arSeeMoreCatalogSmfList = $vars['arSeeMoreCatalogSmfList'];
 	}
 	elseif($obCache->StartDataCache())
 	{
@@ -80,18 +80,18 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 				);
 				while($arSeeMoreItem = $rsSeeMoreElements->Fetch())
 				{
-					$arSeeMoreItem['DETAIL_PAGE_URL'] = '#SITE_DIR#/catalog_meat/#ELEMENT_CODE#/';
+					$arSeeMoreItem['DETAIL_PAGE_URL'] = '#SITE_DIR#/catalog_smf/#ELEMENT_CODE#/';
 					$pattern = array('#SITE_DIR#', '#ELEMENT_CODE#');
 					$replace = array('', $arSeeMoreItem['CODE']);
 					$arSeeMoreItem['DETAIL_PAGE_URL'] = str_replace($pattern, $replace, $arSeeMoreItem['DETAIL_PAGE_URL']);
-					$arSeeMoreCatalogMeatList[$arSeeMoreItem['ID']] = $arSeeMoreItem;
+					$arSeeMoreCatalogSmfList[$arSeeMoreItem['ID']] = $arSeeMoreItem;
 				}
 			}
 		}
-		$obCache->EndDataCache(array('arSeeMoreCatalogMeatList' => $arSeeMoreCatalogMeatList));
+		$obCache->EndDataCache(array('arSeeMoreCatalogSmfList' => $arSeeMoreCatalogSmfList));
 	}
 
-	if(!empty($arSeeMoreCatalogMeatList))
+	if(!empty($arSeeMoreCatalogSmfList))
 	{
 		$obCache = new \CPageCache;
 		$cacheId = $arVariables['ELEMENT_CODE'].$arParams['IBLOCK_TYPE'].$USER->GetUserGroupString();
@@ -100,7 +100,7 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 		{
 			?>
 			<ul class="cross-links">
-				<?foreach($arSeeMoreCatalogMeatList as $arSeeMoreItem){?>
+				<?foreach($arSeeMoreCatalogSmfList as $arSeeMoreItem){?>
 					<li class="cross-links__item">
 						<a href="<?=$arSeeMoreItem['DETAIL_PAGE_URL']?>" class="cross-links__link">
 							<?=$arSeeMoreItem['NAME']?>
