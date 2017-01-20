@@ -1489,11 +1489,6 @@ address {
     width: 22.78788vw;
     box-sizing: border-box;
     text-align: center; }
-    .news-list-item__img-h:after {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      height: 100%; }
   .news-list-item__img {
     width: 100%;
     vertical-align: middle; }

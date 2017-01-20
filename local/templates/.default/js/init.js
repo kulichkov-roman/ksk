@@ -163,7 +163,6 @@ $(function () {
     });
 
     $('.catalog-item').click(function (e) {
-        e.preventDefault();
         var padding = parseInt();
         var $el = $(this);
         var height = $el.outerHeight();
