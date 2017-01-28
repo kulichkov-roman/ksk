@@ -16,6 +16,11 @@
 			'emailListIBlockId'       => 6,
 			'seoSecDescIBlockId'      => 10,
 			'newsIBlockId'            => 9,
+			'ordersIBlockId'          => 11,
+			'ordersPhonePropId'       => 17,
+			'ordersEmailPropId'       => 18,
+			'ordersProdPropId'        => 19,
+			'ordersQuantityPropId'    => 20,
 			'headerSliderClassesTemplates'  => array(
 				'/catalog_meat/' => '_catalog',
 				'/catalog_meat_detail/' => '_product-page',

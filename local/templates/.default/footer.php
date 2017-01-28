@@ -147,3 +147,10 @@ $arFooterClasses = $environment->get('footerClassesTemplates');
 		</footer>
 	</div>
 </body>
+
+<?
+/*
+ * Отобразить форму с заказов в карточке товара
+ * */
+$APPLICATION->ShowViewContent('showOrderForm');
+?>

@@ -16,3 +16,4 @@ foreach ($environment->getConfigFileNames() as $fileName) {
 
 AddEventHandler('main', 'OnEpilog', array('RequestHandler', 'Show404IfNeeded'));
 AddEventHandler('iblock', 'OnAfterIBlockElementAdd', array('SendingEmailHandler', 'SendFeedbackForm'));
+AddEventHandler('iblock', 'OnAfterIBlockElementAdd', array('SendingEmailHandler', 'SendOrderForm'));

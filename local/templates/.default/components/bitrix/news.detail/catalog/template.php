@@ -86,27 +86,4 @@ $this->setFrameMode(true);
 		</div>
 	</div>
 </article>
-<template id="sendForm-tpl">
-	<div class="b-send-form">
-		<form @submit="onFormSubmit">
-			<input type="hidden" name="OFFERID" value="2313213">
-			<input type="hidden" name="QUANTITY" :value="offerQuantity">
-			<!-- Рома, здесь ты можешь подставить любые удобные имена полей для отправки-->
-			<input v-for="field in form" type="hidden" :name="getFieldName(field.name, {
-                                            name: 'MY_NAME',
-                                            phone: 'MY_PHONE',
-                                            email: 'MY_EMAIL'
-                                        })" :value="field.value">
-			<field v-for="field in form" :field="field" :validate-field="validateField"></field>
-			<div v-for="field in form" v-if="field.error && field.message && field.message[field.error]" v-html="field.message[field.error]" class="b-send-form__field-error"></div>
-			<div v-if="isFormSuccess" class="b-send-form__note">Всё, поля заполнены верно, нажмите «Отправить»</div>
-			<button class="b-send-form__submit">Отправить</button>
-		</form>
-	</div>
-</template>
-<template id="sendFormField-tpl">
-	<div class="b-send-form__row">
-		<input type="input" :class="{_error: field.error, _success: field.success}" :placeholder="field.placeholder" autocomplete="off" ref="input" class="b-send-form__input">
-	</div>
-</template>
 
