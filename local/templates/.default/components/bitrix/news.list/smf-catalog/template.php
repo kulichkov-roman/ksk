@@ -23,7 +23,7 @@ $this->setFrameMode(true);
 			<span class="products-item__corner"></span>
 				<div class="products-item__img-h"><img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['NAME']?>" title="<?=$arItem['NAME']?>" class="products-item__img"></div>
 				<div class="products-item__inner">
-					<h3 class="products-item__title"><span class="products-item__title-text"><?=$arItem['NAME']?></span></h3>
+					<h3 class="products-item__title"><a class="products-item__title-text" href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem['NAME']?></a></h3>
 					<div class="products-item-info">
 						<?if($arItem['PROPERTIES']['PRICE_PICKUP']['VALUE']){?>
 							<div class="products-item-info__item"><span class="products-item-info__item-text">Самовывоз -&#32;<span class="products-item-info__item-value"><?=$arItem['PROPERTIES']['PRICE_PICKUP']['VALUE']?></span>&#32;р/кг,</span></div>

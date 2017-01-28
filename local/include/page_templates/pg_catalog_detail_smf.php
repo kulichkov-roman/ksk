@@ -6,7 +6,7 @@
 		$APPLICATION->IncludeComponent("bitrix:main.include", "",
 			Array(
 				"AREA_FILE_SHOW" => "file",
-				"PATH" => "/local/include/page_templates/pg_catalog_meat_title.php",
+				"PATH" => "/local/include/page_templates/pg_catalog_smf_title.php",
 				"EDIT_TEMPLATE" => ""
 			),
 			false
@@ -28,7 +28,7 @@
 	<?
 	$arVariables = array();
 	CComponentEngine::ParseComponentPath(
-		$environment->get('catalogMeatPageUrl'),
+		$environment->get('catalogSmfPageUrl'),
 		array('#ELEMENT_CODE#/'),
 		$arVariables
 	);
@@ -39,7 +39,7 @@
 		array(
 			"AJAX_MODE" => "N",
 			"IBLOCK_TYPE" => "dynamic_content",
-			"IBLOCK_ID" => $environment->get('catalogMeatIBlockId'),
+			"IBLOCK_ID" => $environment->get('catalogSmfIBlockId'),
 			"ELEMENT_ID" => "",
 			"ELEMENT_CODE" => $arVariables["ELEMENT_CODE"],
 			"CHECK_DATES" => "Y",

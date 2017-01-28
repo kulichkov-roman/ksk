@@ -12,5 +12,11 @@ $arUrlRewrite = array(
 		"ID" => "your:catalog",
 		"PATH" => "/catalog_meat/index.php",
 	),
+	array(
+		"CONDITION" => "#^/catalog_smf/#",
+		"RULE" => "",
+		"ID" => "your:catalog",
+		"PATH" => "/catalog_smf/index.php",
+	),
 );
 ?>

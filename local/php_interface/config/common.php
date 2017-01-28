@@ -69,7 +69,9 @@
 			'newsDir'             => '/news/',
 			'newsDetailDir'       => '/news_detail/',
 			'catalogMeatDetailDir'  => '/catalog_meat_detail/',
+			'catalogMeatPageUrl'  => '/catalog_meat/',
 			'catalogSmfDetailDir'   => '/catalog_smf_detail/',
+			'catalogSmfPageUrl'   => '/catalog_smf/',
 			'page404'             => '/404.php',
 			'pageMap'             => '/search/map.php',
 		)

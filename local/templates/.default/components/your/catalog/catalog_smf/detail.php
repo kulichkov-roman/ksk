@@ -1,112 +1,116 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
-$environment = \YT\Environment\EnvironmentManager::getInstance();
+global $USER;
 
-/*
- * Определить город
- * */
-$cityDomain = $arResult["VARIABLES"]["SECTION_CODE"];
-/*
- * По-умолчанию Новосибирск
- * */
-$cityDomain = $cityDomain ? $cityDomain : 'novosibirsk';
+$environment = \Your\Environment\EnvironmentManager::getInstance();
 
-$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section",
-	"shop_content",
+$APPLICATION->IncludeComponent("bitrix:main.include", "",
 	Array(
-		"AJAX_MODE" => "N",	// Включить режим AJAX
-		"IBLOCK_TYPE" => "dynamic_content",	// Тип инфоблока
-		"IBLOCK_ID" => "10",	// Инфоблок
-		"SECTION_ID" => "",	// ID раздела
-		"SECTION_CODE" => $cityDomain,	// Код раздела
-		"SECTION_USER_FIELDS" => array(	// Свойства раздела
-			0 => "UF_ZOOM",
-			1 => "UF_CENTER",
-		),
-		"ELEMENT_SORT_FIELD" => "sort",	// По какому полю сортируем элементы
-		"ELEMENT_SORT_ORDER" => "asc",	// Порядок сортировки элементов
-		"FILTER_NAME" => "arrFilter",	// Имя массива со значениями фильтра для фильтрации элементов
-		"INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
-		"SHOW_ALL_WO_SECTION" => "N",	// Показывать все элементы, если не указан раздел
-		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
-		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
-		"BASKET_URL" => "/personal/basket.php",	// URL, ведущий на страницу с корзиной покупателя
-		"ACTION_VARIABLE" => "action",	// Название переменной, в которой передается действие
-		"PRODUCT_ID_VARIABLE" => "id",	// Название переменной, в которой передается код товара для покупки
-		"PRODUCT_QUANTITY_VARIABLE" => "quantity",	// Название переменной, в которой передается количество товара
-		"PRODUCT_PROPS_VARIABLE" => "prop",	// Название переменной, в которой передаются характеристики товара
-		"SECTION_ID_VARIABLE" => "SECTION_ID",	// Название переменной, в которой передается код группы
-		"META_KEYWORDS" => "-",	// Установить ключевые слова страницы из свойства
-		"META_DESCRIPTION" => "-",	// Установить описание страницы из свойства
-		"BROWSER_TITLE" => "-",	// Установить заголовок окна браузера из свойства
-		"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
-		"DISPLAY_COMPARE" => "N",
-		"SET_TITLE" => "Y",	// Устанавливать заголовок страницы
-		"SET_STATUS_404" => "N",	// Устанавливать статус 404
-		"PAGE_ELEMENT_COUNT" => "30",	// Количество элементов на странице
-		"LINE_ELEMENT_COUNT" => "3",	// Количество элементов выводимых в одной строке таблицы
-		"PROPERTY_CODE" => array(	// Свойства
-			0 => "ADDRESS",
-			1 => "SITE",
-			2 => "PHONE",
-			3 => "CONSULTATIONS",
-			4 => "COORDINATES",
-		),
-		"OFFERS_LIMIT" => "5",	// Максимальное количество предложений для показа (0 - все)
-		"PRICE_CODE" => "",	// Тип цены
-		"USE_PRICE_COUNT" => "N",	// Использовать вывод цен с диапазонами
-		"SHOW_PRICE_COUNT" => "1",	// Выводить цены для количества
-		"PRICE_VAT_INCLUDE" => "Y",	// Включать НДС в цену
-		"PRODUCT_PROPERTIES" => array(	// Характеристики товара
-			0 => "PHONE",
-		),
-		"USE_PRODUCT_QUANTITY" => "N",	// Разрешить указание количества товара
-		"CACHE_TYPE" => "A",	// Тип кеширования
-		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-		"CACHE_NOTES" => "",
-		"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
-		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-		"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
-		"DISPLAY_BOTTOM_PAGER" => "Y",	// Выводить под списком
-		"PAGER_TITLE" => "Товары",	// Название категорий
-		"PAGER_SHOW_ALWAYS" => "Y",	// Выводить всегда
-		"PAGER_TEMPLATE" => "",	// Шаблон постраничной навигации
-		"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
-		"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
-		"CONVERT_CURRENCY" => "N",
-		"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
-		"AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
-		"AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
-		"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
-		"COMPONENT_TEMPLATE" => ".default",
-		"ELEMENT_SORT_FIELD2" => "id",	// Поле для второй сортировки элементов
-		"ELEMENT_SORT_ORDER2" => "desc",	// Порядок второй сортировки элементов
-		"BACKGROUND_IMAGE" => "-",	// Установить фоновую картинку для шаблона из свойства
-		"TEMPLATE_THEME" => "blue",	// Цветовая тема
-		"ADD_PICT_PROP" => "-",	// Дополнительная картинка основного товара
-		"LABEL_PROP" => "-",	// Свойство меток товара
-		"MESS_BTN_BUY" => "Купить",	// Текст кнопки "Купить"
-		"MESS_BTN_ADD_TO_BASKET" => "В корзину",	// Текст кнопки "Добавить в корзину"
-		"MESS_BTN_SUBSCRIBE" => "Подписаться",	// Текст кнопки "Уведомить о поступлении"
-		"MESS_BTN_COMPARE" => "Сравнить",	// Текст кнопки "Сравнить"
-		"MESS_BTN_DETAIL" => "Подробнее",	// Текст кнопки "Подробнее"
-		"MESS_NOT_AVAILABLE" => "Нет в наличии",	// Сообщение об отсутствии товара
-		"SEF_MODE" => "N",	// Включить поддержку ЧПУ
-		"SET_BROWSER_TITLE" => "Y",	// Устанавливать заголовок окна браузера
-		"SET_META_KEYWORDS" => "N",	// Устанавливать ключевые слова страницы
-		"SET_META_DESCRIPTION" => "N",	// Устанавливать описание страницы
-		"SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
-		"USE_MAIN_ELEMENT_SECTION" => "N",	// Использовать основной раздел для показа элемента
-		"ADD_PROPERTIES_TO_BASKET" => "N",	// Добавлять в корзину свойства товаров и предложений
-		"PARTIAL_PRODUCT_PROPERTIES" => "N",	// Разрешить добавлять в корзину товары, у которых заполнены не все характеристики
-		"PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
-		"SHOW_404" => "N",	// Показ специальной страницы
-		"MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
-		"DISABLE_INIT_JS_IN_COMPONENT" => "N",	// Не подключать js-библиотеки в компоненте
+		"AREA_FILE_SHOW" => "file",
+		"PATH" => "/local/include/page_templates/pg_catalog_detail_smf.php",
+		"EDIT_TEMPLATE" => ""
 	),
-	false
+	false,
+	Array('HIDE_ICONS' => 'Y')
 );
 ?>
+<div class="product-page__footer">
+	<?
+
+	$arVariables = array();
+	CComponentEngine::ParseComponentPath(
+		$environment->get('catalogSmfPageUrl'),
+		array('#ELEMENT_CODE#/'),
+		$arVariables
+	);
+
+	$arSecIds = array();
+	$obCache = new \CPHPCache();
+	$arSeeMoreCatalogMeatList = array();
+	$cacheLifeTime = 2628000;
+	$cacheID = 'arSeeMoreCatalogMeatList'.$arVariables['ELEMENT_CODE'];
+	$cachePath = '/yt/'.$cacheID;
+	if($obCache->InitCache($cacheLifeTime, $cacheID, $cachePath))
+	{
+		$vars = $obCache->GetVars();
+		$arSeeMoreCatalogMeatList = $vars['arSeeMoreCatalogMeatList'];
+	}
+	elseif($obCache->StartDataCache())
+	{
+		$arCatalogMeatSort = array();
+		$arCatalogMeatSelect = array(
+			'ID',
+			'NAME',
+			'PROPERTY_SEE_ALSO_LINK'
+		);
+		$arCatalogMeatFilter = array(
+			'IBLOCK_ID' => $environment->get('catalogSmfIBlockId'),
+			'ACTIVE'    => 'Y',
+			'CODE'      => $arVariables['ELEMENT_CODE']
+		);
+		$rsCatalogMeatElements = \CIBlockElement::GetList(
+			$arCatalogMeatSort,
+			$arCatalogMeatFilter,
+			false,
+			false,
+			$arCatalogMeatSelect
+		);
+		if($arCatalogMeatItem = $rsCatalogMeatElements->Fetch())
+		{
+			if(!empty($arCatalogMeatItem['PROPERTY_SEE_ALSO_LINK_VALUE']))
+			{
+				$arSeeMoreSort = array();
+				$arSeeMoreSelect = array(
+					'ID',
+					'NAME',
+					'DETAIL_PAGE_URL'
+				);
+				$arSeeMoreFilter = array(
+					'IBLOCK_ID' => $environment->get('catalogMeatIBlockId'),
+					'ACTIVE'    => 'Y',
+					'ID'        => $arCatalogMeatItem['PROPERTY_SEE_ALSO_LINK_VALUE']
+				);
+				$rsSeeMoreElements = \CIBlockElement::GetList(
+					$arSeeMoreSort,
+					$arSeeMoreFilter,
+					false,
+					false,
+					$arSeeMoreSelect
+				);
+				while($arSeeMoreItem = $rsSeeMoreElements->Fetch())
+				{
+					$arSeeMoreItem['DETAIL_PAGE_URL'] = '#SITE_DIR#/catalog_meat/#ELEMENT_CODE#/';
+					$pattern = array('#SITE_DIR#', '#ELEMENT_CODE#');
+					$replace = array('', $arSeeMoreItem['CODE']);
+					$arSeeMoreItem['DETAIL_PAGE_URL'] = str_replace($pattern, $replace, $arSeeMoreItem['DETAIL_PAGE_URL']);
+					$arSeeMoreCatalogMeatList[$arSeeMoreItem['ID']] = $arSeeMoreItem;
+				}
+			}
+		}
+		$obCache->EndDataCache(array('arSeeMoreCatalogMeatList' => $arSeeMoreCatalogMeatList));
+	}
+
+	if(!empty($arSeeMoreCatalogMeatList))
+	{
+		$obCache = new \CPageCache;
+		$cacheId = $arVariables['ELEMENT_CODE'].$arParams['IBLOCK_TYPE'].$USER->GetUserGroupString();
+		$cacheLifeTime = 2628000;
+		if($obCache->StartDataCache($cacheLifeTime, $cacheId, '/'))
+		{
+			?>
+			<ul class="cross-links">
+				<?foreach($arSeeMoreCatalogMeatList as $arSeeMoreItem){?>
+					<li class="cross-links__item">
+						<a href="<?=$arSeeMoreItem['DETAIL_PAGE_URL']?>" class="cross-links__link">
+							<?=$arSeeMoreItem['NAME']?>
+						</a>
+					</li>
+				<?}?>
+			</ul>
+			<?
+			$obCache->EndDataCache();
+		}
+	}
+	?>
+</div>

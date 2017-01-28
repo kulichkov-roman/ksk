@@ -20,7 +20,7 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 
 	$arVariables = array();
 	CComponentEngine::ParseComponentPath(
-		'/catalog_smf/',
+		$environment->get('catalogMeatPageUrl'),
 		array('#ELEMENT_CODE#/'),
 		$arVariables
 	);
@@ -45,7 +45,7 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 			'PROPERTY_SEE_ALSO_LINK'
 		);
 		$arCatalogMeatFilter = array(
-			'IBLOCK_ID' => $environment->get('catalogMeatIBlockId'),
+			'IBLOCK_ID' => $environment->get('catalogSmfIBlockId'),
 			'ACTIVE'    => 'Y',
 			'CODE'      => $arVariables['ELEMENT_CODE']
 		);
@@ -67,7 +67,7 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 					'DETAIL_PAGE_URL'
 				);
 				$arSeeMoreFilter = array(
-					'IBLOCK_ID' => $environment->get('catalogMeatIBlockId'),
+					'IBLOCK_ID' => $environment->get('catalogSmfIBlockId'),
 					'ACTIVE'    => 'Y',
 					'ID'        => $arCatalogMeatItem['PROPERTY_SEE_ALSO_LINK_VALUE']
 				);
