@@ -176,7 +176,7 @@
 
 
 .product-page-content {
-    min-height: gs(510);
+    // min-height: gs(510);
 
     &__title,
     &__subtitle {
@@ -221,6 +221,83 @@
         line-height: gs(24);
         color: #646464;
         padding-right: gs(80);
+
+        h1, h2, h3 {
+            font-weight: bold;
+            margin: gs(24) 0 gs(12);
+        }
+        h1 {
+            font-size: gs(22);
+            line-height: gs(28);
+        }
+
+        h2 {
+            font-size: gs(20);
+        }
+
+        h3 {
+            font-size: gs(17);
+        }
+
+        p {
+            margin-bottom: gs(15);
+        }
+
+        a {
+            color: #646464;
+        }
+
+        ul {
+            margin: gs(15) 0;
+
+            li {
+                // line-height: gs(20);
+                // color: #838d8f;
+                padding-left: gs(18);
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    top: gs(7);
+                    left: 0;
+                    content: '';
+                    display: inline-block;
+                    background: #bfbfbf;
+                    width: gs(6);
+                    height: gs(6);
+                    border-radius: 50%;
+                }
+            }
+
+            li + li {
+                margin-top: gs(4);
+            }
+        }
+
+        ol {
+            counter-reset: myCounter;
+            margin: gs(15) 0;
+            padding-left: 0;
+            list-style: none;
+
+            li {
+                padding-left: gs(18);
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    top: gs(0);
+                    left: gs(-2);
+                    counter-increment: myCounter;
+                    content: counter(myCounter) ".";
+                    display: inline-block;
+                }
+            }
+
+            li + li {
+                margin-top: gs(4);
+            }
+        }
     }
 }
 
@@ -264,7 +341,7 @@
 }
 
 .product-page-buy {
-    margin-top: gs(10);
+    margin-top: gs(35);
     border: 1px solid #ededed;
     height: gs(78);
     border-radius: gs(4);

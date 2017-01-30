@@ -635,7 +635,7 @@ address {
       margin-bottom: 13.33333vw; }
     .content._product-page .content__description {
       padding-left: 24.36364vw;
-      margin-top: 1.33333vw;
+      margin-top: 2.42424vw;
       margin-bottom: -1.93939vw; }
 
 .catalog {
@@ -2062,39 +2062,89 @@ address {
     display: inline-block !important;
     cursor: pointer; }
 
-.product-page-content {
-  min-height: 30.90909vw; }
-  .product-page-content__title, .product-page-content__subtitle {
-    padding: 1.09091vw 0 1.21212vw;
-    margin-bottom: 1.09091vw;
-    position: relative; }
-    .product-page-content__title:after, .product-page-content__subtitle:after {
-      position: absolute;
-      content: '';
-      height: 1px;
-      bottom: -1px;
-      left: 0.12121vw;
-      right: 3.0303vw;
-      background: url("../images/line.png") no-repeat left;
-      background-size: 100%; }
-  .product-page-content__subtitle {
-    padding: 0.84848vw 0 0.84848vw;
-    margin-top: 0.84848vw; }
-  .product-page-content__title-text, .product-page-content__subtitle-text {
-    font-size: 1.45455vw;
-    line-height: 1.69697vw;
+.product-page-content__title, .product-page-content__subtitle {
+  padding: 1.09091vw 0 1.21212vw;
+  margin-bottom: 1.09091vw;
+  position: relative; }
+  .product-page-content__title:after, .product-page-content__subtitle:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    bottom: -1px;
+    left: 0.12121vw;
+    right: 3.0303vw;
+    background: url("../images/line.png") no-repeat left;
+    background-size: 100%; }
+
+.product-page-content__subtitle {
+  padding: 0.84848vw 0 0.84848vw;
+  margin-top: 0.84848vw; }
+
+.product-page-content__title-text, .product-page-content__subtitle-text {
+  font-size: 1.45455vw;
+  line-height: 1.69697vw;
+  font-weight: bold;
+  color: #000000;
+  display: inline-block;
+  vertical-align: top; }
+
+.product-page-content__subtitle-text {
+  font-size: 1.09091vw;
+  line-height: 1.45455vw; }
+
+.product-page-content__description {
+  font-size: 0.90909vw;
+  line-height: 1.45455vw;
+  color: #646464;
+  padding-right: 4.84848vw; }
+  .product-page-content__description h1, .product-page-content__description h2, .product-page-content__description h3 {
     font-weight: bold;
-    color: #000000;
-    display: inline-block;
-    vertical-align: top; }
-  .product-page-content__subtitle-text {
-    font-size: 1.09091vw;
-    line-height: 1.45455vw; }
-  .product-page-content__description {
-    font-size: 0.90909vw;
-    line-height: 1.45455vw;
-    color: #646464;
-    padding-right: 4.84848vw; }
+    margin: 1.45455vw 0 0.72727vw; }
+  .product-page-content__description h1 {
+    font-size: 1.33333vw;
+    line-height: 1.69697vw; }
+  .product-page-content__description h2 {
+    font-size: 1.21212vw; }
+  .product-page-content__description h3 {
+    font-size: 1.0303vw; }
+  .product-page-content__description p {
+    margin-bottom: 0.90909vw; }
+  .product-page-content__description a {
+    color: #646464; }
+  .product-page-content__description ul {
+    margin: 0.90909vw 0; }
+    .product-page-content__description ul li {
+      padding-left: 1.09091vw;
+      position: relative; }
+      .product-page-content__description ul li:before {
+        position: absolute;
+        top: 0.42424vw;
+        left: 0;
+        content: '';
+        display: inline-block;
+        background: #bfbfbf;
+        width: 0.36364vw;
+        height: 0.36364vw;
+        border-radius: 50%; }
+    .product-page-content__description ul li + li {
+      margin-top: 0.24242vw; }
+  .product-page-content__description ol {
+    counter-reset: myCounter;
+    margin: 0.90909vw 0;
+    padding-left: 0;
+    list-style: none; }
+    .product-page-content__description ol li {
+      padding-left: 1.09091vw;
+      position: relative; }
+      .product-page-content__description ol li:before {
+        position: absolute;
+        top: 0vw;
+        left: -0.12121vw;
+        counter-increment: myCounter;
+        content: counter(myCounter) ".";
+        display: inline-block; }
+    .product-page-content__description ol li + li {
+      margin-top: 0.24242vw; }
 
 .product-page-content-structure__item {
   font-size: 0.84848vw;
@@ -2119,7 +2169,7 @@ address {
   font-weight: 600; }
 
 .product-page-buy {
-  margin-top: 0.60606vw;
+  margin-top: 2.12121vw;
   border: 1px solid #ededed;
   height: 4.72727vw;
   border-radius: 0.24242vw;
@@ -2344,6 +2394,53 @@ body .fancybox-next {
   .seo-block__text {
     font-size: 0.78788vw;
     line-height: 1.09091vw; }
+    .seo-block__text h1, .seo-block__text h2, .seo-block__text h3 {
+      font-weight: bold;
+      margin: 1.45455vw 0 0.72727vw; }
+    .seo-block__text h1 {
+      font-size: 1.21212vw; }
+    .seo-block__text h2 {
+      font-size: 1.0303vw; }
+    .seo-block__text h3 {
+      font-size: 0.90909vw; }
+    .seo-block__text p {
+      margin-bottom: 0.90909vw; }
+    .seo-block__text a {
+      color: #8b8b8b; }
+    .seo-block__text ul {
+      margin: 0.90909vw 0; }
+      .seo-block__text ul li {
+        padding-left: 1.09091vw;
+        position: relative; }
+        .seo-block__text ul li:before {
+          position: absolute;
+          top: 0.42424vw;
+          left: 0;
+          content: '';
+          display: inline-block;
+          background: #bfbfbf;
+          width: 0.36364vw;
+          height: 0.36364vw;
+          border-radius: 50%; }
+      .seo-block__text ul li + li {
+        margin-top: 0.24242vw; }
+    .seo-block__text ol {
+      counter-reset: myCounter;
+      margin: 0.90909vw 0;
+      padding-left: 0;
+      list-style: none; }
+      .seo-block__text ol li {
+        padding-left: 1.09091vw;
+        position: relative; }
+        .seo-block__text ol li:before {
+          position: absolute;
+          top: 0vw;
+          left: -0.12121vw;
+          counter-increment: myCounter;
+          content: counter(myCounter) ".";
+          display: inline-block; }
+      .seo-block__text ol li + li {
+        margin-top: 0.24242vw; }
   .seo-block__toggle {
     text-align: center;
     cursor: pointer;
