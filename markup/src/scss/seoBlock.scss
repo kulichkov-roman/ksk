@@ -11,6 +11,11 @@
         box-shadow: 0 gs(12) gs(12) rgba(0,0,0,0.2);
     }
 
+    .content._product-page & {
+        margin-left: gs(380);
+        right: gs(-(178 + 40));
+    }
+
     // .content._preparing & {
     //     background: #f0eed5;
     // }

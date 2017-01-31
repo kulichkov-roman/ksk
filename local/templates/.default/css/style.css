@@ -2367,6 +2367,9 @@ body .fancybox-next {
     bottom: 0;
     background: #fff;
     box-shadow: 0 0.72727vw 0.72727vw rgba(0, 0, 0, 0.2); }
+  .content._product-page .seo-block {
+    margin-left: 23.0303vw;
+    right: -13.21212vw; }
   .seo-block__inner {
     color: #8b8b8b;
     background: #f0eed5;
