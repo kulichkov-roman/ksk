@@ -17,7 +17,6 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 ?>
 <div class="product-page__footer">
 	<?
-
 	$arVariables = array();
 	CComponentEngine::ParseComponentPath(
 		$environment->get('catalogSmfPageUrl'),
@@ -26,6 +25,7 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 	);
 
 	$arSecIds = array();
+	$arSeoText = array();
 	$obCache = new \CPHPCache();
 	$arSeeMoreCatalogMeatList = array();
 	$cacheLifeTime = 2628000;
@@ -42,7 +42,9 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 		$arCatalogMeatSelect = array(
 			'ID',
 			'NAME',
-			'PROPERTY_SEE_ALSO_LINK'
+			'PROPERTY_SEE_ALSO_LINK',
+			'PROPERTY_SEO_TEXT',
+			'PROPERTY_SEO_TITLE'
 		);
 		$arCatalogMeatFilter = array(
 			'IBLOCK_ID' => $environment->get('catalogSmfIBlockId'),
@@ -87,6 +89,8 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 					$arSeeMoreCatalogMeatList[$arSeeMoreItem['ID']] = $arSeeMoreItem;
 				}
 			}
+            $arSeoText['TEXT'] = $arCatalogMeatItem['PROPERTY_SEO_TEXT_VALUE']['TEXT'];
+            $arSeoText['TITLE'] = $arCatalogMeatItem['PROPERTY_SEO_TITLE_VALUE'];
 		}
 		$obCache->EndDataCache(array('arSeeMoreCatalogMeatList' => $arSeeMoreCatalogMeatList));
 	}
@@ -94,7 +98,7 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 	if(!empty($arSeeMoreCatalogMeatList))
 	{
 		$obCache = new \CPageCache;
-		$cacheId = $arVariables['ELEMENT_CODE'].$arParams['IBLOCK_TYPE'].$USER->GetUserGroupString();
+		$cacheId = 'link'.$arVariables['ELEMENT_CODE'].$arParams['IBLOCK_TYPE'].$USER->GetUserGroupString();
 		$cacheLifeTime = 2628000;
 		if($obCache->StartDataCache($cacheLifeTime, $cacheId, '/'))
 		{
@@ -114,3 +118,26 @@ $APPLICATION->IncludeComponent("bitrix:main.include", "",
 	}
 	?>
 </div>
+<?
+if(!empty($arSeoText['TEXT']))
+{
+	$obCache = new \CPageCache;
+	$cacheId = 'seo_text'.$arVariables['ELEMENT_CODE'].$arParams['IBLOCK_ID'].$USER->GetUserGroupString();
+	$cacheLifeTime = 2628000;
+	if($obCache->StartDataCache($cacheLifeTime, $cacheId, '/'))
+	{
+		?>
+		<div class="seo-block">
+			<div class="seo-block__inner">
+				<div class="seo-block__content">
+                    <h3 class="seo-block__title"><?=$arSeoText['TITLE']?></h3>
+                    <div class="seo-block__text"><?=$arSeoText['TEXT']?></div>
+				</div>
+                <div class="seo-block__toggle"><span class="seo-block__toggle-text _expand">Развернуть</span><span class="seo-block__toggle-text _minimize">Свернуть</span></div>
+            </div>
+		</div>
+		<?
+		$obCache->EndDataCache();
+	}
+}
+?>
