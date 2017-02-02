@@ -54,4 +54,13 @@ if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['VALUE']))
         $arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] = $arPicture;
     }
 }
+
+/*
+ * Передать TIMESTAMP_X в кеш для установки в LastModifier
+ * */
+$cp = $this->__component;
+if (is_object($cp))
+{
+    $cp->SetResultCacheKeys(array('TIMESTAMP_X'));
+}
 ?>

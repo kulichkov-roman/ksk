@@ -1,6 +1,6 @@
 <?php
 
-namespace KLRF\Helper;
+namespace KSK\Helper;
 
 /**
  * Хелпер для работы с изображениями

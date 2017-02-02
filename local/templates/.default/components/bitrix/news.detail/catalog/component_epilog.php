@@ -1,6 +1,17 @@
 <?
-$environment = \Your\Environment\EnvironmentManager::getInstance();
+use KSK\Helper;
 
+$environment = \Your\Environment\EnvironmentManager::getInstance();
+$CLastModifierHelper = KSK\Helper\LastModifierHelper::getInstance();
+
+/*
+ * Передать TIMESTAMP_X в кеш для установки в LastModifier
+ * */
+$CLastModifierHelper->setLastModifier(MakeTimeStamp($arResult['TIMESTAMP_X']));
+
+/*
+ * Форма заявки
+ * */
 $APPLICATION->IncludeComponent(
     "your:iblock.element.add.form",
     "order",

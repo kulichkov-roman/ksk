@@ -68,4 +68,13 @@ else
         $arResult['DETAIL_PICTURE']['SRC']  = itc\Resizer::get($environment->get('w504h537aPlugId'), 'w504h537cr');
     }
 }
+
+/*
+ * Передать TIMESTAMP_X в кеш для установки в LastModifier
+ * */
+$cp = $this->__component;
+if (is_object($cp))
+{
+    $cp->SetResultCacheKeys(array('TIMESTAMP_X'));
+}
 ?>
