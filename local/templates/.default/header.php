@@ -14,6 +14,7 @@ IncludeTemplateLangFile(__FILE__);
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" width="960">
+	<meta name="cmsmagazine" content="f3a6695dfcc9f3ed1b584c8b48702bc0" />
 	<title><?$APPLICATION->ShowTitle()?></title>
 	<?
 	CJSCore::Init();
